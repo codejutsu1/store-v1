@@ -8,7 +8,20 @@
 
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        
+        <style>
+            .imgbox{
+                transform: rotateY(180deg);
+                animation: animateUser 4s linear infinite;
+            }
 
+            @keyframes animateUser{
+                50%{
+                    right: 30px;
+                    top: -90px;
+                }
+            }
+        </style>
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
@@ -35,7 +48,7 @@
                 </li>
             </ul>
             <div class="flex items-center space-x-5">
-                <input type="search" name="Search Here" id="search" class="w-20 h-3">
+                <img src="https://icons8.com/icon/7695/search" alt="Search Icon">
 
                 <div>
                     <h1>Cart (0)</h1>
