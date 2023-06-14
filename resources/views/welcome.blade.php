@@ -3,23 +3,21 @@
     <div class="bg-hero-image bg-cover relative h-[600px] overflow-hidden">
         <div class="absolute bg-[#101820] opacity-60 inset-0"></div>
         <div class="relative z-40 w-5/6 mx-auto flex justify-between">
-            <div class="pt-20">
-                <h1 class="text-6xl font-bold text-[#FEE715]">My Gee!!!</h1>
-                <p class="text-xl font-semibold text-gray-200 mt-2">
-                    You dey find the best shopping plug &#128526?
-                </p>
+            <div class="pt-20 w-[400px]">
+                <h1 class="text-6xl font-bold text-[#FEE715] uppercase" id="typed-strings"></h1>
+                <p class="text-2xl font-semibold text-gray-200 mt-2" id="typed-strings2"></p>
             </div>
 
             <div class="h-[400px] w-[400px] bg-[#FEE715] mt-10 pt-10" style="border-radius: 100%;">
-                <img class="imgbox" src="{{ Vite::asset('resources/images/normal/young_model.png') }}" alt="A young black model">
+                <img class="" src="{{ Vite::asset('resources/images/normal/young_model.png') }}" alt="A young black model">
             </div>
 
             <div class="flex items-end">
                 <div>
-                    <p class="text-4xl font-bold text-gray-100">
-                        Na here we dey &#128513.
+                    <p class="text-4xl font-bold text-gray-100 uppercase">
+                        <span class="text-[#FEE715]">Quick </span>order <br/> Fast <span class="text-[#FEE715]">Delivery</span>
                     </p>
-                    <button class="bg-[#FEE715] px-4 py-2 text-[#101820] font-semibold text-lg mt-2 rounded-md shadow-xl">
+                    <button class="bg-[#FEE715] px-4 py-2 text-[#101820] font-semibold text-lg mt-4 rounded-md shadow-2xl animate-bounce">
                         Order Now! &#128523
                     </button>
                 </div>

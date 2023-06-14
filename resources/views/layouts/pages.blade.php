@@ -9,19 +9,6 @@
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         
-        <style>
-            .imgbox{
-                transform: rotateY(180deg);
-                animation: animateUser 4s linear infinite;
-            }
-
-            @keyframes animateUser{
-                50%{
-                    right: 30px;
-                    top: -90px;
-                }
-            }
-        </style>
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
@@ -61,5 +48,29 @@
         <main>
             {{ $slot }}
         </main>
+
+        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+        <script>
+            var typed = new Typed('#typed-strings', {
+                strings: ['My Gee!!!'],
+                typeSpeed: 150,
+                showCursor: false,
+                loop: true,
+                backDelay: 14000,
+            });
+
+            var typed = new Typed('#typed-strings2', {
+                strings: [
+                    'You dey find the best shopping plug' + String.fromCodePoint(0x1F601) + '?',
+                    'Na here we dey' + String.fromCodePoint(0x1F60E) + '.'
+                    ],
+                typeSpeed: 80,
+                startDelay: 3000,
+                loop: true,
+                backDelay: 3000,
+                backspeed: 5000,
+                showCursor: false,
+            });
+        </script>
     </body>
 </html>
