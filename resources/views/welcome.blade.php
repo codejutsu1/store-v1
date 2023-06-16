@@ -26,30 +26,32 @@
     </div>
 
 
-    <div class="py-10 w-5/6 mx-auto border relative circles">
-        <h1 class="text-center text-4xl uppercase font-semibold ">
-            Top Products
-        </h1>
-        <div class="pt-10 circes">
-            <div class="grid grid-cols-2 justify-center gap-10">
-                <div class="bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-90 border shadow-xl h-[400px] flex items-center justify-center rounded-r-2xl">
-                    <h1>Product 1</h1>
-                </div>
+    <section class="relative">
+        <div class="py-10 w-5/6 mx-auto circles">
+            <h1 class="relative z-30 text-center text-4xl uppercase font-semibold">
+                Top Products
+            </h1>
+            <div class="pt-10 relative z-30">
+                <div class="grid grid-cols-2 justify-center gap-10">
+                    <div class="bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-20 border shadow-xl h-[400px] flex items-center justify-center rounded-r-2xl">
+                        <h1>Product 1</h1>
+                    </div>
 
-                <div class="bg-gray-600 h-[400px] flex items-center justify-center">
-                    <h1>Product 2</h1>
-                </div>
+                    <div class="bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-20 border shadow-xl h-[400px] flex items-center justify-center rounded-r-2xl">
+                        <h1>Product 2</h1>
+                    </div>
 
-                <div class="bg-gray-600 h-[400px] flex items-center justify-center">
-                    <h1>Product 3</h1>
-                </div>
+                    <div class="bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-20 border shadow-xl h-[400px] flex items-center justify-center rounded-r-2xl">
+                        <h1>Product 3</h1>
+                    </div>
 
-                <div class="bg-gray-600 h-[400px] flex items-center justify-center">
-                    <h1>Product 4</h1>
+                    <div class="bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-20 border shadow-xl h-[400px] flex items-center justify-center rounded-r-2xl">
+                        <h1>Product 4</h1>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <div class="py-10 w-5/6 mx-auto">
         <h1 class="text-center text-4xl uppercase font-semibold">
