@@ -17,7 +17,7 @@
                 width: 100%;
                 height: 100%;
                 background: yellow;
-                clip-path: circle(70% at 0% -50%);
+                clip-path: circle(75% at 0% -50%);
             }
 
             .circles::after {
@@ -28,7 +28,11 @@
                 width: 100%;
                 height: 100%;
                 background: black;
-                clip-path: circle(30% at 100% 100%);
+                clip-path: circle(25% at 100% 100%);
+            }
+
+            .images {
+                border-radius: 100%;
             }
         </style>
 
