@@ -16,7 +16,7 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background: yellow;
+                background: #FEE715;
                 clip-path: circle(75% at 0% -50%);
             }
 
@@ -27,12 +27,38 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background: black;
+                background: #101820;
                 clip-path: circle(25% at 100% 100%);
             }
 
             .images {
                 border-radius: 100%;
+            }
+
+            .shadow-custom {
+                box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.3),
+                            inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+                            5px 5px 15px rgba(0, 0, 0, 0.3),
+                            -5px -5px 15px rgba(255, 255, 255, 0.1);
+            }
+
+            .shadow-custom-2 {
+                box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5)
+            }
+
+            .shadow-custom-2:hover {
+                box-shadow: 0 40px 70px rgba(0, 0, 0, 0.5)
+            }
+
+            .shadow-custom-2:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 50%;
+                height: 100%;
+                background: rgba(255, 255, 255, 0.05);
+                pointer-events: none;
             }
         </style>
 
@@ -40,7 +66,7 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="antialiased">
-        <nav class="bg-zinc-800 flex justify-around items-center text-gray-200 py-3">
+        <nav class="bg-[#101820] flex justify-around items-center text-gray-200 py-3">
             <div>
                 <h1>Logo Here...</h1>
             </div>

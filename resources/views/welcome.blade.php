@@ -5,7 +5,7 @@
         <div class="relative z-40 w-5/6 mx-auto flex justify-between">
             <div class="pt-20 w-[400px]">
                 <h1 class="text-6xl font-bold text-[#FEE715] uppercase" id="typed-strings"></h1>
-                <p class="text-2xl font-semibold text-gray-200 mt-2" id="typed-strings2"></p>
+                <p class="text-2xl font-semibold text-gray-100 mt-2" id="typed-strings2"></p>
             </div>
 
             <div class="h-[400px] w-[400px] bg-[#FEE715] mt-10 pt-10" style="border-radius: 100%;">
@@ -26,7 +26,7 @@
     </div>
 
 
-    <section class="relative border-b border-dashed border-[#101820]">
+    <section class="relative">
         <div class="py-10 pb-28 w-5/6 mx-auto circles">
             <h1 class="relative z-30 text-center text-4xl uppercase font-semibold">
                 Top Products
@@ -96,30 +96,57 @@
         </div>
     </section>
 
-    <div class="py-10 w-5/6 mx-auto">
-        <h1 class="text-center text-4xl uppercase font-semibold">
-            Categories
-        </h1>
-        <div class="pt-10">
-            <div class="flex justify-between space-x-2">
-                <div class="bg-gray-600 h-[200px] w-[200px] flex items-center justify-center rounded-r-2xl">
-                    <h1>Product 1</h1>
-                </div>
+    <section class="bg-[#101820] relative">
+     
+        <div class="py-10 w-5/6 mx-auto relative z-30">
+            <h1 class="text-center text-4xl uppercase font-semibold text-[#FEE721]">
+                Categories
+            </h1>
+            <div class="pt-10">
+                <div class="flex justify-between gap-x-20">
+                    <div class="shadow-custom w-1/3 h-[500px] relative rounded-md">
+                        <div class="bg-gray-800 opacity-90 hover:opacity-100 absolute top-5 left-5 right-5 bottom-5 p-4 overflow-hidden rounded-md shadow-custom-2 duration-500 hover:translate-y-[-50px] group">
+                            <div class="relative pt-16 text-center">
+                                <h1 class="text-4xl font-bold text-gray-200 group-hover:text-[#FEE715] duration-1000">Armateur</h1>
+                                <h3 class="absolute -top-10 right-4 text-white opacity-5 text-[8rem] font-bold">01</h3>
+                                <p class="my-8 font-semibold text-gray-400">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate corrupti nemo voluptatem, consectetur impedit accusantium saepe provident suscipit consequuntur neque, autem dolor aliquam inventore distinctio, ullam ab pariatur nesciunt cumque!
+                                </p>
+                                <a href="#" class="bg-black text-gray-200 rounded-3xl px-8 py-2 font-bold text-xl group-hover:text-[#101820] group-hover:bg-[#FEE715] duration-1000">Explore</a>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="bg-gray-600 h-[200px] w-[200px] flex items-center justify-center">
-                    <h1>Product 2</h1>
-                </div>
+                    <div class="shadow-custom w-1/3 h-[500px] relative rounded-md">
+                        <div class="bg-gray-800 opacity-90 hover:opacity-100 absolute top-5 left-5 right-5 bottom-5 p-4 overflow-hidden rounded-md shadow-custom-2 duration-500 hover:translate-y-[-50px] group">
+                            <div class="relative pt-16 text-center">
+                                <h1 class="text-4xl font-bold text-gray-200 group-hover:text-[#FEE715] duration-1000">Mid</h1>
+                                <h3 class="absolute -top-10 right-4 text-white opacity-5 text-[8rem] font-bold">02</h3>
+                                <p class="my-8 font-semibold text-gray-400">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate corrupti nemo voluptatem, consectetur impedit accusantium saepe provident suscipit consequuntur neque, autem dolor aliquam inventore distinctio, ullam ab pariatur nesciunt cumque!
+                                </p>
+                                <a href="#" class="bg-black text-gray-200 rounded-3xl px-8 py-2 font-bold text-xl group-hover:text-[#101820] group-hover:bg-[#FEE715] duration-1000">Explore</a>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="bg-gray-600 h-[200px] w-[200px] flex items-center justify-center">
-                    <h1>Product 3</h1>
-                </div>
+                    <div class="shadow-custom w-1/3 h-[500px] relative rounded-md">
+                        <div class="bg-gray-800 opacity-90 hover:opacity-100 absolute top-5 left-5 right-5 bottom-5 p-4 overflow-hidden rounded-md shadow-custom-2 duration-500 hover:translate-y-[-50px] group">
+                            <div class="relative pt-16 text-center">
+                                <h1 class="text-4xl font-bold text-gray-200 group-hover:text-[#FEE715] duration-1000">Professional</h1>
+                                <h3 class="absolute -top-10 right-4 text-white opacity-5 text-[8rem] font-bold">03</h3>
+                                <p class="my-8 font-semibold text-gray-400">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate corrupti nemo voluptatem, consectetur impedit accusantium saepe provident suscipit consequuntur neque, autem dolor aliquam inventore distinctio, ullam ab pariatur nesciunt cumque!
+                                </p>
+                                <a href="#" class="bg-black text-gray-200 rounded-3xl px-8 py-2 font-bold text-xl group-hover:text-[#101820] group-hover:bg-[#FEE715] duration-1000">Explore</a>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="bg-gray-600 h-[200px] w-[200px] flex items-center justify-center">
-                    <h1>Product 4</h1>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <div class="py-10 w-5/6 mx-auto">
         <h1 class="text-center text-4xl uppercase font-semibold">
