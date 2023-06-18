@@ -8,6 +8,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
         <style>
             .circles::before {
                 content: '';
@@ -60,6 +61,19 @@
                 background: rgba(255, 255, 255, 0.05);
                 pointer-events: none;
             }
+            .swiper {
+                width: 100%;
+                height: 600px;
+            }
+
+            .swiper-slide {
+                filter: blur(8px);
+                background: black;
+            }
+
+            .swiper-slide-active {
+                filter: blur(0px);
+            }
         </style>
 
         <!-- Scripts -->
@@ -103,6 +117,7 @@
         </main>
 
         <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
         <script>
             var typed = new Typed('#typed-strings', {
                 strings: ['My Gee!!!'],
@@ -123,6 +138,25 @@
                 backDelay: 3000,
                 backspeed: 5000,
                 showCursor: false,
+            });
+
+            const swiper = new Swiper('.mySwiper', {
+                direction: 'horizontal',
+                loop: true, 
+                slidesPerView: 2,
+                spaceBetween: 50, 
+                centeredSlides: true,
+
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                    dynamicBullets: true,
+                },
             });
         </script>
     </body>

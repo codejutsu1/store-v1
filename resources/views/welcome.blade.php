@@ -104,39 +104,39 @@
             </h1>
             <div class="pt-10">
                 <div class="flex justify-between gap-x-20">
-                    <div class="shadow-custom w-1/3 h-[500px] relative rounded-md">
+                    <div class="shadow-custom w-1/3 h-[400px] relative rounded-md">
                         <div class="bg-gray-800 opacity-90 hover:opacity-100 absolute top-5 left-5 right-5 bottom-5 p-4 overflow-hidden rounded-md shadow-custom-2 duration-500 hover:translate-y-[-50px] group">
                             <div class="relative pt-16 text-center">
                                 <h1 class="text-4xl font-bold text-gray-200 group-hover:text-[#FEE715] duration-1000">Armateur</h1>
-                                <h3 class="absolute -top-10 right-4 text-white opacity-5 text-[8rem] font-bold">01</h3>
+                                <h3 class="absolute -top-10 right-4 text-[#FEE715] opacity-20 text-[8rem] font-bold group-hover:opacity-30 duration-1000">01</h3>
                                 <p class="my-8 font-semibold text-gray-400">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate corrupti nemo voluptatem, consectetur impedit accusantium saepe provident suscipit consequuntur neque, autem dolor aliquam inventore distinctio, ullam ab pariatur nesciunt cumque!
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate corrupti nemo voluptatem, consectetur impedit accusantium saepe provident 
                                 </p>
                                 <a href="#" class="bg-black text-gray-200 rounded-3xl px-8 py-2 font-bold text-xl group-hover:text-[#101820] group-hover:bg-[#FEE715] duration-1000">Explore</a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="shadow-custom w-1/3 h-[500px] relative rounded-md">
+                    <div class="shadow-custom w-1/3 h-[400px] relative rounded-md">
                         <div class="bg-gray-800 opacity-90 hover:opacity-100 absolute top-5 left-5 right-5 bottom-5 p-4 overflow-hidden rounded-md shadow-custom-2 duration-500 hover:translate-y-[-50px] group">
                             <div class="relative pt-16 text-center">
                                 <h1 class="text-4xl font-bold text-gray-200 group-hover:text-[#FEE715] duration-1000">Mid</h1>
-                                <h3 class="absolute -top-10 right-4 text-white opacity-5 text-[8rem] font-bold">02</h3>
+                                <h3 class="absolute -top-10 right-4 text-[#FEE715] opacity-20 text-[8rem] font-bold group-hover:opacity-30 duration-1000">02</h3>
                                 <p class="my-8 font-semibold text-gray-400">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate corrupti nemo voluptatem, consectetur impedit accusantium saepe provident suscipit consequuntur neque, autem dolor aliquam inventore distinctio, ullam ab pariatur nesciunt cumque!
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate corrupti nemo voluptatem, consectetur impedit accusantium saepe provident
                                 </p>
                                 <a href="#" class="bg-black text-gray-200 rounded-3xl px-8 py-2 font-bold text-xl group-hover:text-[#101820] group-hover:bg-[#FEE715] duration-1000">Explore</a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="shadow-custom w-1/3 h-[500px] relative rounded-md">
+                    <div class="shadow-custom w-1/3 h-[400px] relative rounded-md">
                         <div class="bg-gray-800 opacity-90 hover:opacity-100 absolute top-5 left-5 right-5 bottom-5 p-4 overflow-hidden rounded-md shadow-custom-2 duration-500 hover:translate-y-[-50px] group">
                             <div class="relative pt-16 text-center">
                                 <h1 class="text-4xl font-bold text-gray-200 group-hover:text-[#FEE715] duration-1000">Professional</h1>
-                                <h3 class="absolute -top-10 right-4 text-white opacity-5 text-[8rem] font-bold">03</h3>
+                                <h3 class="absolute -top-10 right-4 text-[#FEE715] opacity-20 text-[8rem] font-bold group-hover:opacity-30 duration-1000">03</h3>
                                 <p class="my-8 font-semibold text-gray-400">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate corrupti nemo voluptatem, consectetur impedit accusantium saepe provident suscipit consequuntur neque, autem dolor aliquam inventore distinctio, ullam ab pariatur nesciunt cumque!
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate corrupti nemo voluptatem, consectetur impedit accusantium saepe provident 
                                 </p>
                                 <a href="#" class="bg-black text-gray-200 rounded-3xl px-8 py-2 font-bold text-xl group-hover:text-[#101820] group-hover:bg-[#FEE715] duration-1000">Explore</a>
                             </div>
@@ -148,55 +148,66 @@
         </div>
     </section>
 
-    <div class="py-10 w-5/6 mx-auto">
-        <h1 class="text-center text-4xl uppercase font-semibold">
+    <div class="py-10 mx-auto">
+        <h1 class="text-center text-4xl uppercase font-semibold my-10">
             Feeds
         </h1>
-       <div class="bg-gray-600 h-[400px] mt-10">
-
-       </div>
-    </div>
-
-    <div class="py-10 w-5/6 mx-auto">
-        <h1 class="text-center text-4xl uppercase font-semibold">
-            Meet our chef
-        </h1>
-       <div class="w-[400px] h-[400px] bg-black mx-auto mt-10 shadow-2xl" style="border-radius: 100%;">
-
-       </div>
-
-       <div class="pt-10">
-           <p class="text-center">Moiseur James</p>
-       </div>
-    </div>
-
-
-    <div class="bg-gray-500">
-        <div class="py-10 w-5/6 mx-auto ">
-            <h1 class="text-center text-4xl uppercase font-semibold">
-                Wetin dem dey yarn about us?
-            </h1>
-            <div class="pt-10">
-                <div class="flex justify-between space-x-2">
-                    <div class="bg-zinc-800 h-[200px] w-[200px] flex items-center justify-center rounded-r-2xl">
-                        <h1>Product 1</h1>
-                    </div>
-
-                    <div class="bg-zinc-800 h-[200px] w-[200px] flex items-center justify-center">
-                        <h1>Product 2</h1>
-                    </div>
-
-                    <div class="bg-zinc-800 h-[200px] w-[200px] flex items-center justify-center">
-                        <h1>Product 3</h1>
-                    </div>
-
-                    <div class="bg-zinc-800 h-[200px] w-[200px] flex items-center justify-center">
-                        <h1>Product 4</h1>
-                    </div>
+       <div class="swiper mySwiper">
+            <div class="swiper-wrapper ">
+                <div class="swiper-slide">
+                    <img class="h-full w-full" src="{{ Vite::asset('resources/images/feeds/food-poster-1.jpg') }}" alt="A food Poster">
                 </div>
-            </div>  
-        </div>
+                <div class="swiper-slide">
+                    <img class="h-full w-full" src="{{ Vite::asset('resources/images/feeds/food-poster-2.jpg') }}" alt="A food Poster">
+                </div>
+                <div class="swiper-slide">
+                    <img class="h-full w-full" src="{{ Vite::asset('resources/images/feeds/food-poster-3.jpg') }}" alt="A food Poster">
+                </div>
+                <div class="swiper-slide">
+                    <img class="h-full w-full" src="{{ Vite::asset('resources/images/feeds/food-poster-4.jpg') }}" alt="A food Poster">
+                </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+       </div>
     </div>
+
+
+
+
+    <section class="bg-[#101820]">
+        <div>
+            <div class="py-10 w-5/6 mx-auto ">
+                <h1 class="text-center text-4xl uppercase font-semibold text-[#FEE715]">
+                    Wetin dem dey yarn about us?
+                </h1>
+
+                <div class="pt-10">
+                    <div class="flex justify-between space-x-2">
+                        <div class="bg-zinc-800 h-[400px] w-[300px] py-8 px-5">
+                            <div>
+                                <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur libero porro quis placeat aut adipisci, suscipit dignissimos esse, est eveniet, dolores fuga? Iste provident possimus animi, commodi ipsa vel eum.
+
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="bg-zinc-800 h-[200px] w-[200px] flex items-center justify-center">
+                            <h1>Product 2</h1>
+                        </div>
+
+                        <div class="bg-zinc-800 h-[200px] w-[200px] flex items-center justify-center">
+                            <h1>Product 3</h1>
+                        </div>
+
+                        <div class="bg-zinc-800 h-[200px] w-[200px] flex items-center justify-center">
+                            <h1>Product 4</h1>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </section>
 
     <div class="h-[600px] bg-zinc-800">
 
