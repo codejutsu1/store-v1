@@ -155,25 +155,22 @@
        <div class="swiper mySwiper">
             <div class="swiper-wrapper ">
                 <div class="swiper-slide">
-                    <img class="h-full w-full" src="{{ Vite::asset('resources/images/feeds/food-poster-1.jpg') }}" alt="A food Poster">
+                    <img class="h-full w-full object-cover" src="{{ Vite::asset('resources/images/feeds/food-poster-1.jpg') }}" alt="A food Poster">
                 </div>
                 <div class="swiper-slide">
-                    <img class="h-full w-full" src="{{ Vite::asset('resources/images/feeds/food-poster-2.jpg') }}" alt="A food Poster">
+                    <img class="h-full w-full object-cover" src="{{ Vite::asset('resources/images/feeds/food-poster-2.jpg') }}" alt="A food Poster">
                 </div>
                 <div class="swiper-slide">
-                    <img class="h-full w-full" src="{{ Vite::asset('resources/images/feeds/food-poster-3.jpg') }}" alt="A food Poster">
+                    <img class="h-full w-full object-cover" src="{{ Vite::asset('resources/images/feeds/food-poster-3.jpg') }}" alt="A food Poster">
                 </div>
                 <div class="swiper-slide">
-                    <img class="h-full w-full" src="{{ Vite::asset('resources/images/feeds/food-poster-4.jpg') }}" alt="A food Poster">
+                    <img class="h-full w-full object-cover" src="{{ Vite::asset('resources/images/feeds/food-poster-4.jpg') }}" alt="A food Poster">
                 </div>
             </div>
 
             <div class="swiper-pagination"></div>
        </div>
     </div>
-
-
-
 
     <section class="bg-[#101820]">
         <div>
@@ -182,26 +179,94 @@
                     Wetin dem dey yarn about us?
                 </h1>
 
-                <div class="pt-10">
-                    <div class="flex justify-between space-x-2">
-                        <div class="bg-zinc-800 h-[400px] w-[300px] py-8 px-5">
-                            <div>
-                                <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur libero porro quis placeat aut adipisci, suscipit dignissimos esse, est eveniet, dolores fuga? Iste provident possimus animi, commodi ipsa vel eum.
-
-                                </p>
+                <div class="pt-10 swiper-container overflow-hidden">
+                    <div class="flex justify-between space-x-10 swiper-wrapper">
+                        <div class="bg-gray-800 h-[500px] w-[300px] py-8 px-5 swiper-slide group">
+                            <div class="layer"></div>
+                            <div class="relative z-30">
+                                <p class="text-center text-gray-300 group-hover:text-gray-900 font-semibold duration-1000">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur libero porro quis placeat aut adipisci, suscipit dignissimos esse, est eveniet, dolores fuga? Iste provident possimus animi, commodi ipsa vel eum.</P>
+                                <div class="pt-10 pb-5 flex justify-center">
+                                    <img class="border-2 border-gray-200 w-32 h-32 rounded-full object-cover" src="{{ Vite::asset('resources/images/review/human-1.jpg') }}" alt="Human 1">
+                                </div>
+                                <h3 class="text-gray-200 font-bold uppercase text-center">Beauri Goddess</h3>
+                                <div class="w-5/6 mx-auto flex justify-between pt-2">
+                                    <a href="#">
+                                        <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/tiktok.svg') }}" alt="reviewer tiktok">
+                                    </a>
+                                    <a href="#">
+                                        <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/twitter.svg') }}" alt="reviewer tiktok">
+                                    </a>
+                                    <a href="#">
+                                        <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/instagram.svg') }}" alt="reviewer tiktok">
+                                    </a>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="bg-zinc-800 h-[200px] w-[200px] flex items-center justify-center">
-                            <h1>Product 2</h1>
+                        <div class="bg-gray-800 h-[500px] w-[300px] py-8 px-5 swiper-slide group">
+                            <div class="layer"></div>
+                            <div class="relative z-30">
+                                <p class="text-center text-gray-300 group-hover:text-gray-900 font-semibold duration-1000">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur libero porro quis placeat aut adipisci, suscipit dignissimos esse, est eveniet, dolores fuga? Iste provident possimus animi, commodi ipsa vel eum.</P>
+                                <div class="pt-10 pb-5 flex justify-center">
+                                    <img class="border-2 border-gray-200 w-32 h-32 rounded-full object-cover" src="{{ Vite::asset('resources/images/review/human-2.png') }}" alt="Human 1">
+                                </div>
+                                <h3 class="text-gray-200 font-bold uppercase text-center">D Tee</h3>
+                                <div class="w-5/6 mx-auto flex justify-between pt-2">
+                                    <a href="#">
+                                        <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/tiktok.svg') }}" alt="reviewer tiktok">
+                                    </a>
+                                    <a href="#">
+                                        <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/twitter.svg') }}" alt="reviewer tiktok">
+                                    </a>
+                                    <a href="#">
+                                        <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/instagram.svg') }}" alt="reviewer tiktok">
+                                    </a>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="bg-zinc-800 h-[200px] w-[200px] flex items-center justify-center">
-                            <h1>Product 3</h1>
+                        <div class="bg-gray-800 h-[500px] w-[300px] py-8 px-5 swiper-slide group">
+                            <div class="layer"></div>
+                            <div class="relative z-30">
+                                <p class="text-center text-gray-300 group-hover:text-gray-900 font-semibold duration-1000">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur libero porro quis placeat aut adipisci, suscipit dignissimos esse, est eveniet, dolores fuga? Iste provident possimus animi, commodi ipsa vel eum.</P>
+                                <div class="pt-10 pb-5 flex justify-center">
+                                    <img class="border-2 border-gray-200 w-32 h-32 rounded-full object-cover" src="{{ Vite::asset('resources/images/review/human-3.jpg') }}" alt="Human 1">
+                                </div>
+                                <h3 class="text-gray-200 font-bold uppercase text-center">DO Kalos</h3>
+                                <div class="w-5/6 mx-auto flex justify-between pt-2">
+                                    <a href="#">
+                                        <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/tiktok.svg') }}" alt="reviewer tiktok">
+                                    </a>
+                                    <a href="#">
+                                        <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/twitter.svg') }}" alt="reviewer tiktok">
+                                    </a>
+                                    <a href="#">
+                                        <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/instagram.svg') }}" alt="reviewer tiktok">
+                                    </a>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="bg-zinc-800 h-[200px] w-[200px] flex items-center justify-center">
-                            <h1>Product 4</h1>
+                        <div class="bg-gray-800 h-[500px] w-[300px] py-8 px-5 swiper-slide group">
+                            <div class="layer"></div>
+                            <div class="relative z-30">
+                                <p class="text-center text-gray-300 group-hover:text-gray-900 font-semibold duration-1000">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur libero porro quis placeat aut adipisci, suscipit dignissimos esse, est eveniet, dolores fuga? Iste provident possimus animi, commodi ipsa vel eum.</P>
+                                <div class="pt-10 pb-5 flex justify-center">
+                                    <img class="border-2 border-gray-200 w-32 h-32 rounded-full object-cover" src="{{ Vite::asset('resources/images/review/human-2.png') }}" alt="Human 1">
+                                </div>
+                                <h3 class="text-gray-200 font-bold uppercase text-center">Preshy</h3>
+                                <div class="w-5/6 mx-auto flex justify-between pt-2">
+                                    <a href="#">
+                                        <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/tiktok.svg') }}" alt="reviewer tiktok">
+                                    </a>
+                                    <a href="#">
+                                        <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/twitter.svg') }}" alt="reviewer tiktok">
+                                    </a>
+                                    <a href="#">
+                                        <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/instagram.svg') }}" alt="reviewer tiktok">
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>  

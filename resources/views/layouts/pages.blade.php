@@ -61,18 +61,37 @@
                 background: rgba(255, 255, 255, 0.05);
                 pointer-events: none;
             }
-            .swiper {
+            .mySwiper {
                 width: 100%;
                 height: 600px;
             }
 
-            .swiper-slide {
+            .swiper .swiper-slide {
                 filter: blur(8px);
                 background: black;
             }
 
-            .swiper-slide-active {
+            .swiper .swiper-slide-active {
                 filter: blur(0px);
+            }
+
+            .layer {
+                position: absolute;
+                top: calc(100% - 2px);
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(#FEE715, #101820);
+                z-index: 1;
+                transition: 1s;
+            }
+
+            .swiper-container .swiper-slide {
+                -webkit-box-reflect: below 4px -webkit-linear-gradient(transparent 90%, #0009);
+            }
+
+            .swiper-container .swiper-slide:hover .layer {
+                top: 0;
             }
         </style>
 
@@ -156,6 +175,27 @@
                     el: '.swiper-pagination',
                     clickable: true,
                     dynamicBullets: true,
+                },
+            });
+
+            const swiper2 = new Swiper('.swiper-container', {
+                effect: 'coverflow',
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: 3,
+                coverflowEffect: {
+                    rotate: 0,
+                    stetch: 0,
+                    depth: 0,
+                    modifier: 1,
+                    slideshadows: true,
+                },
+
+                loop: true,
+
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
                 },
             });
         </script>
