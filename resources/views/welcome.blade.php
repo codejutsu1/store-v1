@@ -62,7 +62,9 @@
                     </div>
 
                     <div class="bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-20 border-t shadow-xl flex flex-col items-center justify-center rounded-r-2xl">
-                        <div class="bg-[url('../../resources/images/normal/cake.jpg')] w-[200px] h-[200px] bg-cover -mt-28 shadow-lg bg-no-repeat images border"></div>
+                        <div class="bg-[url('../../resources/images/normal/cake.jpg')] w-[200px] h-[200px] bg-cover -mt-28 shadow-lg bg-no-repeat images border">
+                            <img src="{{ Vite::assert }}" alt="">
+                        </div>
                         <div class="w-5/6 mx-auto">
                             <div class="border-b text-center py-10">
                                 <p class="text-2xl uppercase font-bold text-[#101820]">Sliced Cake Buffer</p>
@@ -174,7 +176,7 @@
 
     <section class="bg-[#101820]">
         <div>
-            <div class="py-10 w-5/6 mx-auto ">
+            <div class="py-10 pb-32 w-5/6 mx-auto ">
                 <h1 class="text-center text-4xl uppercase font-semibold text-[#FEE715]">
                     Wetin dem dey yarn about us?
                 </h1>
@@ -273,9 +275,5 @@
             </div>
         </div>
     </section>
-
-    <div class="h-[600px] bg-zinc-800">
-
-    </div>
 
 </x-page-layout>    

@@ -135,6 +135,67 @@
             {{ $slot }}
         </main>
 
+        <footer class="bg-black">
+            <div class="w-5/6 mx-auto py-10 text-gray-100 flex justify-between">
+                <div>
+                    <h1 class="text-6xl">
+                        Logo Here
+                    </h1>
+                </div>
+                
+                <div class="uppercase">
+                    <h1 class="text-2xl">
+                        Quick Links
+                    </h1>
+                    <ul class="text-center space-y-4 py-4">
+                        <li>
+                            <a href="#">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                About us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Categories
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                FAQ
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Privacy Policy
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="uppercase">
+                    <h1 class="text-2xl">
+                        Contact Info
+                    </h1>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                About us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
         <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
         <script>
