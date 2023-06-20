@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Page\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::controller(PageController::class)->group(function() {
+    Route::get('/', 'home')->name('home');
+    Route::get('/about-us', 'aboutUs')->name('about.us');
 });
 
 Route::get('/dashboard', function () {

@@ -170,12 +170,12 @@
                     </h1>
                     <ul class="text-center space-y-4 py-4">
                         <li>
-                            <a href="#" class="block duration-100 hover:text-[#FEE715] hover:font-semibold">
+                            <a href="{{ route('home') }}" class="block duration-100 hover:text-[#FEE715] hover:font-semibold">
                                 Home
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="block duration-100 hover:text-[#FEE715] hover:font-semibold">
+                            <a href="{{ route('about.us') }}" class="block duration-100 hover:text-[#FEE715] hover:font-semibold">
                                 About us
                             </a>
                         </li>
