@@ -101,35 +101,39 @@
     <body class="antialiased">
         <nav class="bg-[#101820] flex justify-around items-center text-gray-200 py-3">
             <div>
-                <h1>Logo Here...</h1>
+                <h1 class="text-[#FEE715]">Logo Here...</h1>
             </div>
             <ul class="flex items-center space-x-20">
                 <li>
-                    <a href="#">
+                    <a href="#" class="duration-300 hover:text-[#FEE715]">
                         Category 1
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="#" class="duration-300 hover:text-[#FEE715]">
                         Category 2
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="#" class="duration-300 hover:text-[#FEE715]">
                         Category 3
                     </a>
                 </li>
             </ul>
             <div class="flex items-center space-x-5">
-                <img src="https://icons8.com/icon/7695/search" alt="Search Icon">
+                <img class="w-5 cursor-pointer" src="{{ Vite::asset('resources/images/nav/search.svg') }}" alt="Search Icon">
 
-                <div>
-                    <h1>Cart (0)</h1>
-                </div>
+                <a href="#" class="bg-[#FEE715] w-10 h-10 flex justify-center items-center images relative">
+                    <img class="w-5" src="{{ Vite::asset('resources/images/nav/shopping-cart.svg') }}" alt="Shopping Cart">
+
+                    <div class="absolute top-0 -right-3 h-5 w-5 bg-[#FEE715] text-[#101820] images overflow-hidden flex justify-center items-center">
+                        <p class="text-sm font-bold">0</p>
+                    </div>
+                </a>
             </div>
         </nav>
-        <div class="py-2">
-            <p class="text-center font-semibold">Important Announcement, all products will have a discount of <span class="font-bold">30%</span>, valid till 30th August.</p>
+        <div class="py-2 w-5/6 mx-auto">
+            <marquee class="text-center font-semibold">Important Announcement, all products will have a discount of <span class="font-bold">30%</span>, valid till 30th August.</marquee>
         </div>
         <main>
             {{ $slot }}
