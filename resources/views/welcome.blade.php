@@ -34,7 +34,9 @@
             <div class="pt-44 relative z-30">
                 <div class="grid grid-cols-2 justify-center gap-y-44 gap-10">
                     <div class="bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-20 border-t shadow-xl flex flex-col items-center justify-center rounded-r-2xl">
-                        <div class="bg-[url('../../resources/images/normal/pizza.jpg')] w-[200px] h-[200px] bg-cover -mt-28 shadow-lg bg-no-repeat images border"></div>
+                        <div class="-mt-28">
+                            <img class="object-cover w-[200px] h-[200px] images border shadow-lg" src="{{ Vite::asset('resources/images/normal/pizza.jpg') }}" alt="Pizza">
+                        </div>
                         <div class="w-5/6 mx-auto">
                             <div class="border-b text-center py-10">
                                 <p class="text-2xl uppercase font-bold text-[#101820]">Pizzas with Leaf Toppings</p>
@@ -48,7 +50,9 @@
                     </div>
 
                     <div class="bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-20 border-t shadow-xl flex flex-col items-center justify-center rounded-r-2xl">
-                        <div class="bg-[url('../../resources/images/normal/fruit-salad.jpg')] w-[200px] h-[200px] bg-cover -mt-28 shadow-lg bg-no-repeat images border"></div>
+                        <div class="-mt-28">
+                            <img class="object-cover w-[200px] h-[200px] images border shadow-lg" src="{{ Vite::asset('resources/images/normal/fruit-salad.jpg') }}" alt="Fruit Salad">
+                        </div>
                         <div class="w-5/6 mx-auto">
                             <div class="border-b text-center py-10">
                                 <p class="text-2xl uppercase font-bold text-[#101820]">Delicious fruit salad</p>
@@ -62,7 +66,8 @@
                     </div>
 
                     <div class="bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-20 border-t shadow-xl flex flex-col items-center justify-center rounded-r-2xl">
-                        <div class="bg-[url('../../resources/images/normal/cake.jpg')] w-[200px] h-[200px] bg-cover -mt-28 shadow-lg bg-no-repeat images border">
+                        <div class="-mt-28">
+                            <img class="object-cover w-[200px] h-[200px] images border shadow-lg" src="{{ Vite::asset('resources/images/normal/cake.jpg') }}" alt="Cake">
                         </div>
                         <div class="w-5/6 mx-auto">
                             <div class="border-b text-center py-10">
@@ -77,7 +82,9 @@
                     </div>
 
                     <div class="bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-20 border-t shadow-xl flex flex-col items-center justify-center rounded-r-2xl">
-                        <div class="bg-[url('../../resources/images/normal/ice-cream.jpg')] w-[200px] h-[200px] bg-cover -mt-28 shadow-lg bg-no-repeat images border"></div>
+                        <div class="-mt-28">
+                            <img class="object-cover w-[200px] h-[200px] images border shadow-lg" src="{{ Vite::asset('resources/images/normal/ice-cream.jpg') }}" alt="Ice cream">
+                        </div>
                         <div class="w-5/6 mx-auto">
                             <div class="border-b text-center py-10">
                                 <p class="text-2xl uppercase font-bold text-[#101820]">Cone Ice cream</p>
