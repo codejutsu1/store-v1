@@ -136,60 +136,91 @@
         </main>
 
         <footer class="bg-black">
-            <div class="w-5/6 mx-auto py-10 text-gray-100 flex justify-between">
-                <div>
-                    <h1 class="text-6xl">
+            <div class="w-5/6 mx-auto py-10 text-gray-100 grid grid-cols-3 gap-10">
+                <div class="flex flex-col justify-between pb-5">
+                    <h1 class="text-6xl text-[#FEE715]">
                         Logo Here
                     </h1>
+                    <div class="w-3/5 flex justify-between pt-2 grayscale">
+                        <a href="#" class="hover:grayscale-0">
+                            <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/tiktok.svg') }}" alt="reviewer tiktok">
+                        </a>
+                        <a href="#" class="hover:grayscale-0">
+                            <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/twitter.svg') }}" alt="reviewer tiktok">
+                        </a>
+                        <a href="#">
+                            <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/instagram.svg') }}" alt="reviewer tiktok">
+                        </a>
+                        <a href="#">
+                            <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/facebook.svg') }}" alt="reviewer tiktok">
+                        </a>
+                        <a href="#">
+                            <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/whatsapp.svg') }}" alt="reviewer whatsapp">
+                        </a>
+                    </div>
                 </div>
                 
                 <div class="uppercase">
-                    <h1 class="text-2xl">
+                    <h1 class="text-2xl font-semibold text-center text-[#FEE715]">
                         Quick Links
                     </h1>
                     <ul class="text-center space-y-4 py-4">
                         <li>
-                            <a href="#">
+                            <a href="#" class="block duration-100 hover:text-[#FEE715] hover:font-semibold">
                                 Home
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#" class="block duration-100 hover:text-[#FEE715] hover:font-semibold">
                                 About us
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#" class="block duration-100 hover:text-[#FEE715] hover:font-semibold">
                                 Categories
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#" class="block duration-100 hover:text-[#FEE715] hover:font-semibold">
                                 FAQ
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#" class="block duration-100 hover:text-[#FEE715] hover:font-semibold">
                                 Privacy Policy
                             </a>
                         </li>
                     </ul>
                 </div>
 
-                <div class="uppercase">
-                    <h1 class="text-2xl">
+                <div>
+                    <h1 class="text-2xl font-semibold uppercase text-[#FEE715]">
                         Contact Info
                     </h1>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                Home
-                            </a>
+                    <ul class="space-y-6 pt-5">
+                        <li class="flex gap-5">
+                            <div class="w-1/5 flex justify-center">
+                                <img class="w-20" src="{{ Vite::asset('resources/images/contact-us/address.svg') }}" alt="Logo location">
+                            </div>
+                            <div class="w-4/5">
+                                No. 9 UpperNorth Street, <br> Off Breakfast Road, <br> Tokyo.
+                            </div>
                         </li>
-                        <li>
-                            <a href="#">
-                                About us
-                            </a>
+                        <li class="flex gap-5">
+                            <div class="w-1/5 flex justify-center">
+                                <img class="w-10 object-cover" src="{{ Vite::asset('resources/images/contact-us/email.svg') }}" alt="Logo location">
+                            </div>
+                            <div class="w-4/5 flex items-center">
+                                <a href="#" class="underline">hello@logo.com</a>
+                            </div>
+                        </li>
+                        <li class="flex gap-5">
+                            <div class="w-1/5 flex justify-center">
+                                <img class="w-10 object-cover" src="{{ Vite::asset('resources/images/contact-us/phone.svg') }}" alt="Logo location">
+                            </div>
+                            <div class="w-4/5 flex items-center">
+                                <a href="#" class="underline">+234 8083 336 9493</a>
+                            </div>
                         </li>
                     </ul>
                 </div>

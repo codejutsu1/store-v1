@@ -63,7 +63,6 @@
 
                     <div class="bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-20 border-t shadow-xl flex flex-col items-center justify-center rounded-r-2xl">
                         <div class="bg-[url('../../resources/images/normal/cake.jpg')] w-[200px] h-[200px] bg-cover -mt-28 shadow-lg bg-no-repeat images border">
-                            <img src="{{ Vite::assert }}" alt="">
                         </div>
                         <div class="w-5/6 mx-auto">
                             <div class="border-b text-center py-10">
