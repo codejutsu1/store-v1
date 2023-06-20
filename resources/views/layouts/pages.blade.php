@@ -141,20 +141,20 @@
                     <h1 class="text-6xl text-[#FEE715]">
                         Logo Here
                     </h1>
-                    <div class="w-3/5 flex justify-between pt-2 grayscale">
-                        <a href="#" class="hover:grayscale-0">
+                    <div class="w-3/5 flex justify-between pt-2">
+                        <a href="#" class="grayscale duration-300 hover:grayscale-0">
                             <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/tiktok.svg') }}" alt="reviewer tiktok">
                         </a>
-                        <a href="#" class="hover:grayscale-0">
+                        <a href="#" class="grayscale duration-300 hover:grayscale-0">
                             <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/twitter.svg') }}" alt="reviewer tiktok">
                         </a>
-                        <a href="#">
+                        <a href="#" class="grayscale duration-300 hover:grayscale-0">
                             <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/instagram.svg') }}" alt="reviewer tiktok">
                         </a>
-                        <a href="#">
+                        <a href="#" class="grayscale duration-300 hover:grayscale-0">
                             <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/facebook.svg') }}" alt="reviewer tiktok">
                         </a>
-                        <a href="#">
+                        <a href="#" class="grayscale duration-300 hover:grayscale-0">
                             <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/whatsapp.svg') }}" alt="reviewer whatsapp">
                         </a>
                     </div>

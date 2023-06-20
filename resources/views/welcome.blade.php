@@ -190,7 +190,7 @@
                                     <img class="border-2 border-gray-200 w-32 h-32 rounded-full object-cover" src="{{ Vite::asset('resources/images/review/human-1.jpg') }}" alt="Human 1">
                                 </div>
                                 <h3 class="text-gray-200 font-bold uppercase text-center">Beauri Goddess</h3>
-                                <div class="w-5/6 mx-auto flex justify-between pt-2">
+                                <div class="w-5/6 mx-auto flex justify-around pt-3 grayscale group-hover:grayscale-0">
                                     <a href="#">
                                         <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/tiktok.svg') }}" alt="reviewer tiktok">
                                     </a>
@@ -212,7 +212,7 @@
                                     <img class="border-2 border-gray-200 w-32 h-32 rounded-full object-cover" src="{{ Vite::asset('resources/images/review/human-2.png') }}" alt="Human 1">
                                 </div>
                                 <h3 class="text-gray-200 font-bold uppercase text-center">D Tee</h3>
-                                <div class="w-5/6 mx-auto flex justify-between pt-2">
+                                <div class="w-5/6 mx-auto flex justify-around pt-3 grayscale group-hover:grayscale-0">
                                     <a href="#">
                                         <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/tiktok.svg') }}" alt="reviewer tiktok">
                                     </a>
@@ -234,7 +234,7 @@
                                     <img class="border-2 border-gray-200 w-32 h-32 rounded-full object-cover" src="{{ Vite::asset('resources/images/review/human-3.jpg') }}" alt="Human 1">
                                 </div>
                                 <h3 class="text-gray-200 font-bold uppercase text-center">DO Kalos</h3>
-                                <div class="w-5/6 mx-auto flex justify-between pt-2">
+                                <div class="w-5/6 mx-auto flex justify-around pt-3 grayscale group-hover:grayscale-0">
                                     <a href="#">
                                         <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/tiktok.svg') }}" alt="reviewer tiktok">
                                     </a>
@@ -256,7 +256,7 @@
                                     <img class="border-2 border-gray-200 w-32 h-32 rounded-full object-cover" src="{{ Vite::asset('resources/images/review/human-2.png') }}" alt="Human 1">
                                 </div>
                                 <h3 class="text-gray-200 font-bold uppercase text-center">Preshy</h3>
-                                <div class="w-5/6 mx-auto flex justify-between pt-2">
+                                <div class="w-5/6 mx-auto flex justify-around pt-3 grayscale group-hover:grayscale-0">
                                     <a href="#">
                                         <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/tiktok.svg') }}" alt="reviewer tiktok">
                                     </a>
