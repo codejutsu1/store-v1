@@ -36,9 +36,41 @@
 
     <x-feed-backs />
 
-    <section>
-        <div>
-            <h1 class="text-center">FAQ</h1>
+    <section id="faq">
+        <div class="w-3/5 mx-auto py-20">
+            <h1 class="text-4xl font-bold mb-10">Frequently asked questions?</h1>
+
+            <div class="flex flex-col space-y-10">
+                <div class="p-4 shadow-lg rounded-md tab-acc relative">
+                    <input type="radio" id="acc1" name="acc" class="hidden">
+                    <label for="acc1" class="label-acc">
+                        <h1 class="text-2xl font-bold text-[#101820]">Who are we?</h1>
+                    </label>
+                    <div class="text-gray-500 text-lg content-acc max-h-0 overflow-hidden">
+                        <p class="py-10">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed ex quisquam, modi amet reiciendis ut molestias! Ipsam, fuga illo. Error quam saepe consectetur facere qui sapiente veritatis assumenda dolorem earum.</p>
+                    </div>
+                </div>
+
+                <div class="p-4 shadow-lg rounded-md tab-acc relative">
+                    <input type="radio" id="acc2" name="acc" class="hidden">
+                    <label for="acc2" class="label-acc">
+                        <h1 class="text-2xl font-bold text-[#101820]">How do we deliver?</h1>
+                    </label>
+                    <div class="text-gray-500 text-lg content-acc max-h-0 overflow-hidden">
+                        <p class="py-10">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed ex quisquam, modi amet reiciendis ut molestias! Ipsam, fuga illo. Error quam saepe consectetur facere qui sapiente veritatis assumenda dolorem earum.</p>
+                    </div>
+                </div>
+
+                <div class="p-4 shadow-lg rounded-md tab-acc relative">
+                    <input type="radio" id="acc3" name="acc" class="hidden">
+                    <label for="acc3" class="label-acc">
+                        <h1 class="text-2xl font-bold text-[#101820]">When is the cookathon coming to pass?</h1>
+                    </label>
+                    <div class="text-gray-500 text-lg content-acc max-h-0 overflow-hidden">
+                        <p class="py-10 font-semibold">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed ex quisquam, modi amet reiciendis ut molestias! Ipsam, fuga illo. Error quam saepe consectetur facere qui sapiente veritatis assumenda dolorem earum.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </x-page-layout>  

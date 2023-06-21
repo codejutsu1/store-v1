@@ -93,6 +93,32 @@
             .swiper-container .swiper-slide:hover .layer {
                 top: 0;
             }
+
+            .label-acc:after {
+                content: '+';
+                position: absolute;
+                right: 20px;
+                top: 0;
+                font-size: 2em;
+                color: rgba(0, 0, 0, 0.1);
+                transition: transform 1s;
+            }
+
+            .tab-acc:hover .label-acc:after{
+                color: #333;
+            }
+
+            .tab-acc input:checked ~ .label-acc:after {
+                transform: rotate(135deg);
+            }
+
+            .content-acc {
+                transition: 1s;
+            }
+
+            .tab-acc input:checked ~ .content-acc {
+                max-height: 100vh;
+            }
         </style>
 
         <!-- Scripts -->
@@ -135,6 +161,7 @@
         <div class="py-2 w-5/6 mx-auto">
             <marquee class="text-center font-semibold">Important Announcement, all products will have a discount of <span class="font-bold">30%</span>, valid till 30th August.</marquee>
         </div>
+
         <main>
             {{ $slot }}
         </main>
@@ -185,7 +212,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="block duration-100 hover:text-[#FEE715] hover:font-semibold">
+                            <a href="{{ route('about.us') . '#faq' }}" class="block duration-100 hover:text-[#FEE715] hover:font-semibold">
                                 FAQ
                             </a>
                         </li>
@@ -234,26 +261,32 @@
         <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
         <script>
-            var typed = new Typed('#typed-strings', {
-                strings: ['My Gee!!!'],
-                typeSpeed: 150,
-                showCursor: false,
-                loop: true,
-                backDelay: 14000,
-            });
+            var $typed_strings = document.getElementById('typed-strings');
+            var $typed_strings2 = document.getElementById('typed-strings2');
 
-            var typed = new Typed('#typed-strings2', {
-                strings: [
-                    'You dey find the best shopping plug' + String.fromCodePoint(0x1F601) + '?',
-                    'Na here we dey' + String.fromCodePoint(0x1F60E) + '.'
-                    ],
-                typeSpeed: 80,
-                startDelay: 3000,
-                loop: true,
-                backDelay: 3000,
-                backspeed: 5000,
-                showCursor: false,
-            });
+            if($typed_strings || $typed_strings2)
+            {
+                var typed = new Typed('#typed-strings', {
+                    strings: ['My Gee!!!'],
+                    typeSpeed: 150,
+                    showCursor: false,
+                    loop: true,
+                    backDelay: 14000,
+                });
+
+                var typed = new Typed('#typed-strings2', {
+                    strings: [
+                        'You dey find the best shopping plug' + String.fromCodePoint(0x1F601) + '?',
+                        'Na here we dey' + String.fromCodePoint(0x1F60E) + '.'
+                        ],
+                    typeSpeed: 80,
+                    startDelay: 3000,
+                    loop: true,
+                    backDelay: 3000,
+                    backspeed: 5000,
+                    showCursor: false,
+                });
+            }
 
             const swiper = new Swiper('.mySwiper', {
                 direction: 'horizontal',
