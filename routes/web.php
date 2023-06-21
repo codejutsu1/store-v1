@@ -19,6 +19,7 @@ use App\Http\Controllers\Page\PageController;
 Route::controller(PageController::class)->group(function() {
     Route::get('/', 'home')->name('home');
     Route::get('/about-us', 'aboutUs')->name('about.us');
+    Route::get('/privacy-policy', 'privacyPolicy')->name('privacy.policy');
 });
 
 Route::get('/dashboard', function () {

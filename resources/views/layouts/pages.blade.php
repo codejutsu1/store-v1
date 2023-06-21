@@ -119,6 +119,16 @@
             .tab-acc input:checked ~ .content-acc {
                 max-height: 100vh;
             }
+            .privacy h2 {
+                font-weight: 700;
+                margin: 10px 0;
+                font-size: 20px;
+            }
+
+            .privacy p {
+                margin: 15px 0;
+                font-weight: 400;
+            }
         </style>
 
         <!-- Scripts -->
@@ -217,7 +227,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="block duration-100 hover:text-[#FEE715] hover:font-semibold">
+                            <a href="{{ route('privacy.policy') }}" class="block duration-100 hover:text-[#FEE715] hover:font-semibold">
                                 Privacy Policy
                             </a>
                         </li>

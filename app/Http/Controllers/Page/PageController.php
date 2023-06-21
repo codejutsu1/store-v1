@@ -16,4 +16,9 @@ class PageController extends Controller
     {
         return view('pages/about-us');
     }
+
+    public function privacyPolicy()
+    {
+        return view('pages/privacy-policy');
+    }
 }
