@@ -21,4 +21,9 @@ class PageController extends Controller
     {
         return view('pages/privacy-policy');
     }
+
+    public function shop()
+    {
+        return view('pages/shop');
+    }
 }

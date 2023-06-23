@@ -20,6 +20,7 @@ Route::controller(PageController::class)->group(function() {
     Route::get('/', 'home')->name('home');
     Route::get('/about-us', 'aboutUs')->name('about.us');
     Route::get('/privacy-policy', 'privacyPolicy')->name('privacy.policy');
+    Route::get('/shop', 'shop')->name('shop');
 });
 
 Route::get('/dashboard', function () {
