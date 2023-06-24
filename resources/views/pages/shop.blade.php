@@ -1,40 +1,10 @@
 <x-page-layout>
-    <section class="bg-[#101820]">
-        <div class="w-1/2 mx-auto py-5">
-            <form action="#" class=" flex justify-between">
-                <div>
-                    <label for="category1" class="flex items-center px-2 category">
-                        <input type="radio" name="catergories" id="category1"  class="w-12 h-6 outline-none bg-gray-200 cursor-pointer rounded-[20px] relative">
-                        <span class="block p-5 category-span font-semibold text-gray-200">
-                            Category 1
-                        </span>
-                    </label>
-                </div>
+    <x-category />
 
-                <div>
-                    <label for="category2" class="flex items-center px-2 category">
-                        <input type="radio" name="catergories" id="category2" class="w-12 h-6 outline-none bg-gray-200 cursor-pointer rounded-[20px] relative">
-                        <span class="block p-5 category-span font-semibold text-gray-200">
-                            Category 2
-                        </span>
-                    </label>
-                </div>
-
-                <div>
-                    <label for="category3" class="flex items-center px-2 category">
-                        <input type="radio" name="catergories" id="category3" class="w-12 h-6 outline-none bg-gray-200 cursor-pointer rounded-[20px] relative">
-                        <span class="block p-5 category-span font-semibold text-gray-200">
-                            Category 3
-                        </span>
-                    </label>
-                </div>
-            </form>
-        </div>
-
-        <section class="relative">
-        <div class="py-10 pb-28 w-5/6 mx-auto circles">
-            <h1 class="relative z-30 text-center text-4xl uppercase font-semibold">
-                Top Products
+    <section class="relative">
+        <div class="pt-5 pb-28 w-5/6 mx-auto circles">
+            <h1 class="relative z-30 text-center text-[#101820] text-4xl uppercase font-semibold">
+                Products
             </h1>
             <div class="pt-44 relative z-30">
                 <div class="grid grid-cols-2 justify-center gap-y-44 gap-10">
@@ -44,8 +14,8 @@
                         </div>
                         <div class="w-5/6 mx-auto">
                             <div class="border-b text-center py-10">
-                                <p class="text-2xl uppercase font-bold text-[#101820]">Pizzas with Leaf Toppings</p>
-                                <span class="text-[#101820] text-2xl font-bold"><sup>&#8358;</sup><span class="text-4xl">10,000</span>.00</span>
+                                <p class="text-[#101820] text-2xl uppercase font-bold ">Pizzas with Leaf Toppings</p>
+                                <span class="text-[#101920] text-2xl font-bold"><sup>&#8358;</sup><span class="text-4xl">10,000</span>.00</span>
                             </div>
                             <div class="py-8 flex justify-between">
                                 <a href="#" class="block px-5 py-2 uppercase font-bold bg-[#FEE715] text-[#101820] rounded-tr-md rounded-bl-md">Buy Now</a>
@@ -108,5 +78,6 @@
             </div>
         </div>
     </section>
-    </section>
+
+    <x-category />
 </x-page-layout>

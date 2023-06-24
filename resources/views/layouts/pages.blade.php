@@ -265,7 +265,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="block duration-100 hover:text-[#FEE715] hover:font-semibold">
+                            <a href="{{ route('shop') }}" class="block duration-100 hover:text-[#FEE715] hover:font-semibold">
                                 Shop
                             </a>
                         </li>
