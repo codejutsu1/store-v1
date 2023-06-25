@@ -87,7 +87,7 @@
             </div>                    
         </div>
         <div class="flex justify-end w-5/6 mx-auto py-4">
-            <a href="#" class="px-6 py-2 bg-[#FEE715] rounded-md font-semibold text-lg uppercase">Proceed to checkout</a>
+            <a href="{{ route('checkout') }}" class="px-6 py-2 bg-[#FEE715] rounded-md font-semibold text-lg uppercase">Proceed to checkout</a>
         </div>  
     </section>
 
