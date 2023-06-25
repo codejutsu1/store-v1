@@ -31,4 +31,9 @@ class PageController extends Controller
     {
         return view('pages/cart');
     }
+
+    public function cartReview()
+    {
+        return view('pages/cart-review');
+    }
 }

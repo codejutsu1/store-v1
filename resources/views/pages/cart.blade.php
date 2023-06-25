@@ -66,7 +66,7 @@
             </div>
 
             <div class="flex justify-end py-10">
-                <button class="py-4 px-6 bg-[#FEE715] text-[#101820] font-semibold text-xl rounded-md shadow-lg">Checkout</button>
+                <a href="{{ route('cart.review') }}" class="py-4 px-6 bg-[#FEE715] text-[#101820] font-semibold text-xl rounded-md shadow-lg">Next</a>
             </div>
         </div>
     </section>
