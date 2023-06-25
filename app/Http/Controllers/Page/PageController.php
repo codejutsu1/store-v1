@@ -36,4 +36,9 @@ class PageController extends Controller
     {
         return view('pages/cart-review');
     }
+
+    public function checkout()
+    {
+        return view('pages/checkout');
+    }
 }

@@ -23,6 +23,7 @@ Route::controller(PageController::class)->group(function() {
     Route::get('/shop', 'shop')->name('shop');
     Route::get('/cart', 'cart')->name('cart');
     Route::get('/cart-review', 'cartReview')->name('cart.review');
+    Route::get('/checkout', 'checkout')->name('checkout');
 });
 
 Route::get('/dashboard', function () {
