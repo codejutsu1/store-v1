@@ -1,8 +1,8 @@
 <x-page-layout>
 
-    <div class="bg-hero-image bg-cover relative h-[600px] overflow-hidden">
+    <div class="bg-[url('{{ Vite::asset('resources/images/bg/first_bg.jpg') }}')] bg-cover relative h-[600px] overflow-hidden">
         <div class="absolute bg-[#101820] opacity-60 inset-0"></div>
-        <div class="relative z-40 w-5/6 mx-auto flex justify-between">
+        <div class="relative z-40 w-5/6 mx-auto md:flex justify-between">
             <div class="pt-20 w-[400px]">
                 <h1 class="text-6xl font-bold text-[#FEE715] uppercase" id="typed-strings"></h1>
                 <p class="text-2xl font-semibold text-gray-100 mt-2" id="typed-strings2"></p>
@@ -32,7 +32,7 @@
                 Top Products
             </h1>
             <div class="pt-44 relative z-30">
-                <div class="grid grid-cols-2 justify-center gap-y-44 gap-10">
+                <div class="md:grid grid-cols-2 justify-center md:gap-y-44 md:gap-10 space-y-36 md:space-y-0">
                     <div class="bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-20 border-t shadow-xl flex flex-col items-center justify-center rounded-r-2xl">
                         <div class="-mt-28">
                             <img class="object-cover w-[200px] h-[200px] images border shadow-lg" src="{{ Vite::asset('resources/images/normal/pizza.jpg') }}" alt="Pizza">
@@ -88,7 +88,7 @@
                         <div class="w-5/6 mx-auto">
                             <div class="border-b text-center py-10">
                                 <p class="text-2xl uppercase font-bold text-[#101820]">Cone Ice cream</p>
-                                <div class="flex justify-between items-center">
+                                <div class="md:flex justify-between items-center">
                                     <span class="text-[#FEE715] text-2xl font-bold"><sup>&#8358;</sup><span class="text-4xl line-through">6,999.00</span></span>
                                     <span class="text-[#101820] text-2xl font-bold"><sup>&#8358;</sup><span class="text-4xl">1,999</span>.00</span>
                                 </div>
@@ -111,8 +111,8 @@
                 Categories
             </h1>
             <div class="pt-10">
-                <div class="flex justify-between gap-x-20">
-                    <div class="shadow-custom w-1/3 h-[400px] relative rounded-md">
+                <div class="md:flex justify-between md:gap-x-20 gap-x-0 space-y-24 md:space-y-0">
+                    <div class="shadow-custom md:w-1/3 w-full h-[400px] relative rounded-md">
                         <div class="bg-gray-800 opacity-90 hover:opacity-100 absolute top-5 left-5 right-5 bottom-5 p-4 overflow-hidden rounded-md shadow-custom-2 duration-500 hover:translate-y-[-50px] group">
                             <div class="relative pt-16 text-center">
                                 <h1 class="text-4xl font-bold text-gray-200 group-hover:text-[#FEE715] duration-1000">Armateur</h1>
@@ -125,7 +125,7 @@
                         </div>
                     </div>
 
-                    <div class="shadow-custom w-1/3 h-[400px] relative rounded-md">
+                    <div class="shadow-custom md:w-1/3 w-full h-[400px] relative rounded-md">
                         <div class="bg-gray-800 opacity-90 hover:opacity-100 absolute top-5 left-5 right-5 bottom-5 p-4 overflow-hidden rounded-md shadow-custom-2 duration-500 hover:translate-y-[-50px] group">
                             <div class="relative pt-16 text-center">
                                 <h1 class="text-4xl font-bold text-gray-200 group-hover:text-[#FEE715] duration-1000">Mid</h1>
@@ -138,7 +138,7 @@
                         </div>
                     </div>
 
-                    <div class="shadow-custom w-1/3 h-[400px] relative rounded-md">
+                    <div class="shadow-custom md:w-1/3 w-full h-[400px] relative rounded-md">
                         <div class="bg-gray-800 opacity-90 hover:opacity-100 absolute top-5 left-5 right-5 bottom-5 p-4 overflow-hidden rounded-md shadow-custom-2 duration-500 hover:translate-y-[-50px] group">
                             <div class="relative pt-16 text-center">
                                 <h1 class="text-4xl font-bold text-gray-200 group-hover:text-[#FEE715] duration-1000">Professional</h1>

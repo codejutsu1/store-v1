@@ -12,9 +12,6 @@ module.exports = {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
-            },
-            backgroundImage: {
-                'hero-image' : "url('/../resources/images/bg/first_bg.jpg')",
             }
         },
     },

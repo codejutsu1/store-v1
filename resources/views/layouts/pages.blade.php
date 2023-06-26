@@ -187,7 +187,7 @@
             <div>
                 <h1 class="text-[#FEE715]">Logo Here...</h1>
             </div>
-            <ul class="flex items-center space-x-20">
+            <ul class="md:flex items-center space-x-20 hidden">
                 <li>
                     <a href="#" class="duration-300 hover:text-[#FEE715]">
                         Category 1
@@ -225,12 +225,12 @@
         </main>
 
         <footer class="bg-black">
-            <div class="w-5/6 mx-auto py-10 text-gray-100 grid grid-cols-3 gap-10">
+            <div class="w-5/6 mx-auto py-10 text-gray-100 md:grid grid-cols-3 md:gap-10 space-y-16">
                 <div class="flex flex-col justify-between pb-5">
-                    <h1 class="text-6xl text-[#FEE715]">
+                    <h1 class="text-6xl text-[#FEE715] text-center md:text-left">
                         Logo Here
                     </h1>
-                    <div class="w-3/5 flex justify-between pt-2">
+                    <div class="md:w-3/5 flex justify-between pt-2">
                         <a href="#" class="grayscale duration-300 hover:grayscale-0">
                             <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/tiktok.svg') }}" alt="reviewer tiktok">
                         </a>
@@ -283,12 +283,12 @@
                 </div>
 
                 <div>
-                    <h1 class="text-2xl font-semibold uppercase text-[#FEE715]">
+                    <h1 class="text-2xl font-semibold uppercase text-[#FEE715] text-center md:text-left">
                         Contact Info
                     </h1>
                     <ul class="space-y-6 pt-5">
                         <li class="flex gap-5">
-                            <div class="w-1/5 flex justify-center">
+                            <div class="w-full md:w-1/5 flex justify-center">
                                 <img class="w-20" src="{{ Vite::asset('resources/images/contact-us/address.svg') }}" alt="Logo location">
                             </div>
                             <div class="w-4/5">
@@ -296,7 +296,7 @@
                             </div>
                         </li>
                         <li class="flex gap-5">
-                            <div class="w-1/5 flex justify-center">
+                            <div class="w-full md:w-1/5 flex justify-center">
                                 <img class="w-10 object-cover" src="{{ Vite::asset('resources/images/contact-us/email.svg') }}" alt="Logo location">
                             </div>
                             <div class="w-4/5 flex items-center">
@@ -304,7 +304,7 @@
                             </div>
                         </li>
                         <li class="flex gap-5">
-                            <div class="w-1/5 flex justify-center">
+                            <div class="w-full md:w-1/5 flex justify-center">
                                 <img class="w-10 object-cover" src="{{ Vite::asset('resources/images/contact-us/phone.svg') }}" alt="Logo location">
                             </div>
                             <div class="w-4/5 flex items-center">
@@ -358,6 +358,18 @@
                     disableOnInteraction: false,
                 },
 
+                breakpoints: {
+                    400: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                    },
+
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 50,
+                    }
+                },
+
                 pagination: {
                     el: '.swiper-pagination',
                     clickable: true,
@@ -383,6 +395,16 @@
                 autoplay: {
                     delay: 5000,
                     disableOnInteraction: false,
+                },
+
+                breakpoints: {
+                    400: {
+                        slidesPerView: 1,
+                    },
+
+                    640: {
+                        slidesPerView: 3,
+                    }
                 },
             });
         </script>
