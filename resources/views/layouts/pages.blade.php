@@ -225,12 +225,12 @@
         </main>
 
         <footer class="bg-black">
-            <div class="w-5/6 mx-auto py-10 text-gray-100 md:grid grid-cols-3 md:gap-10 space-y-16">
-                <div class="flex flex-col justify-between pb-5">
-                    <h1 class="text-6xl text-[#FEE715] text-center md:text-left">
+            <div class="w-11/12 md:w-5/6 mx-auto py-10 text-gray-100 md:grid grid-cols-2 md:gap-5 space-y-16 md:space-y-0">
+                <div class="flex flex-col justify-between pb-5 space-y-5 md:space-y-0">
+                    <h1 class="text-4xl md:text-6xl text-[#FEE715] text-center md:text-left">
                         Logo Here
                     </h1>
-                    <div class="md:w-3/5 flex justify-between pt-2">
+                    <div class="w-3/5 mx-auto md:mx-0 flex justify-between pt-2">
                         <a href="#" class="grayscale duration-300 hover:grayscale-0">
                             <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/tiktok.svg') }}" alt="reviewer tiktok">
                         </a>
@@ -249,69 +249,71 @@
                     </div>
                 </div>
                 
-                <div class="uppercase">
-                    <h1 class="text-2xl font-semibold text-center text-[#FEE715]">
-                        Quick Links
-                    </h1>
-                    <ul class="text-center space-y-4 py-4">
-                        <li>
-                            <a href="{{ route('home') }}" class="block duration-100 hover:text-[#FEE715] hover:font-semibold">
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('about.us') }}" class="block duration-100 hover:text-[#FEE715] hover:font-semibold">
-                                About us
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('shop') }}" class="block duration-100 hover:text-[#FEE715] hover:font-semibold">
-                                Shop
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('about.us') . '#faq' }}" class="block duration-100 hover:text-[#FEE715] hover:font-semibold">
-                                FAQ
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('privacy.policy') }}" class="block duration-100 hover:text-[#FEE715] hover:font-semibold">
-                                Privacy Policy
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                <div class="flex justify-between">
+                    <div class="uppercase">
+                        <h1 class="text-lg md:text-2xl font-semibold text-center text-[#FEE715]">
+                            Quick Links
+                        </h1>
+                        <ul class="text-center space-y-4 py-4 text-sm md:text-base">
+                            <li>
+                                <a href="{{ route('home') }}" class="block duration-100 hover:text-[#FEE715] hover:font-semibold">
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('about.us') }}" class="block duration-100 hover:text-[#FEE715] hover:font-semibold">
+                                    About us
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('shop') }}" class="block duration-100 hover:text-[#FEE715] hover:font-semibold">
+                                    Shop
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('about.us') . '#faq' }}" class="block duration-100 hover:text-[#FEE715] hover:font-semibold">
+                                    FAQ
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('privacy.policy') }}" class="block duration-100 hover:text-[#FEE715] hover:font-semibold">
+                                    Privacy Policy
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
 
-                <div>
-                    <h1 class="text-2xl font-semibold uppercase text-[#FEE715] text-center md:text-left">
-                        Contact Info
-                    </h1>
-                    <ul class="space-y-6 pt-5">
-                        <li class="flex gap-5">
-                            <div class="w-full md:w-1/5 flex justify-center">
-                                <img class="w-20" src="{{ Vite::asset('resources/images/contact-us/address.svg') }}" alt="Logo location">
-                            </div>
-                            <div class="w-4/5">
-                                No. 9 UpperNorth Street, <br> Off Breakfast Road, <br> Tokyo.
-                            </div>
-                        </li>
-                        <li class="flex gap-5">
-                            <div class="w-full md:w-1/5 flex justify-center">
-                                <img class="w-10 object-cover" src="{{ Vite::asset('resources/images/contact-us/email.svg') }}" alt="Logo location">
-                            </div>
-                            <div class="w-4/5 flex items-center">
-                                <a href="#" class="underline">hello@logo.com</a>
-                            </div>
-                        </li>
-                        <li class="flex gap-5">
-                            <div class="w-full md:w-1/5 flex justify-center">
-                                <img class="w-10 object-cover" src="{{ Vite::asset('resources/images/contact-us/phone.svg') }}" alt="Logo location">
-                            </div>
-                            <div class="w-4/5 flex items-center">
-                                <a href="#" class="underline">+234 8083 336 9493</a>
-                            </div>
-                        </li>
-                    </ul>
+                    <div>
+                        <h1 class="text-lg md:text-2xl font-semibold uppercase text-[#FEE715] text-center md:text-left">
+                            Contact Info
+                        </h1>
+                        <ul class="space-y-6 pt-5 text-sm md:text-base">
+                            <li class="flex justify-between gap-2 md:gap-5">
+                                <div class="md:w-1/5 flex justify-center">
+                                    <img class="w-10 md:w-20 object-cover" src="{{ Vite::asset('resources/images/contact-us/address.svg') }}" alt="Logo location">
+                                </div>
+                                <div class="w-full md:w-4/5">
+                                    No. 9 UpperNorth Street, <br> Off Breakfast Road, <br> Tokyo.
+                                </div>
+                            </li>
+                            <li class="flex gap-5">
+                                <div class="md:w-1/5 flex justify-center">
+                                    <img class="w-10 md:w-20 object-cover" src="{{ Vite::asset('resources/images/contact-us/email.svg') }}" alt="Logo location">
+                                </div>
+                                <div class="w-4/5 flex items-center">
+                                    <a href="#" class="underline">hello@logo.com</a>
+                                </div>
+                            </li>
+                            <li class="flex gap-5">
+                                <div class="md:w-1/5 flex justify-center">
+                                    <img class="w-10 md:w-20 object-cover" src="{{ Vite::asset('resources/images/contact-us/phone.svg') }}" alt="Logo location">
+                                </div>
+                                <div class="w-4/5 flex items-center">
+                                    <a href="#" class="underline">+234 8083 336 9493</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </footer>
