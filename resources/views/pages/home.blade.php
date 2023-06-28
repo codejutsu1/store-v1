@@ -9,7 +9,7 @@
             </div>
 
             <div class="h-[400px] w-[400px] bg-[#FEE715] mt-10 pt-10" style="border-radius: 100%;">
-                <img class="" src="{{ Vite::asset('resources/images/normal/young_model.png') }}" alt="A young black model">
+                <img class="object-cover" src="{{ Vite::asset('resources/images/normal/young_model.png') }}" alt="A young black model">
             </div>
 
             <div class="flex items-end">
@@ -35,7 +35,7 @@
                 <div class="md:grid grid-cols-2 justify-center md:gap-y-44 md:gap-10 space-y-36 md:space-y-0">
                     <div class="bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-20 border-t shadow-xl flex flex-col items-center justify-center rounded-r-2xl">
                         <div class="-mt-28">
-                            <img class="object-cover w-[200px] h-[200px] images border shadow-lg" src="{{ Vite::asset('resources/images/normal/pizza.jpg') }}" alt="Pizza">
+                            <img class="object-cover w-[200px] h-[200px] images border shadow-lg" src="{{ Vite::asset('resources/images/normal/pizza.jpg') }}" alt="Pizza" loading="lazy">
                         </div>
                         <div class="w-5/6 mx-auto">
                             <div class="border-b text-center py-10">
@@ -51,7 +51,7 @@
 
                     <div class="bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-20 border-t shadow-xl flex flex-col items-center justify-center rounded-r-2xl">
                         <div class="-mt-28">
-                            <img class="object-cover w-[200px] h-[200px] images border shadow-lg" src="{{ Vite::asset('resources/images/normal/fruit-salad.jpg') }}" alt="Fruit Salad">
+                            <img class="object-cover w-[200px] h-[200px] images border shadow-lg" src="{{ Vite::asset('resources/images/normal/fruit-salad.jpg') }}" alt="Fruit Salad" loading="lazy">
                         </div>
                         <div class="w-5/6 mx-auto">
                             <div class="border-b text-center py-10">
@@ -67,7 +67,7 @@
 
                     <div class="bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-20 border-t shadow-xl flex flex-col items-center justify-center rounded-r-2xl">
                         <div class="-mt-28">
-                            <img class="object-cover w-[200px] h-[200px] images border shadow-lg" src="{{ Vite::asset('resources/images/normal/cake.jpg') }}" alt="Cake">
+                            <img class="object-cover w-[200px] h-[200px] images border shadow-lg" src="{{ Vite::asset('resources/images/normal/cake.jpg') }}" alt="Cake" loading="lazy">
                         </div>
                         <div class="w-5/6 mx-auto">
                             <div class="border-b text-center py-10">
@@ -83,7 +83,7 @@
 
                     <div class="bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-20 border-t shadow-xl flex flex-col items-center justify-center rounded-r-2xl">
                         <div class="-mt-28">
-                            <img class="object-cover w-[200px] h-[200px] images border shadow-lg" src="{{ Vite::asset('resources/images/normal/ice-cream.jpg') }}" alt="Ice cream">
+                            <img class="object-cover w-[200px] h-[200px] images border shadow-lg" src="{{ Vite::asset('resources/images/normal/ice-cream.jpg') }}" alt="Ice cream" loading="lazy">
                         </div>
                         <div class="w-5/6 mx-auto">
                             <div class="border-b text-center py-10">
