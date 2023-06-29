@@ -1,11 +1,11 @@
 <x-page-layout>
 
-    <div class="bg-[url('{{ Vite::asset('resources/images/bg/first_bg.jpg') }}')] bg-cover relative h-[600px] overflow-hidden">
-        <div class="absolute bg-[#101820] opacity-60 inset-0"></div>
-        <div class="relative z-40 w-5/6 mx-auto md:flex justify-between">
-            <div class="pt-20 w-[400px]">
-                <h1 class="text-6xl font-bold text-[#FEE715] uppercase" id="typed-strings"></h1>
-                <p class="text-2xl font-semibold text-gray-100 mt-2" id="typed-strings2"></p>
+    <div class="bg-hero bg-cover relative  md:h-[600px] overflow-hidden">
+        <div class="absolute bg-[#101820] opacity-80 inset-0 h-full w-full"></div>
+        <div class="relative z-40 w-11/12 md:w-5/6 mx-auto md:flex justify-between">
+            <div class="pt-20 w-[400px] h-[150px]">
+                <h1 class="text-3xl md:text-6xl font-bold text-[#FEE715] uppercase" id="typed-strings"></h1>
+                <p class="text-xl md:text-2xl font-semibold text-gray-100 mt-2" id="typed-strings2"></p>
             </div>
 
             <div class="h-[400px] w-[400px] bg-[#FEE715] mt-10 pt-10" style="border-radius: 100%;">
@@ -14,10 +14,10 @@
 
             <div class="flex items-end">
                 <div>
-                    <p class="text-4xl font-bold text-gray-100 uppercase">
+                    <p class="text-2xl md:text-4xl font-bold text-gray-100 uppercase">
                         <span class="text-[#FEE715]">Quick </span>order <br/> Fast <span class="text-[#FEE715]">Delivery</span>
                     </p>
-                    <button class="bg-[#FEE715] px-4 py-2 text-[#101820] font-semibold text-lg mt-4 rounded-md shadow-2xl animate-bounce">
+                    <button class="bg-[#FEE715] px-4 py-2 text-[#101820] font-semibold text-base md:text-lg mt-4 rounded-md shadow-2xl animate-bounce">
                         Order Now! &#128523
                     </button>
                 </div>
@@ -28,7 +28,7 @@
 
     <section class="relative">
         <div class="py-10 pb-28 w-5/6 mx-auto circles">
-            <h1 class="relative z-30 text-center text-4xl uppercase font-semibold">
+            <h1 class="relative z-30 text-center text-2xl md:text-4xl uppercase font-semibold">
                 Top Products
             </h1>
             <div class="pt-44 relative z-30">
@@ -39,8 +39,8 @@
                         </div>
                         <div class="w-5/6 mx-auto">
                             <div class="border-b text-center py-10">
-                                <p class="text-2xl uppercase font-bold text-[#101820]">Pizzas with Leaf Toppings</p>
-                                <span class="text-[#101820] text-2xl font-bold"><sup>&#8358;</sup><span class="text-4xl">10,000</span>.00</span>
+                                <p class="text-xl md:text-2xl uppercase font-bold text-[#101820]">Pizzas with Leaf Toppings</p>
+                                <span class="text-[#101820] text-xl md:text-2xl font-bold"><sup>&#8358;</sup><span class="text-2xl md:text-4xl">10,000</span>.00</span>
                             </div>
                             <div class="py-8 flex justify-between">
                                 <a href="#" class="block px-5 py-2 uppercase font-bold bg-[#FEE715] text-[#101820] rounded-tr-md rounded-bl-md">Buy Now</a>
@@ -55,8 +55,8 @@
                         </div>
                         <div class="w-5/6 mx-auto">
                             <div class="border-b text-center py-10">
-                                <p class="text-2xl uppercase font-bold text-[#101820]">Delicious fruit salad</p>
-                                <span class="text-[#101820] text-2xl font-bold"><sup>&#8358;</sup><span class="text-4xl">14,999</span>.00</span>
+                                <p class="text-xl md:text-2xl uppercase font-bold text-[#101820]">Delicious fruit salad</p>
+                                <span class="text-[#101820] text-xl md:text-2xl font-bold"><sup>&#8358;</sup><span class="text-2xl md:text-4xl">14,999</span>.00</span>
                             </div>
                             <div class="py-8 flex justify-between">
                                 <a href="#" class="block px-5 py-2 uppercase font-bold bg-[#FEE715] text-[#101820] rounded-tr-md rounded-bl-md">Buy Now</a>
@@ -71,8 +71,8 @@
                         </div>
                         <div class="w-5/6 mx-auto">
                             <div class="border-b text-center py-10">
-                                <p class="text-2xl uppercase font-bold text-[#101820]">Sliced Cake Buffer</p>
-                                <span class="text-[#101820] text-2xl font-bold"><sup>&#8358;</sup><span class="text-4xl">4,999</span>.00</span>
+                                <p class="text-xl md:text-2xl uppercase font-bold text-[#101820]">Sliced Cake Buffer</p>
+                                <span class="text-[#101820] text-xl md:text-2xl font-bold"><sup>&#8358;</sup><span class="text-2xl md:text-4xl">4,999</span>.00</span>
                             </div>
                             <div class="py-8 flex justify-between">
                                 <a href="#" class="block px-5 py-2 uppercase font-bold bg-[#FEE715] text-[#101820] rounded-tr-md rounded-bl-md">Buy Now</a>
@@ -87,10 +87,10 @@
                         </div>
                         <div class="w-5/6 mx-auto">
                             <div class="border-b text-center py-10">
-                                <p class="text-2xl uppercase font-bold text-[#101820]">Cone Ice cream</p>
+                                <p class="text-xl md:text-2xl uppercase font-bold text-[#101820]">Cone Ice cream</p>
                                 <div class="md:flex justify-between items-center">
-                                    <span class="text-[#FEE715] text-2xl font-bold"><sup>&#8358;</sup><span class="text-4xl line-through">6,999.00</span></span>
-                                    <span class="text-[#101820] text-2xl font-bold"><sup>&#8358;</sup><span class="text-4xl">1,999</span>.00</span>
+                                    <span class="text-[#FEE715] text-xl md:text-2xl font-bold"><sup>&#8358;</sup><span class="text-2xl md:text-4xl line-through">6,999.00</span></span>
+                                    <span class="text-[#101820] text-xl md:text-2xl font-bold"><sup>&#8358;</sup><span class="text-2xl md:text-4xl">1,999</span>.00</span>
                                 </div>
                             </div>
                             <div class="py-8 flex justify-between">
@@ -107,7 +107,7 @@
     <section class="bg-[#101820] relative">
      
         <div class="py-10 w-5/6 mx-auto relative z-30">
-            <h1 class="text-center text-4xl uppercase font-semibold text-[#FEE721]">
+            <h1 class="text-center text-2xl md:text-4xl uppercase font-semibold text-[#FEE721]">
                 Categories
             </h1>
             <div class="pt-10">
@@ -115,7 +115,7 @@
                     <div class="shadow-custom md:w-1/3 w-full h-[400px] relative rounded-md">
                         <div class="bg-gray-800 opacity-90 hover:opacity-100 absolute top-5 left-5 right-5 bottom-5 p-4 overflow-hidden rounded-md shadow-custom-2 duration-500 hover:translate-y-[-50px] group">
                             <div class="relative pt-16 text-center">
-                                <h1 class="text-4xl font-bold text-gray-200 group-hover:text-[#FEE715] duration-1000">Armateur</h1>
+                                <h1 class="text-2xl md:text-4xl font-bold text-gray-200 group-hover:text-[#FEE715] duration-1000">Armateur</h1>
                                 <h3 class="absolute -top-10 right-4 text-[#FEE715] opacity-20 text-[8rem] font-bold group-hover:opacity-30 duration-1000">01</h3>
                                 <p class="my-8 font-semibold text-gray-400">
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate corrupti nemo voluptatem, consectetur impedit accusantium saepe provident 
@@ -128,7 +128,7 @@
                     <div class="shadow-custom md:w-1/3 w-full h-[400px] relative rounded-md">
                         <div class="bg-gray-800 opacity-90 hover:opacity-100 absolute top-5 left-5 right-5 bottom-5 p-4 overflow-hidden rounded-md shadow-custom-2 duration-500 hover:translate-y-[-50px] group">
                             <div class="relative pt-16 text-center">
-                                <h1 class="text-4xl font-bold text-gray-200 group-hover:text-[#FEE715] duration-1000">Mid</h1>
+                                <h1 class="text-2xl md:text-4xl font-bold text-gray-200 group-hover:text-[#FEE715] duration-1000">Mid</h1>
                                 <h3 class="absolute -top-10 right-4 text-[#FEE715] opacity-20 text-[8rem] font-bold group-hover:opacity-30 duration-1000">02</h3>
                                 <p class="my-8 font-semibold text-gray-400">
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate corrupti nemo voluptatem, consectetur impedit accusantium saepe provident
@@ -141,7 +141,7 @@
                     <div class="shadow-custom md:w-1/3 w-full h-[400px] relative rounded-md">
                         <div class="bg-gray-800 opacity-90 hover:opacity-100 absolute top-5 left-5 right-5 bottom-5 p-4 overflow-hidden rounded-md shadow-custom-2 duration-500 hover:translate-y-[-50px] group">
                             <div class="relative pt-16 text-center">
-                                <h1 class="text-4xl font-bold text-gray-200 group-hover:text-[#FEE715] duration-1000">Professional</h1>
+                                <h1 class="text-2xl md:text-4xl font-bold text-gray-200 group-hover:text-[#FEE715] duration-1000">Professional</h1>
                                 <h3 class="absolute -top-10 right-4 text-[#FEE715] opacity-20 text-[8rem] font-bold group-hover:opacity-30 duration-1000">03</h3>
                                 <p class="my-8 font-semibold text-gray-400">
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate corrupti nemo voluptatem, consectetur impedit accusantium saepe provident 
