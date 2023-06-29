@@ -14,16 +14,16 @@
                                 <div class="pt-10 pb-5 flex justify-center">
                                     <img class="border-2 border-gray-200 w-32 h-32 rounded-full object-cover" src="{{ Vite::asset('resources/images/review/human-1.jpg') }}" alt="Human 1" loading="lazy">
                                 </div>
-                                <h3 class="text-gray-200 font-bold uppercase text-center">Beauri Goddess</h3>
+                                <h1 class="text-gray-200 font-bold uppercase text-center">Beauri Goddess</h1>
                                 <div class="w-5/6 mx-auto flex justify-around pt-3 grayscale group-hover:grayscale-0">
                                     <a href="#">
-                                        <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/tiktok.svg') }}" alt="reviewer tiktok"  loading="lazy">
+                                        <img class="w-6 h-6 object-cover" src="{{ Vite::asset('resources/images/review/tiktok.svg') }}" alt="reviewer tiktok"  loading="lazy">
                                     </a>
                                     <a href="#">
-                                        <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/twitter.svg') }}" alt="reviewer tiktok"  loading="lazy">
+                                        <img class="w-6 h-6 object-cover" src="{{ Vite::asset('resources/images/review/twitter.svg') }}" alt="reviewer tiktok"  loading="lazy">
                                     </a>
                                     <a href="#">
-                                        <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/instagram.svg') }}" alt="reviewer tiktok"  loading="lazy">
+                                        <img class="w-6 h-6 object-cover" src="{{ Vite::asset('resources/images/review/instagram.svg') }}" alt="reviewer tiktok"  loading="lazy">
                                     </a>
                                 </div>
                             </div>
@@ -36,16 +36,16 @@
                                 <div class="pt-10 pb-5 flex justify-center">
                                     <img class="border-2 border-gray-200 w-32 h-32 rounded-full object-cover" src="{{ Vite::asset('resources/images/review/human-2.png') }}" alt="Human 1">
                                 </div>
-                                <h3 class="text-gray-200 font-bold uppercase text-center">D Tee</h3>
+                                <h1 class="text-gray-200 font-bold uppercase text-center">D Tee</h1>
                                 <div class="w-5/6 mx-auto flex justify-around pt-3 grayscale group-hover:grayscale-0">
                                     <a href="#">
-                                        <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/tiktok.svg') }}" alt="reviewer tiktok">
+                                        <img class="w-6 h-6 object-cover" src="{{ Vite::asset('resources/images/review/tiktok.svg') }}" alt="reviewer tiktok">
                                     </a>
                                     <a href="#">
-                                        <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/twitter.svg') }}" alt="reviewer tiktok">
+                                        <img class="w-6 h-6 object-cover" src="{{ Vite::asset('resources/images/review/twitter.svg') }}" alt="reviewer tiktok">
                                     </a>
                                     <a href="#">
-                                        <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/instagram.svg') }}" alt="reviewer tiktok">
+                                        <img class="w-6 h-6 object-cover" src="{{ Vite::asset('resources/images/review/instagram.svg') }}" alt="reviewer tiktok">
                                     </a>
                                 </div>
                             </div>
@@ -58,16 +58,16 @@
                                 <div class="pt-10 pb-5 flex justify-center">
                                     <img class="border-2 border-gray-200 w-32 h-32 rounded-full object-cover" src="{{ Vite::asset('resources/images/review/human-3.jpg') }}" alt="Human 1">
                                 </div>
-                                <h3 class="text-gray-200 font-bold uppercase text-center">DO Kalos</h3>
+                                <h1 class="text-gray-200 font-bold uppercase text-center">DO Kalos</h1>
                                 <div class="w-5/6 mx-auto flex justify-around pt-3 grayscale group-hover:grayscale-0">
                                     <a href="#">
-                                        <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/tiktok.svg') }}" alt="reviewer tiktok">
+                                        <img class="w-6 h-6 object-cover" src="{{ Vite::asset('resources/images/review/tiktok.svg') }}" alt="reviewer tiktok">
                                     </a>
                                     <a href="#">
-                                        <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/twitter.svg') }}" alt="reviewer tiktok">
+                                        <img class="w-6 h-6 object-cover" src="{{ Vite::asset('resources/images/review/twitter.svg') }}" alt="reviewer tiktok">
                                     </a>
                                     <a href="#">
-                                        <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/instagram.svg') }}" alt="reviewer tiktok">
+                                        <img class="w-6 h-6 object-cover" src="{{ Vite::asset('resources/images/review/instagram.svg') }}" alt="reviewer tiktok">
                                     </a>
                                 </div>
                             </div>
@@ -80,16 +80,16 @@
                                 <div class="pt-10 pb-5 flex justify-center">
                                     <img class="border-2 border-gray-200 w-32 h-32 rounded-full object-cover" src="{{ Vite::asset('resources/images/review/human-2.png') }}" alt="Human 1" loading="lazy">
                                 </div>
-                                <h3 class="text-gray-200 font-bold uppercase text-center">Preshy</h3>
+                                <h1 class="text-gray-200 font-bold uppercase text-center">Preshy</h1>
                                 <div class="w-5/6 mx-auto flex justify-around pt-3 grayscale group-hover:grayscale-0">
                                     <a href="#">
-                                        <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/tiktok.svg') }}" alt="reviewer tiktok" loading="lazy">
+                                        <img class="w-6 h-6 object-cover" src="{{ Vite::asset('resources/images/review/tiktok.svg') }}" alt="reviewer tiktok" loading="lazy">
                                     </a>
                                     <a href="#">
-                                        <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/twitter.svg') }}" alt="reviewer tiktok" loading="lazy">
+                                        <img class="w-6 h-6 object-cover" src="{{ Vite::asset('resources/images/review/twitter.svg') }}" alt="reviewer tiktok" loading="lazy">
                                     </a>
                                     <a href="#">
-                                        <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/instagram.svg') }}" alt="reviewer tiktok" loading="lazy">
+                                        <img class="w-6 h-6 object-cover" src="{{ Vite::asset('resources/images/review/instagram.svg') }}" alt="reviewer tiktok" loading="lazy">
                                     </a>
                                 </div>
                             </div>

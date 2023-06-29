@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="A simple shopping website">
 
         <title>Under construction / E-commerce Website</title>
 
@@ -35,10 +36,10 @@
                 </li>
             </ul>
             <div class="flex items-center space-x-5">
-                <img class="w-5 cursor-pointer" src="{{ Vite::asset('resources/images/nav/search.svg') }}" alt="Search Icon">
+                <img class="w-5 h-5 cursor-pointer" src="{{ Vite::asset('resources/images/nav/search.svg') }}" alt="Search Icon">
 
                 <a href="#" class="bg-[#FEE715] w-10 h-10 flex justify-center items-center images relative">
-                    <img class="w-5" src="{{ Vite::asset('resources/images/nav/shopping-cart.svg') }}" alt="Shopping Cart">
+                    <img class="w-5 h-5" src="{{ Vite::asset('resources/images/nav/shopping-cart.svg') }}" alt="Shopping Cart">
 
                     <div class="absolute top-0 -right-3 h-5 w-5 bg-[#FEE715] text-[#101820] images overflow-hidden flex justify-center items-center">
                         <p class="text-sm font-bold">0</p>
@@ -62,19 +63,19 @@
                     </h1>
                     <div class="w-3/5 mx-auto md:mx-0 flex justify-between pt-2">
                         <a href="#" class="grayscale duration-300 hover:grayscale-0">
-                            <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/tiktok.svg') }}" alt="reviewer tiktok">
+                            <img class="w-6 h-6 object-cover" src="{{ Vite::asset('resources/images/review/tiktok.svg') }}" alt="reviewer tiktok">
                         </a>
                         <a href="#" class="grayscale duration-300 hover:grayscale-0">
-                            <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/twitter.svg') }}" alt="reviewer tiktok">
+                            <img class="w-6 h-6 object-cover" src="{{ Vite::asset('resources/images/review/twitter.svg') }}" alt="reviewer tiktok">
                         </a>
                         <a href="#" class="grayscale duration-300 hover:grayscale-0">
-                            <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/instagram.svg') }}" alt="reviewer tiktok">
+                            <img class="w-6 h-6 object-cover" src="{{ Vite::asset('resources/images/review/instagram.svg') }}" alt="reviewer tiktok">
                         </a>
                         <a href="#" class="grayscale duration-300 hover:grayscale-0">
-                            <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/facebook.svg') }}" alt="reviewer tiktok">
+                            <img class="w-6 h-6 object-cover" src="{{ Vite::asset('resources/images/review/facebook.svg') }}" alt="reviewer tiktok">
                         </a>
                         <a href="#" class="grayscale duration-300 hover:grayscale-0">
-                            <img class="w-6 object-cover" src="{{ Vite::asset('resources/images/review/whatsapp.svg') }}" alt="reviewer whatsapp">
+                            <img class="w-6 h-6 object-cover" src="{{ Vite::asset('resources/images/review/whatsapp.svg') }}" alt="reviewer whatsapp">
                         </a>
                     </div>
                 </div>
@@ -120,7 +121,7 @@
                         <ul class="space-y-6 pt-5 text-sm md:text-base">
                             <li class="flex justify-between gap-2 md:gap-5">
                                 <div class="md:w-1/5 flex justify-center">
-                                    <img class="w-10 md:w-20 object-cover" src="{{ Vite::asset('resources/images/contact-us/address.svg') }}" alt="Logo location">
+                                    <img class="w-10 h-10 md:w-20 object-cover" src="{{ Vite::asset('resources/images/contact-us/address.svg') }}" alt="Logo location">
                                 </div>
                                 <div class="w-full md:w-4/5">
                                     No. 9 UpperNorth Street, <br> Off Breakfast Road, <br> Tokyo.
@@ -128,7 +129,7 @@
                             </li>
                             <li class="flex gap-5">
                                 <div class="md:w-1/5 flex justify-center">
-                                    <img class="w-10 md:w-20 object-cover" src="{{ Vite::asset('resources/images/contact-us/email.svg') }}" alt="Logo location">
+                                    <img class="w-10 h-10 md:w-20 object-cover" src="{{ Vite::asset('resources/images/contact-us/email.svg') }}" alt="Logo location">
                                 </div>
                                 <div class="w-4/5 flex items-center">
                                     <a href="#" class="underline">hello@logo.com</a>
@@ -136,7 +137,7 @@
                             </li>
                             <li class="flex gap-5">
                                 <div class="md:w-1/5 flex justify-center">
-                                    <img class="w-10 md:w-20 object-cover" src="{{ Vite::asset('resources/images/contact-us/phone.svg') }}" alt="Logo location">
+                                    <img class="w-10 h-10 md:w-20 object-cover" src="{{ Vite::asset('resources/images/contact-us/phone.svg') }}" alt="Logo location">
                                 </div>
                                 <div class="w-4/5 flex items-center">
                                     <a href="#" class="underline">+234 8083 336 9493</a>

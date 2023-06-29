@@ -8,8 +8,8 @@
                 <p class="text-xl md:text-2xl font-semibold text-gray-100 mt-2" id="typed-strings2"></p>
             </div>
 
-            <div class="h-[400px] w-[400px] bg-[#FEE715] mt-10 pt-10" style="border-radius: 100%;">
-                <img class="object-cover" src="{{ Vite::asset('resources/images/normal/young_model.png') }}" alt="A young black model">
+            <div class="h-[400px] w-[400px] bg-[#FEE715] mt-10 pt-44" style="border-radius: 100%;">
+                <img class="object-contain w-96 h-96" src="{{ Vite::asset('resources/images/normal/young_model.png') }}" alt="A young black model">
             </div>
 
             <div class="flex items-end">
@@ -116,7 +116,7 @@
                         <div class="bg-gray-800 opacity-90 hover:opacity-100 absolute top-5 left-5 right-5 bottom-5 p-4 overflow-hidden rounded-md shadow-custom-2 duration-500 hover:translate-y-[-50px] group">
                             <div class="relative pt-16 text-center">
                                 <h1 class="text-2xl md:text-4xl font-bold text-gray-200 group-hover:text-[#FEE715] duration-1000">Armateur</h1>
-                                <h3 class="absolute -top-10 right-4 text-[#FEE715] opacity-20 text-[8rem] font-bold group-hover:opacity-30 duration-1000">01</h3>
+                                <h2 class="absolute -top-10 right-4 text-[#FEE715] opacity-20 text-[8rem] font-bold group-hover:opacity-30 duration-1000">01</h2>
                                 <p class="my-8 font-semibold text-gray-400">
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate corrupti nemo voluptatem, consectetur impedit accusantium saepe provident 
                                 </p>
@@ -129,7 +129,7 @@
                         <div class="bg-gray-800 opacity-90 hover:opacity-100 absolute top-5 left-5 right-5 bottom-5 p-4 overflow-hidden rounded-md shadow-custom-2 duration-500 hover:translate-y-[-50px] group">
                             <div class="relative pt-16 text-center">
                                 <h1 class="text-2xl md:text-4xl font-bold text-gray-200 group-hover:text-[#FEE715] duration-1000">Mid</h1>
-                                <h3 class="absolute -top-10 right-4 text-[#FEE715] opacity-20 text-[8rem] font-bold group-hover:opacity-30 duration-1000">02</h3>
+                                <h2 class="absolute -top-10 right-4 text-[#FEE715] opacity-20 text-[8rem] font-bold group-hover:opacity-30 duration-1000">02</h2>
                                 <p class="my-8 font-semibold text-gray-400">
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate corrupti nemo voluptatem, consectetur impedit accusantium saepe provident
                                 </p>
@@ -142,7 +142,7 @@
                         <div class="bg-gray-800 opacity-90 hover:opacity-100 absolute top-5 left-5 right-5 bottom-5 p-4 overflow-hidden rounded-md shadow-custom-2 duration-500 hover:translate-y-[-50px] group">
                             <div class="relative pt-16 text-center">
                                 <h1 class="text-2xl md:text-4xl font-bold text-gray-200 group-hover:text-[#FEE715] duration-1000">Professional</h1>
-                                <h3 class="absolute -top-10 right-4 text-[#FEE715] opacity-20 text-[8rem] font-bold group-hover:opacity-30 duration-1000">03</h3>
+                                <h2 class="absolute -top-10 right-4 text-[#FEE715] opacity-20 text-[8rem] font-bold group-hover:opacity-30 duration-1000">03</h2>
                                 <p class="my-8 font-semibold text-gray-400">
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate corrupti nemo voluptatem, consectetur impedit accusantium saepe provident 
                                 </p>
