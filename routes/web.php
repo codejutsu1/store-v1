@@ -28,7 +28,11 @@ Route::controller(PageController::class)->group(function() {
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->name('dashboard');
+
+Route::get('/dashboard-mini', function () {
+    return view('user.dashboard');
+})->name('dashboard.mini');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
