@@ -27,18 +27,18 @@ Route::controller(PageController::class)->group(function() {
     Route::get('/checkout', 'checkout')->name('checkout');
 });
 
-Route::group(['prefix' => 'dashboard'], function() {
-    Route::controller(UserPage::class)->group(function() {
-        Route::get('/faq', 'faq')->name('faq');
+Route::group(['middleware' => 'auth'], function() {
+    Route::get('/dashboard', [UserPage::class, 'dashboard'])->name('dashboard');
+    
+    Route::group(['prefix' => 'dashboard'], function() {
+        Route::controller(UserPage::class)->group(function() {
+            Route::get('/faq', 'faq')->name('faq');
+        });
     });
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
-
 Route::get('/dashboard-mini', function () {
-    return view('user.dashboard');
+    return view('dashboard');
 })->name('dashboard.mini');
 
 Route::middleware('auth')->group(function () {

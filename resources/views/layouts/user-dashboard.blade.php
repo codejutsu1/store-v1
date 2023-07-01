@@ -14,6 +14,7 @@
         <script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @livewireStyles
     </head>
     <body>
         <div 
@@ -43,7 +44,7 @@
                         x-data="{ linkHover: false }"
                         @mouseover = "linkHover = true"
                         @mouseleave = "linkHover = false"
-                        href="./index.html"
+                        href="{{ route('dashboard') }}"
                         class="flex items-center text-gray-400 px-6 py-3 cursor-pointer hover:bg-black hover:bg-opacity-30 transition duration-200"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 transition duration-200" :class="linkHover ? 'text-gray-100' : ''" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -263,8 +264,8 @@
 
             <div class="lg:pl-64 w-full flex flex-col">
                 <!-- start::Topbar -->
-                <div class="flex flex-col">
-                    <header class="flex justify-between items-center h-16 py-4 px-6 bg-white">
+                <div class="flex flex-col relative">
+                    <header class="flex justify-between items-center h-16 py-4 px-6 bg-gray-800 fixed inset-0 border-b">
                         <!-- start::Mobile menu button -->
                         <div class="flex items-center">
                             <button 
@@ -291,7 +292,7 @@
                                 >
                                     <img 
                                         src="{{ Vite::asset('resources/images/review/human-2.png') }}"
-                                        class="w-10 h-10 border border-2 border-black rounded-full"
+                                        class="w-10 h-10 border-2 border-gray-200 bg-white rounded-full"
                                     >
                                 </div>
                                 <!-- end::Main link -->
@@ -380,6 +381,8 @@
                 <!-- end::Topbar -->
 
                 {{ $slot }}
-
+                
+        @livewire('livewire-ui-modal')
+        @livewireScripts
     </body>
 </html>
