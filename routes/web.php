@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Page\PageController;
+use App\Http\Controllers\User\PageController as UserPage;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,12 @@ Route::controller(PageController::class)->group(function() {
     Route::get('/cart', 'cart')->name('cart');
     Route::get('/cart-review', 'cartReview')->name('cart.review');
     Route::get('/checkout', 'checkout')->name('checkout');
+});
+
+Route::group(['prefix' => 'dashboard'], function() {
+    Route::controller(UserPage::class)->group(function() {
+        Route::get('/faq', 'faq')->name('faq');
+    });
 });
 
 Route::get('/dashboard', function () {
