@@ -5,16 +5,17 @@
         <title>Your Dashboard</title>
 
         <!-- Styles -->
-        <link rel="stylesheet" href="./css/tailwind.css">
+        @livewireStyles
 
         <style>[x-cloak] { display: none !important; }</style>
 
         <!-- Scripts -->
-        <script defer src="https://unpkg.com/@alpinejs/collapse@3.4.2/dist/cdn.min.js"></script>
-        <script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-        @livewireStyles
+
+        <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.1/dist/cdn.min.js"></script>
+        
+        @vite(['resources/css/app.css']) 
     </head>
     <body>
         <div 
@@ -381,7 +382,7 @@
                 <!-- end::Topbar -->
 
                 {{ $slot }}
-                
+
         @livewire('livewire-ui-modal')
         @livewireScripts
     </body>

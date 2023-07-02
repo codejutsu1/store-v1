@@ -2,7 +2,7 @@
 
 namespace App\Http\Livewire\User\Faq;
 
-use Livewire\Component;
+use LivewireUI\Modal\ModalComponent;
 
 class CreateFaq extends ModalComponent
 {
