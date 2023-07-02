@@ -18,6 +18,7 @@
         @vite(['resources/css/app.css']) 
     </head>
     <body>
+        @include('sweetalert::alert')
         <div 
             x-data="{ menuOpen: false }" 
             class="flex min-h-screen custom-scrollbar"
