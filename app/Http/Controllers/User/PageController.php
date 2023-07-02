@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Http\Controllers\Controller;
+use App\Models\Faq;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class PageController extends Controller
 {
@@ -14,6 +15,6 @@ class PageController extends Controller
 
     public function faq()
     {
-        return view('user.faq');
+        return view('user.faq', ['faqs' => Faq::displayAllFaq()]);
     }
 }
