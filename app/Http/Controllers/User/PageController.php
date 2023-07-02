@@ -15,6 +15,11 @@ class PageController extends Controller
 
     public function faq()
     {
-        return view('user.faq', ['faqs' => Faq::displayAllFaq()]);
+        return view('user.faq', ['faqs' => Faq::getAllFaq()]);
+    }
+
+    public function settings()
+    {
+        return view('user.settings');
     }
 }

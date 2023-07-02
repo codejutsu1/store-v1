@@ -33,6 +33,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::group(['prefix' => 'dashboard'], function() {
         Route::controller(UserPage::class)->group(function() {
             Route::get('/faq', 'faq')->name('faq');
+            Route::get('/settings', 'settings')->name('settings');
         });
     });
 });

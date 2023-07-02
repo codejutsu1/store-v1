@@ -11,7 +11,7 @@ class Faq extends Model
 
     protected $fillable = ['question', 'answer', 'priority_id'];
 
-    public static function displayAllFaq()
+    public static function getAllFaq()
     {
         return (new static)->get();
     }
