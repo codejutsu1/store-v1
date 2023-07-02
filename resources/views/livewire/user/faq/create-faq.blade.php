@@ -12,7 +12,7 @@
                     @error('answer') <span class="text-red-600 font-bold">{{ $message }}</span> @enderror
                 </div>
                 <div class="flex justify-end mt-5">
-                    <input type="submit" class="bg-purple-600 text-gray-200 px-5 py-2 rounded-md text-lg font-semibold" value="Create" />
+                    <input type="submit" class="bg-purple-600 cursor-pointer text-gray-200 px-5 py-2 rounded-md text-lg font-semibold" value="Create" />
                 </div>
             </form>
         </div>

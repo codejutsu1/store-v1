@@ -10,14 +10,14 @@
                         <div class="w-2/5">
                             <span class="text-lg font-semibold">{{ $loop->iteration }}.</span>
                             <span class="text-lg font-semibold inline">Question</span>
-                            <p class=" rounded-md border border-gray-200 px-2 pt-2 pb-20 mt-5 shadow-md ">{{ $faq->question }}</p>
+                            <p class=" rounded-md border bg-gray-900 border-gray-200 px-2 pt-2 pb-20 mt-5 shadow-md ">{{ $faq->question }}</p>
                         </div>
                         <div class="w-2/5">
-                            <span class="block text-lg font-semibold">Answers</span>
-                            <p class=" rounded-md border border-gray-200 px-2 pt-2 pb-20 mt-5 shadow-md ">{{ $faq->answer }}</p>
+                            <span class="block text-lg font-semibold">Answer</span>
+                            <p class=" rounded-md border bg-gray-900 border-gray-200 px-2 pt-2 pb-20 mt-5 shadow-md ">{{ $faq->answer }}</p>
                         </div>
                         <div class="space-y-10 ">
-                            <button onclick="Livewire.emit('openModal', 'user.faq.faq-edit')" class="block">
+                            <button onclick="Livewire.emit('openModal', 'user.faq.faq-edit', {{ json_encode(['faq' => $faq->id]) }})" class="block">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-yellow-500 hover:text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
                                 </svg>  
