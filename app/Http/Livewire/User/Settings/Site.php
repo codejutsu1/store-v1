@@ -7,6 +7,10 @@ use Livewire\Component;
 
 class Site extends Component
 {
+    public $settings;
+    public $site_name;
+    public $site_email;
+
     protected $rules = [
         'site_name' => 'required|string',
         'site_email' => 'required|string',
@@ -46,8 +50,6 @@ class Site extends Component
         Setting::findOrFail($this->settings->id)->update($validated_data);
 
         toast('Successfully Updated', 'success');
-
-        // alert()->success('Successful', 'You have created a new FAQ');
 
         return redirect()->route('settings');
     }
