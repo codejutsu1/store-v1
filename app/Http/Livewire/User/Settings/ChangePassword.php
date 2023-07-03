@@ -2,7 +2,9 @@
 
 namespace App\Http\Livewire\User\Settings;
 
+use App\Models\User;
 use Livewire\Component;
+use Illuminate\Support\Facades\Hash;
 
 class ChangePassword extends Component
 {
@@ -19,6 +21,19 @@ class ChangePassword extends Component
     public function updated($propertyName)
     {
         $this->validateOnly($propertyName);
+    }
+
+    public function submit()
+    {
+        $this->validate();
+        
+        User::findOrFail(auth()->user()->id)->update([
+            'password' => Hash::make($this->new_password)
+        ]);
+
+        toast('Password Successfully Updated', 'success');
+
+        return redirect()->route('settings');
     }
 
 

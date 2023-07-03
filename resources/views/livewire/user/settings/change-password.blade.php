@@ -2,7 +2,7 @@
             <h1 class="font-semibold text-2xl border-b pb-4">Change Password? - Sure, just below here.</h1>
 
             <div>
-                <form class="py-10 space-y-10">
+                <form wire:submit.prevent="submit" class="py-10 space-y-10">
                     <div class="flex flex-col">
                         <label for="input_show_hide_password">Current Password</label>
                         <div 
@@ -65,7 +65,7 @@
                     </div>
                     
                     <div class="flex justify-end">
-                        <input type="submit" class="bg-purple-800 text-white px-4 py-2 rounded-md font-semibold" value="Update Password" />
+                        <input type="submit" class="cursor-pointer bg-purple-800 text-white px-4 py-2 rounded-md font-semibold" value="Update Password" />
                     </div>
                 </form>
             </div>
