@@ -4,7 +4,7 @@
             <h1 class="font-semibold text-2xl border-b pb-4">Review - Upload what people say about you.</h1>
 
             <div class="py-10 overflow-auto">
-                <table class="w-full bg-gray-900 rounded-md overflow-hidden space-y-10">
+                <table class="w-full bg-gray-900 rounded-md overflow-hidden">
                     <tr class="font-semibold border-b">
                         <th class="p-4">S/N</th>
                         <th class="p-4">Name</th>
@@ -27,6 +27,11 @@
                         <td class="px-4 py-2">Edit, Delete</td>
                     </tr>
                 </table>
+            </div>
+            <div class="flex justify-end">
+                <button type="button" onclick="Livewire.emit('openModal', 'user.review.create-review')" class="bg-purple-800 text-white px-4 py-2 rounded-md font-semibold">
+                    Create New Review
+                </button>
             </div>
         </div>
     </div>
