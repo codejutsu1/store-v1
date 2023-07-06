@@ -20,10 +20,10 @@
                                 <td class="w-1/3 p-4 text-center">{{ $review->comment }}</td>
                                 <td class="px-4 py-2 text-sm text-purple-600 text-center font-semibold">
                                     @if($review->twiiter || $review->facebook || $review->instagram || $review->tiktok)
-                                        <a class="underline" href="{{ $review->twitter }}">Twitter</a>
-                                        <a class="underline" href="{{ $review->facebook }}">Facebook</a>
-                                        <a class="underline" href="{{ $review->instagram }}">Instagram</a>
-                                        <a class="underline" href="{{ $review->tiktok }}">Tiktok</a>
+                                        <a class="underline" href="{{ $review->twitter ?? '#' }}">Twitter</a>
+                                        <a class="underline" href="{{ $review->facebook ?? '#' }}">Facebook</a>
+                                        <a class="underline" href="{{ $review->instagram ?? '#' }}">Instagram</a>
+                                        <a class="underline" href="{{ $review->tiktok ?? '#' }}">Tiktok</a>
                                     @else
                                         <p class="text-center text-gray-200">No socials yet ...</p>
                                     @endif

@@ -35,8 +35,6 @@ class FaqEdit extends ModalComponent
 
         toast('Successfully Updated', 'success');
 
-        // alert()->success('Successful', 'You have created a new FAQ');
-
         return redirect()->route('faq');
     }
     
