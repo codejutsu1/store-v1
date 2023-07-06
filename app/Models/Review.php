@@ -8,4 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class Review extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'comment',
+        'facebook',
+        'tiktok',
+        'instagram',
+        'twitter'
+    ];
+
+    public static function getAllReview()
+    {
+        return (new static)->get();
+    }
 }

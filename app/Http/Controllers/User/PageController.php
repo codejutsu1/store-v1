@@ -5,6 +5,7 @@ namespace App\Http\Controllers\User;
 use App\Models\Faq;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Review;
 
 class PageController extends Controller
 {
@@ -20,7 +21,7 @@ class PageController extends Controller
 
     public function review()
     {
-        return view('user.website.review');
+        return view('user.website.review', ['reviews' => Review::getAllReview()]);
     }
 
     public function settings()
