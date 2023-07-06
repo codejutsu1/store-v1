@@ -33,8 +33,9 @@ Route::group(['middleware' => 'auth'], function() {
     Route::group(['prefix' => 'dashboard'], function() {
         Route::controller(UserPage::class)->group(function() {
             Route::get('/faq', 'faq')->name('faq');
-            Route::get('/settings', 'settings')->name('settings');
+            Route::get('/feed', 'feed')->name('feed');
             Route::get('/review', 'review')->name('review');
+            Route::get('/settings', 'settings')->name('settings');
         });
     });
 });

@@ -235,11 +235,11 @@
                             <!-- start::Submenu link -->
                             <li class="pl-10 pr-6 py-2 cursor-pointer hover:bg-black hover:bg-opacity-30 transition duration-200 hover:text-gray-100">
                                 <a 
-                                    href="./pages/ui/alerts.html"
+                                    href="{{ route('feed') }}"
                                     class="flex items-center"
                                 >
                                     <span class="mr-2 text-sm">&bull;</span>
-                                    <span class="overflow-ellipsis">Feeds</span>
+                                    <span class="overflow-ellipsis">Feed</span>
                                 </a>
                             </li>
                             <!-- end::Submenu link -->
