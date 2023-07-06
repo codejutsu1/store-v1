@@ -9,16 +9,6 @@ class DeleteReview extends ModalComponent
 {
     public Review $review;
 
-    public function mount()
-    {
-        $title = 'Delete Review!';
-
-        $text = "Are you sure you want to delete?";
-
-        confirmDelete($title, $text);
-        
-    }
-
     public function destroy()
     {
         $this->review->delete();
