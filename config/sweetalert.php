@@ -118,7 +118,7 @@ return [
     |  The default background is '#fff'.
     */
 
-    'background' => env('SWEET_ALERT_BACKGROUND', '#111827'),
+    'background' => env('SWEET_ALERT_BACKGROUND', '#336633'),
 
     /*
     |--------------------------------------------------------------------------
