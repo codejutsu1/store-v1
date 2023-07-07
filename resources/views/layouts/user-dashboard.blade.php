@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Your Dashboard</title>
-
+        <link href="https://unpkg.com/filepond@^4/dist/filepond.css" rel="stylesheet" />
         <!-- Styles -->
         @livewireStyles
 
@@ -17,7 +17,7 @@
         
         @vite(['resources/css/app.css']) 
     </head>
-    <body>
+    <body >
         @include('sweetalert::alert')
         <div 
             x-data="{ menuOpen: false }" 
@@ -403,6 +403,7 @@
 
                 {{ $slot }}
 
+        <script src="https://unpkg.com/filepond@^4/dist/filepond.js"></script>
         @livewire('livewire-ui-modal')
         @livewireScripts
     </body>
