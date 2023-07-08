@@ -15,7 +15,6 @@
                                     }
                                 });" 
                             type="file" 
-                            wire:model.debounce.500ms="image" 
                             class="file_field block w-full bg-gray-800 focus:ring-0 focus:border-gray-200 rounded-md" /
                     >
                     @error('image')<span class="text-red-600 font-bold">{{ $message }}</span> @enderror

@@ -6,6 +6,6 @@ class UploadFile
 {
     public function store($file)
     {
-        
+      
     }    
 }

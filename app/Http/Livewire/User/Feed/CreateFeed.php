@@ -9,9 +9,13 @@ class CreateFeed extends ModalComponent
     public $image;
     public $description;
 
-    public function submit()
+    protected $rules = [
+        'description' => 'required',
+    ];
+
+    public function updated($propertyName)
     {
-        dd($this->image);
+        $this->validateOnly($propertyName);
     }
     
     public function render()
