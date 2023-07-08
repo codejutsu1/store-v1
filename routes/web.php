@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Page\PageController;
+use App\Http\Controllers\User\UploadController;
 use App\Http\Controllers\User\PageController as UserPage;
 
 /*
@@ -38,6 +39,8 @@ Route::group(['middleware' => 'auth'], function() {
             Route::get('/settings', 'settings')->name('settings');
         });
     });
+
+    Route::post('/upload', [UploadController::class, 'store']);
 });
 
 Route::get('/dashboard-mini', function () {

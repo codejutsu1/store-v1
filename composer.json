@@ -12,6 +12,7 @@
         "laravel/tinker": "^2.7",
         "livewire/livewire": "^2.12",
         "realrashid/sweet-alert": "^7.0",
+        "spatie/image": "^2.2",
         "wire-elements/modal": "^1.0"
     },
     "require-dev": {

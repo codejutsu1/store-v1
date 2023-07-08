@@ -8,6 +8,11 @@ class CreateFeed extends ModalComponent
 {
     public $image;
     public $description;
+
+    public function submit()
+    {
+        dd($this->image);
+    }
     
     public function render()
     {
