@@ -4,14 +4,17 @@
         <meta charset="utf-8">
         <title>Your Dashboard</title>
         <link href="https://unpkg.com/filepond@^4/dist/filepond.css" rel="stylesheet" />
+        <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet">
+
+        <style>[x-cloak] { display: none !important; }</style>
+
         <!-- Styles -->
         @livewireStyles
         @fcStyles
 
-        <style>[x-cloak] { display: none !important; }</style>
-
         <!-- Scripts -->
 
+        <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
         <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
         <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
         <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.1/dist/cdn.min.js"></script>
@@ -408,5 +411,11 @@
         @livewire('livewire-ui-modal')
         @livewireScripts
         @fcScripts
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                FilePond.registerPlugin(FilePondPluginImagePreview);
+            });
+        </script>
     </body>
 </html>

@@ -28,8 +28,6 @@ class CreateFaq extends ModalComponent
 
         toast('You have created a new FAQ', 'success');
 
-        // alert()->success('Successful', 'You have created a new FAQ');
-
         return redirect()->route('faq');
     }
 

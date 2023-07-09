@@ -26,7 +26,11 @@ class CreateFeed extends ModalComponent
     {
         $this->validate();
 
-        $uploadFile->store($this->image, $this->description, 'feed');
+        $uploadFile->store($this->image, $this->description, 'feed');   
+
+        toast('You have created a new Feed', 'success');
+
+        return redirect()->route('feed');
     }
     
     public function render()
