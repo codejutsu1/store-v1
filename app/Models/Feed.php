@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Feed extends Model
+class Feed extends Model implements HasMedia
 {
     use HasFactory;
 
@@ -14,4 +14,9 @@ class Feed extends Model
         'description',
         'show'
     ];
+
+    protected static function getAllFeed()
+    {
+        return (new static)->get();
+    }
 }

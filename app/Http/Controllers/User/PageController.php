@@ -3,9 +3,10 @@
 namespace App\Http\Controllers\User;
 
 use App\Models\Faq;
+use App\Models\Feed;
+use App\Models\Review;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Review;
 
 class PageController extends Controller
 {
@@ -21,7 +22,7 @@ class PageController extends Controller
 
     public function feed()
     {
-        return view('user.website.feed');
+        return view('user.website.feed',  ['feeds' => Feed::getAllFeed()]);
     }
 
     public function review()

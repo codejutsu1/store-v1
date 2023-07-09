@@ -10,7 +10,6 @@
 
         <!-- Styles -->
         @livewireStyles
-        @fcStyles
 
         <!-- Scripts -->
 

@@ -4,7 +4,7 @@
             <h1 class="font-semibold text-2xl border-b pb-4">FAQ - Customize your questions and answers</h1>
 
             <div class="py-10 overflow-x-auto">
-                @if($faqs)
+                @if(empty($faqs))
                 <table class="w-full bg-gray-900 rounded-md overflow-hidden">
                     <tr class="font-semibold border-b">
                         <th class="p-4">S/N</th>
@@ -34,6 +34,8 @@
                         </tr>
                     @endforeach
                 </table>
+                @else   
+                    <p class="text-xl font-semibold text-center mt-2">No Faq yet...</p>
                 @endif
             </div>
             <div class="flex justify-end">

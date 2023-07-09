@@ -8,13 +8,13 @@ class UploadFile
     {
         $extension = $image->getClientOriginalExtension();
 
-        $model = "\\App\\Models\\".ucfirst($model);
+        $model_class = "\\App\\Models\\".ucfirst($model);
 
         $image_name = time() . '_' . $model . '.' . $extension;
 
-        $image->storeAs($model, $image_name);
+        $image->storeAs('public/'.$model, $image_name);
 
-        $model::create([
+        $model_class::create([
             'image' => $image_name,
             'description' => $description
         ]);
