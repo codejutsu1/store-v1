@@ -6,6 +6,7 @@
         <link href="https://unpkg.com/filepond@^4/dist/filepond.css" rel="stylesheet" />
         <!-- Styles -->
         @livewireStyles
+        @fcStyles
 
         <style>[x-cloak] { display: none !important; }</style>
 
@@ -406,5 +407,6 @@
         <script src="https://unpkg.com/filepond@^4/dist/filepond.js"></script>
         @livewire('livewire-ui-modal')
         @livewireScripts
+        @fcScripts
     </body>
 </html>
