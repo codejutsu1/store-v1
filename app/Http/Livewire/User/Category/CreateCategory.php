@@ -6,6 +6,8 @@ use LivewireUI\Modal\ModalComponent;
 
 class CreateCategory extends ModalComponent
 {
+    public $name;
+    
     public function render()
     {
         return view('livewire.user.category.create-category');

@@ -42,6 +42,7 @@ Route::group(['middleware' => 'auth'], function() {
 
         Route::controller(ShopController::class)->group(function() {
             Route::get('/category', 'category')->name('category');
+            Route::get('/product', 'product')->name('product');
         });
     });
 });
