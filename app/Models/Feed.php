@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Feed extends Model implements HasMedia
+class Feed extends Model
 {
     use HasFactory;
 
