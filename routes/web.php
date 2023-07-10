@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Page\PageController;
+use App\Http\Controllers\User\ShopController;
 use App\Http\Controllers\User\UploadController;
 use App\Http\Controllers\User\PageController as UserPage;
 
@@ -38,9 +39,11 @@ Route::group(['middleware' => 'auth'], function() {
             Route::get('/review', 'review')->name('review');
             Route::get('/settings', 'settings')->name('settings');
         });
-    });
 
-    Route::post('/upload', [UploadController::class, 'store']);
+        Route::controller(ShopController::class)->group(function() {
+            Route::get('/category', 'category')->name('category');
+        });
+    });
 });
 
 Route::get('/dashboard-mini', function () {
