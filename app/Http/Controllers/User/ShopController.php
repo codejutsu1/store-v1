@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Http\Controllers\Controller;
+use App\Models\Category;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class ShopController extends Controller
 {
     public function category()
     {
-        return view('user.shop.category');
+        return view('user.shop.category', ['categories' => Category::getAllCategories()]);
     }
 
     public function product()

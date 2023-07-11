@@ -7,6 +7,10 @@
                     <input type="text" wire:model.debounce.500ms="name" class="block w-full bg-gray-800 focus:ring-0 focus:border-gray-200 rounded-md" placeholder="Name" autofocus>
                     @error('name') <span class="text-red-600 font-bold">{{ $message }}</span> @enderror
                 </div>
+                <div>
+                    <textarea wire:model.debounce.500ms="description" class="block w-full bg-gray-800 focus:ring-0 focus:border-gray-200 rounded-md mt-10" rows="10" placeholder="Short Essay on this category...."></textarea>
+                    @error('description') <span class="text-red-600 font-bold">{{ $message }}</span> @enderror
+                </div>
                 <div class="flex justify-end mt-5">
                     <input type="submit" class="bg-purple-600 cursor-pointer text-gray-200 px-5 py-2 rounded-md text-lg font-semibold" value="Create" />
                 </div>
