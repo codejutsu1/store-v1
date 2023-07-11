@@ -1,0 +1,1 @@
+<x-delete title="Category and all products relating to it" />
