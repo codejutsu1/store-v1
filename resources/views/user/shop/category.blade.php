@@ -19,7 +19,7 @@
                             <td class="p-4 text-center">{{ $category->description }}</td>
                             <td class="p-4 text-center">
                                 <div class="flex space-x-4">
-                                    <button onclick="Livewire.emit('openModal', 'user.faq.faq-edit', {{ json_encode(['category' => $category->id]) }})">
+                                    <button onclick="Livewire.emit('openModal', 'user.category.edit-category', {{ json_encode(['category' => $category->id]) }})">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500 hover:text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
                                         </svg>  
