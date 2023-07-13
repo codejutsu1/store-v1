@@ -21,7 +21,7 @@
                             </td>
                             <td class="p-4 text-center w-2/5">{{ $product->name }}</td>
                             <td class="p-4 text-center w-2/5">{{ $product->productImage->description }}</td>
-                            <td class="p-4 text-center w-2/5">{{ $product->original_price }}</td>
+                            <td class="p-4 text-center w-2/5">@money($product->original_price)</td>
                             <td class="p-4 text-center">
                                 <div class="flex space-x-4">
                                     <button onclick="Livewire.emit('openModal', 'user.category.edit-category', {{ json_encode(['category' => $product->id]) }})">
