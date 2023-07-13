@@ -45,7 +45,7 @@ class CreateProduct extends ModalComponent
 
         $image_name = $uploadFile->store($this->image, $this->description, 'product', false);
 
-        $product->productImages()->create([
+        $product->productImage()->create([
             'product_id' => $product->id,
             'image' => $image_name,
             'description' => $this->description,

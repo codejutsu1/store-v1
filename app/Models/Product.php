@@ -17,18 +17,18 @@ class Product extends Model
         'status'
     ];
 
-    public function categories()
+    public function category()
     {
         return $this->belongsTo(Category::class);
     }
 
-    public function productImages()
+    public function productImage()
     {
-        return $this->hasMany(ProductImage::class);
+        return $this->hasOne(ProductImage::class);
     }
 
     public static function getAllProducts()
     {
-        return (new static)::with(['productImages'])->get();  
+        return (new static)::with(['productImage'])->get();  
     }
 }
