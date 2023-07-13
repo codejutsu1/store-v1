@@ -4,7 +4,7 @@
         <h1 class="font-semibold text-2xl border-b pb-4">Categories - Create new categories for your store.</h1>
 
         <div class="py-10 overflow-x-auto">
-                @if($categories)
+            @if($categories)
                 <table class="w-full bg-gray-900 rounded-md overflow-hidden">
                     <tr class="font-semibold border-b">
                         <th class="p-4">S/N</th>

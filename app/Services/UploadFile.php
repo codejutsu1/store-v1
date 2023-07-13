@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Services;
+use File;
 
 class UploadFile
 {
-    public function store($image, $description, $model, $migrate=TRUE)
+    public function store($image, $description=NULL, $model, $migrate=TRUE)
     {
         $extension = $image->getClientOriginalExtension();
 
@@ -22,6 +23,16 @@ class UploadFile
             ]);
         }else {
             return $image_name;
+        }
+
+        return '';
+    }
+
+    public function remove($image, $model)
+    {
+        $image_path = public_path('storage/'.$model .'/'.$image);
+        if(File::exists($image_path)) {
+            File::delete($image_path);
         }
 
         return '';
