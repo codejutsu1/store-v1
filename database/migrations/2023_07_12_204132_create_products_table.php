@@ -21,7 +21,7 @@ return new class extends Migration
                 ->onDelete('cascade');
             $table->string('name');
             $table->bigInteger('original_price');
-            $table->bigInteger('selling_price');
+            $table->bigInteger('discount_price')->nullable();
             $table->boolean('status')->default(0);
             $table->timestamps();
         });

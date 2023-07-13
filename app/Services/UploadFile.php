@@ -4,7 +4,7 @@ namespace App\Services;
 
 class UploadFile
 {
-    public function store($image, $description, $model)
+    public function store($image, $description, $model, $migrate=TRUE)
     {
         $extension = $image->getClientOriginalExtension();
 
@@ -14,10 +14,15 @@ class UploadFile
 
         $image->storeAs('public/'.$model, $image_name);
 
-        $model_class::create([
-            'image' => $image_name,
-            'description' => $description
-        ]);
+        if($migrate)
+        {
+            $model_class::create([
+                'image' => $image_name,
+                'description' => $description
+            ]);
+        }else {
+            return $image_name;
+        }
 
         return '';
     }
