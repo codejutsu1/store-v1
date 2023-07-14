@@ -34,15 +34,15 @@ Route::group(['middleware' => 'auth'], function() {
     
     Route::group(['prefix' => 'dashboard'], function() {
         Route::controller(UserPage::class)->group(function() {
-            Route::get('/faq', 'faq')->name('faq');
-            Route::get('/feed', 'feed')->name('feed');
-            Route::get('/review', 'review')->name('review');
-            Route::get('/settings', 'settings')->name('settings');
+            Route::get('faq', 'faq')->name('faq');
+            Route::get('feed', 'feed')->name('feed');
+            Route::get('review', 'review')->name('review');
+            Route::get('settings', 'settings')->name('settings');
         });
 
         Route::controller(ShopController::class)->group(function() {
-            Route::get('/category', 'category')->name('category');
-            Route::get('/product', 'product')->name('product');
+            Route::get('category', 'category')->name('category');
+            Route::get('product', 'product')->name('product');
         });
     });
 });
