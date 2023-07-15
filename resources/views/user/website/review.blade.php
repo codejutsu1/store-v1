@@ -18,7 +18,11 @@
                             <tr class="border-b">
                                 <td class="px-4 py-2 text-center">{{ $loop->iteration }}</td>
                                 <td class="p-4 flex justify-center items-center">
-                                    <img class="w-20 h-20 object-fit" src="../../storage/review/{{ $review->image }}" alt="{{ $review->name }}" />
+                                    @if($review->image)
+                                        <img class="w-20 h-20 object-fit" src="../../storage/review/{{ $review->image }}" alt="{{ $review->name }}" />
+                                    @else
+                                        <img class="w-20 h-20 object-fit" src="{{ Vite::asset('resources/images/review/human-2.png') }}" alt="{{ $review->name }}">
+                                    @endif
                                 </td>
                                 <td class="px-4 py-2 text-center">{{ $review->name }}</td>
                                 <td class="w-1/3 p-4 text-center">{{ $review->comment }}</td>
