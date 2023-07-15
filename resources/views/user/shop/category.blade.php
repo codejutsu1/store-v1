@@ -8,8 +8,8 @@
                 <table class="w-full bg-gray-900 rounded-md overflow-hidden">
                     <tr class="font-semibold border-b">
                         <th class="p-4">S/N</th>
-                        <th class="p-4">Question</th>
-                        <th class="p-4">Answer</th>
+                        <th class="p-4">Name</th>
+                        <th class="p-4">Description</th>
                         <th class="p-4">Actions</th>
                     </tr>
                     @foreach($categories as $category)

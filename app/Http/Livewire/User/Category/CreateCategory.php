@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\User\Category;
 
 use App\Models\Category;
+use Illuminate\Support\Str;
 use LivewireUI\Modal\ModalComponent;
 
 class CreateCategory extends ModalComponent
@@ -24,6 +25,10 @@ class CreateCategory extends ModalComponent
     {
         $validated_data = $this->validate();
 
+        $slug = Str::slug($this->name);
+
+        $validated_data['slug'] = $slug;
+        
         Category::create($validated_data);
 
         toast('You have created a new category', 'success');

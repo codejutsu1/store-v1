@@ -7,14 +7,15 @@
 
                 <div class="pt-10 swiper-container overflow-hidden">
                     <div class="flex justify-between space-x-5 md:space-x-10 swiper-wrapper">
+                        @foreach($reviews as $review)
                         <div class="bg-gray-800 h-[500px] w-[300px] md:w-[300px] py-8 px-5 swiper-slide group">
                             <div class="layer"></div>
                             <div class="relative z-30">
-                                <p class="text-center text-gray-300 group-hover:text-gray-900 font-semibold duration-1000">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur libero porro quis placeat aut adipisci, suscipit dignissimos esse, est eveniet, dolores fuga? Iste provident possimus animi, commodi ipsa vel eum.</P>
+                                <p class="text-center text-gray-300 group-hover:text-gray-900 font-semibold duration-1000">{{ $review->comment }}</P>
                                 <div class="pt-10 pb-5 flex justify-center">
                                     <img class="border-2 border-gray-200 w-32 h-32 rounded-full object-cover" src="{{ Vite::asset('resources/images/review/human-1.jpg') }}" alt="Human 1" loading="lazy">
                                 </div>
-                                <h1 class="text-gray-200 font-bold uppercase text-center">Beauri Goddess</h1>
+                                <h1 class="text-gray-200 font-bold uppercase text-center">{{ $review->name }}</h1>
                                 <div class="w-5/6 mx-auto flex justify-around pt-3 grayscale group-hover:grayscale-0">
                                     <a href="#">
                                         <img class="w-6 h-6 object-cover" src="{{ Vite::asset('resources/images/review/tiktok.svg') }}" alt="reviewer tiktok"  loading="lazy">
@@ -28,72 +29,7 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="bg-gray-800 h-[500px] w-[300px] md:w-[300px] py-8 px-5 swiper-slide group">
-                            <div class="layer"></div>
-                            <div class="relative z-30">
-                                <p class="text-center text-gray-300 group-hover:text-gray-900 font-semibold duration-1000">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur libero porro quis placeat aut adipisci, suscipit dignissimos esse, est eveniet, dolores fuga? Iste provident possimus animi, commodi ipsa vel eum.</P>
-                                <div class="pt-10 pb-5 flex justify-center">
-                                    <img class="border-2 border-gray-200 w-32 h-32 rounded-full object-cover" src="{{ Vite::asset('resources/images/review/human-2.png') }}" alt="Human 1">
-                                </div>
-                                <h1 class="text-gray-200 font-bold uppercase text-center">D Tee</h1>
-                                <div class="w-5/6 mx-auto flex justify-around pt-3 grayscale group-hover:grayscale-0">
-                                    <a href="#">
-                                        <img class="w-6 h-6 object-cover" src="{{ Vite::asset('resources/images/review/tiktok.svg') }}" alt="reviewer tiktok">
-                                    </a>
-                                    <a href="#">
-                                        <img class="w-6 h-6 object-cover" src="{{ Vite::asset('resources/images/review/twitter.svg') }}" alt="reviewer tiktok">
-                                    </a>
-                                    <a href="#">
-                                        <img class="w-6 h-6 object-cover" src="{{ Vite::asset('resources/images/review/instagram.svg') }}" alt="reviewer tiktok">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="bg-gray-800 h-[500px] w-[300px] md:w-[300px] py-8 px-5 swiper-slide group">
-                            <div class="layer"></div>
-                            <div class="relative z-30">
-                                <p class="text-center text-gray-300 group-hover:text-gray-900 font-semibold duration-1000">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur libero porro quis placeat aut adipisci, suscipit dignissimos esse, est eveniet, dolores fuga? Iste provident possimus animi, commodi ipsa vel eum.</P>
-                                <div class="pt-10 pb-5 flex justify-center">
-                                    <img class="border-2 border-gray-200 w-32 h-32 rounded-full object-cover" src="{{ Vite::asset('resources/images/review/human-3.jpg') }}" alt="Human 1">
-                                </div>
-                                <h1 class="text-gray-200 font-bold uppercase text-center">DO Kalos</h1>
-                                <div class="w-5/6 mx-auto flex justify-around pt-3 grayscale group-hover:grayscale-0">
-                                    <a href="#">
-                                        <img class="w-6 h-6 object-cover" src="{{ Vite::asset('resources/images/review/tiktok.svg') }}" alt="reviewer tiktok">
-                                    </a>
-                                    <a href="#">
-                                        <img class="w-6 h-6 object-cover" src="{{ Vite::asset('resources/images/review/twitter.svg') }}" alt="reviewer tiktok">
-                                    </a>
-                                    <a href="#">
-                                        <img class="w-6 h-6 object-cover" src="{{ Vite::asset('resources/images/review/instagram.svg') }}" alt="reviewer tiktok">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="bg-gray-800 h-[500px] w-[300px] md:w-[300px] py-8 px-5 swiper-slide group">
-                            <div class="layer"></div>
-                            <div class="relative z-30">
-                                <p class="text-center text-gray-300 group-hover:text-gray-900 font-semibold duration-1000">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur libero porro quis placeat aut adipisci, suscipit dignissimos esse, est eveniet, dolores fuga? Iste provident possimus animi, commodi ipsa vel eum.</P>
-                                <div class="pt-10 pb-5 flex justify-center">
-                                    <img class="border-2 border-gray-200 w-32 h-32 rounded-full object-cover" src="{{ Vite::asset('resources/images/review/human-2.png') }}" alt="Human 1" loading="lazy">
-                                </div>
-                                <h1 class="text-gray-200 font-bold uppercase text-center">Preshy</h1>
-                                <div class="w-5/6 mx-auto flex justify-around pt-3 grayscale group-hover:grayscale-0">
-                                    <a href="#">
-                                        <img class="w-6 h-6 object-cover" src="{{ Vite::asset('resources/images/review/tiktok.svg') }}" alt="reviewer tiktok" loading="lazy">
-                                    </a>
-                                    <a href="#">
-                                        <img class="w-6 h-6 object-cover" src="{{ Vite::asset('resources/images/review/twitter.svg') }}" alt="reviewer tiktok" loading="lazy">
-                                    </a>
-                                    <a href="#">
-                                        <img class="w-6 h-6 object-cover" src="{{ Vite::asset('resources/images/review/instagram.svg') }}" alt="reviewer tiktok" loading="lazy">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>  
             </div>

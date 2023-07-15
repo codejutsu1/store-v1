@@ -2,10 +2,12 @@
 
 namespace App\View\Components;
 
+use App\Models\Review;
 use Illuminate\View\Component;
 
 class FeedBacks extends Component
 {
+    public $reviews;
     /**
      * Create a new component instance.
      *
@@ -13,7 +15,7 @@ class FeedBacks extends Component
      */
     public function __construct()
     {
-        //
+        $this->reviews = Review::getAllReview();
     }
 
     /**

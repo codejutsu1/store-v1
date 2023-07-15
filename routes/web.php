@@ -23,7 +23,7 @@ Route::controller(PageController::class)->group(function() {
     Route::get('/', 'home')->name('home');
     Route::get('/about-us', 'aboutUs')->name('about.us');
     Route::get('/privacy-policy', 'privacyPolicy')->name('privacy.policy');
-    Route::get('/shop', 'shop')->name('shop');
+    Route::get('/shop/{category}', 'shop')->name('shop');
     Route::get('/cart', 'cart')->name('cart');
     Route::get('/cart-review', 'cartReview')->name('cart.review');
     Route::get('/checkout', 'checkout')->name('checkout');

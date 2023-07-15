@@ -25,6 +25,6 @@ class FeedSlider extends Component
      */
     public function render()
     {
-        return view('components.page.feed-slider', compact($this->feeds));
+        return view('components.page.feed-slider');
     }
 }
