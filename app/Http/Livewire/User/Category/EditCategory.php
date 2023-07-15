@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\User\Category;
 
 use App\Models\Category;
+use Illuminate\Support\Str;
 use LivewireUI\Modal\ModalComponent;
 
 class EditCategory extends ModalComponent
@@ -28,6 +29,10 @@ class EditCategory extends ModalComponent
     public function submit()
     {
         $validated_data = $this->validate();
+
+        $slug = Str::slug($this->name);
+
+        $validated_data['slug'] = $slug;
 
         Category::findOrFail($this->category->id)->update($validated_data);
 
