@@ -3,14 +3,17 @@
 namespace App\Http\Livewire\User\Review;
 
 use App\Models\Review;
+use App\Services\UploadFile;
 use LivewireUI\Modal\ModalComponent;
 
 class DeleteReview extends ModalComponent
 {
     public Review $review;
 
-    public function destroy()
+    public function destroy(UploadFile $uploadFile)
     {
+        $uploadFile->remove($this->review->image, 'review');
+
         $this->review->delete();
 
         toast('You have successfully deleted the review.', 'success');
