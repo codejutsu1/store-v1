@@ -30,11 +30,11 @@ class CreateReview extends ModalComponent
 
     public function submit(UploadFile $uploadFile)
     {
-        $validated_data = $this->validate(); 
+        $validated_data = $this->validate();
+        
+        if($this->image) $validated_data['image'] = $uploadFile->store($this->image, $this->name, 'review', false); 
 
         Review::create($validated_data);
-
-        $uploadFile->store($validated_data['image'], $this->name, 'review', false); 
 
         toast('You have created a new Review', 'success');
 

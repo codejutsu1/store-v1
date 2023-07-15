@@ -8,6 +8,7 @@
                     <table class="w-full bg-gray-900 rounded-md overflow-hidden">
                         <tr class="font-semibold border-b">
                             <th class="p-4">S/N</th>
+                            <th class="p-4">Image</th>
                             <th class="p-4">Name</th>
                             <th class="p-4">Comments</th>
                             <th class="p-4">Links</th>
@@ -16,6 +17,9 @@
                         @foreach($reviews as $review)
                             <tr class="border-b">
                                 <td class="px-4 py-2 text-center">{{ $loop->iteration }}</td>
+                                <td class="p-4 flex justify-center items-center">
+                                    <img class="w-20 h-20 object-fit" src="../../storage/review/{{ $review->image }}" alt="{{ $review->name }}" />
+                                </td>
                                 <td class="px-4 py-2 text-center">{{ $review->name }}</td>
                                 <td class="w-1/3 p-4 text-center">{{ $review->comment }}</td>
                                 <td class="px-4 py-2 text-sm text-purple-600 text-center font-semibold">

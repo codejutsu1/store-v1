@@ -12,7 +12,7 @@
                     @error('comment') <span class="text-red-600 font-bold">{{ $message }}</span> @enderror
                 </div>
                 <div>
-                    <x-file-pond wire:model="image" class="mt-10" />
+                    <x-file-pond wire:model="image" />
                     @error('image')<span class="text-red-600 font-bold">{{ $message }}</span> @enderror
                 </div>
                 <div>
