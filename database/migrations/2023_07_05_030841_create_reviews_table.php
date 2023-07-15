@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('comment');
+            $table->string('image')->nullable();
             $table->string('facebook')->nullable();
             $table->string('tiktok')->nullable();
             $table->string('instagram')->nullable();

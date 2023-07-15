@@ -3,15 +3,20 @@
 namespace App\Http\Livewire\User\Review;
 
 use App\Models\Review;
+use App\Services\UploadFile;
+use Livewire\WithFileUploads;
 use LivewireUI\Modal\ModalComponent;
 
 class CreateReview extends ModalComponent
 {
-    public $name, $comment, $facebook, $twitter, $tiktok, $instagram;
+    use WithFileUploads;
+    
+    public $name, $comment, $image, $facebook, $twitter, $tiktok, $instagram;
 
     protected $rules = [
         'name' => 'required|string',
         'comment' => 'required|string',
+        'image' => 'nullable|mimes:jpeg,jpg,png|max:100',
         'facebook' => 'nullable',
         'tiktok' => 'nullable',
         'twitter' => 'nullable',
@@ -23,11 +28,13 @@ class CreateReview extends ModalComponent
         $this->validateOnly($propertyName);
     }
 
-    public function submit()
+    public function submit(UploadFile $uploadFile)
     {
-        $validated_data = $this->validate();
+        $validated_data = $this->validate(); 
 
         Review::create($validated_data);
+
+        $uploadFile->store($validated_data['image'], $this->name, 'review', false); 
 
         toast('You have created a new Review', 'success');
 
