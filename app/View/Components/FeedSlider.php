@@ -2,10 +2,12 @@
 
 namespace App\View\Components;
 
+use App\Models\Feed;
 use Illuminate\View\Component;
 
 class FeedSlider extends Component
 {
+   public $feeds;
     /**
      * Create a new component instance.
      *
@@ -13,7 +15,7 @@ class FeedSlider extends Component
      */
     public function __construct()
     {
-        //
+        $this->feeds = Feed::getAllFeed();
     }
 
     /**
@@ -23,6 +25,6 @@ class FeedSlider extends Component
      */
     public function render()
     {
-        return view('components.page.feed-slider');
+        return view('components.page.feed-slider', compact($this->feeds));
     }
 }
