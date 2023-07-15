@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Page;
 
-use App\Http\Controllers\Controller;
+use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class PageController extends Controller
 {
@@ -22,9 +24,11 @@ class PageController extends Controller
         return view('pages/privacy-policy');
     }
 
-    public function shop()
+    public function shop(Category $category)
     {
-        return view('pages/shop');
+        $products = Product::with('productImage')->where('category_id', $category->id)->get();
+
+        return view('pages/shop', compact('products'));
     }
 
     public function cart()

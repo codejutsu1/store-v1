@@ -2,10 +2,12 @@
 
 namespace App\View\Components;
 
+use App\Models\Category;
 use Illuminate\View\Component;
 
 class PageLayout extends Component
 {
+    public $categories;
     /**
      * Create a new component instance.
      *
@@ -13,7 +15,7 @@ class PageLayout extends Component
      */
     public function __construct()
     {
-        //
+        $this->categories = Category::select(['id', 'name', 'slug'])->get();
     }
 
     /**

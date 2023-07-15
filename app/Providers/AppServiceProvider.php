@@ -29,5 +29,11 @@ class AppServiceProvider extends ServiceProvider
                 echo '&#8358;' . number_format($amount, 2) ;
             ?>";
         });
+
+        Blade::directive('product_price', function($amount){
+            return "<?php
+                echo number_format($amount, 2) ;
+            ?>";
+        });
     }
 }

@@ -19,21 +19,15 @@
                 <h1 class="text-[#FEE715]">Logo Here...</h1>
             </div>
             <ul class="md:flex items-center space-x-20 hidden">
-                <li>
-                    <a href="#" class="duration-300 hover:text-[#FEE715]">
-                        Category 1
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="duration-300 hover:text-[#FEE715]">
-                        Category 2
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="duration-300 hover:text-[#FEE715]">
-                        Category 3
-                    </a>
-                </li>
+                @forelse($categories as $category)
+                    <li>
+                        <a href="{{ route('shop', $category->slug) }}" class="duration-300 hover:text-[#FEE715]">
+                            {{ $category->name }}
+                        </a>
+                    </li>
+                @empty
+                    <p>No Categories yet</p>
+                @endforelse
             </ul>
             <div class="flex items-center space-x-5">
                 <img class="w-5 h-5 cursor-pointer" src="{{ Vite::asset('resources/images/nav/search.svg') }}" alt="Search Icon">
@@ -97,7 +91,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ route('shop') }}" class="block duration-100 hover:text-[#FEE715] hover:font-semibold">
+                                <a href="#" class="block duration-100 hover:text-[#FEE715] hover:font-semibold">
                                     Shop
                                 </a>
                             </li>
