@@ -12,6 +12,10 @@
                     @error('comment') <span class="text-red-600 font-bold">{{ $message }}</span> @enderror
                 </div>
                 <div>
+                    <x-file-pond wire:model="image" />
+                    @error('image')<span class="text-red-600 font-bold">{{ $message }}</span> @enderror
+                </div>
+                <div>
                     <input type="text" wire:model.debounce.500ms="facebook" class="block w-full bg-gray-800 focus:ring-0 focus:border-gray-200 rounded-md" placeholder="Facebook">
                     @error('facebook') <span class="text-red-600 font-bold">{{ $message }}</span> @enderror
                 </div>
