@@ -16,7 +16,7 @@
     <body class="antialiased">
         <nav class="bg-[#101820] flex justify-around items-center text-gray-200 py-3">
             <div>
-                <h1 class="text-[#FEE715]">Logo Here...</h1>
+                <h1 class="text-[#FEE715]">{{ $setting->site_name }} Here...</h1>
             </div>
             <ul class="md:flex items-center space-x-20 hidden">
                 @forelse($categories as $category)
@@ -134,7 +134,7 @@
                                     <img class="w-10 h-10 md:w-20 object-cover" src="{{ Vite::asset('resources/images/contact-us/phone.svg') }}" alt="Logo location">
                                 </div>
                                 <div class="w-4/5 flex items-center">
-                                    <a href="#" class="underline">+234 8083 336 9493</a>
+                                    <a href="#" class="underline">{{ $setting->site_phone }}</a>
                                 </div>
                             </li>
                         </ul>
