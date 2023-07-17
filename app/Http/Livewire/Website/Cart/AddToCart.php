@@ -16,6 +16,15 @@ class AddToCart extends Component
         Cart::destroy();
     }
 
+    public function render()
+    {
+        $cart = Cart::content();
+
+        $this->addedToCart = ($cart->where('id', $this->product->id)->count()) ? True : False;
+
+        return view('livewire.website.cart.add-to-cart');
+    }
+
     public function addToCart()
     {
         Cart::add(
@@ -27,15 +36,6 @@ class AddToCart extends Component
             [$this->product]
         );
 
-        // return redirect()->route('shop', 'sapa-bien');
-    }
-
-    public function render()
-    {
-        $cart = Cart::content();
-
-        $this->addedToCart = ($cart->where('id', $this->product->id)->count()) ? True : False;
-
-        return view('livewire.website.cart.add-to-cart');
+        $this->emit('cart_updated');
     }
 }

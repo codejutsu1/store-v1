@@ -38,9 +38,7 @@
                 <a href="#" class="bg-[#FEE715] w-10 h-10 flex justify-center items-center images relative">
                     <img class="w-5 h-5" src="{{ Vite::asset('resources/images/nav/shopping-cart.svg') }}" alt="Shopping Cart">
 
-                    <div class="absolute top-0 -right-3 h-5 w-5 bg-[#FEE715] text-[#101820] images overflow-hidden flex justify-center items-center">
-                        <p class="text-sm font-bold">0</p>
-                    </div>
+                    <livewire:website.cart.cart-counter />
                 </a>
             </div>
         </nav>
