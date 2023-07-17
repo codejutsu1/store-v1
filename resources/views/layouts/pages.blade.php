@@ -6,10 +6,13 @@
         <meta name="description" content="A simple shopping website">
 
         <title>Under construction / E-commerce Website</title>
-
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+        <!-- Styles -->
+        @livewireStyles
+        
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
@@ -145,5 +148,6 @@
 
         <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        @livewireScripts
     </body>
 </html>

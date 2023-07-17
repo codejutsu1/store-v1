@@ -20,7 +20,7 @@
                                 </div>
                                 <div class="py-8 flex justify-between">
                                     <a href="{{ route('cart') }}" class="block px-5 py-2 uppercase font-bold bg-[#FEE715] text-[#101820] rounded-tr-md rounded-bl-md">Buy Now</a>
-                                    <a href="#" class="block px-5 py-2 uppercase font-bold bg-[#FEE715] text-[#101820] rounded-tr-md rounded-bl-md">Add to cart</a>
+                                    <livewire:website.cart.add-to-cart :product="$product" />
                                 </div>
                             </div>
                         </div>
