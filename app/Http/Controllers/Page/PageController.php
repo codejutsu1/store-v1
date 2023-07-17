@@ -6,6 +6,7 @@ use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Gloudemans\Shoppingcart\Facades\Cart;
 
 class PageController extends Controller
 {
@@ -33,7 +34,9 @@ class PageController extends Controller
 
     public function cart()
     {
-        return view('pages/cart');
+        $cart_contents = Cart::content();
+
+        return view('pages/cart', compact('cart_contents'));
     }
 
     public function cartReview()
