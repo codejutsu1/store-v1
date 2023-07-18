@@ -11,10 +11,10 @@ class AddToCart extends Component
     public Product $product;
     public $addedToCart;
 
-    public function mount()
-    {
-        Cart::destroy();
-    }
+    // public function mount()
+    // {
+    //     Cart::destroy();
+    // }
 
     public function render()
     {

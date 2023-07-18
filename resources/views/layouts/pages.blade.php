@@ -35,7 +35,7 @@
             <div class="flex items-center space-x-5">
                 <img class="w-5 h-5 cursor-pointer" src="{{ Vite::asset('resources/images/nav/search.svg') }}" alt="Search Icon">
 
-                <a href="#" class="bg-[#FEE715] w-10 h-10 flex justify-center items-center images relative">
+                <a href="{{ route('cart') }}" class="bg-[#FEE715] w-10 h-10 flex justify-center items-center images relative">
                     <img class="w-5 h-5" src="{{ Vite::asset('resources/images/nav/shopping-cart.svg') }}" alt="Shopping Cart">
 
                     <livewire:website.cart.cart-counter />
