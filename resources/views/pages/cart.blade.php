@@ -20,6 +20,8 @@
                                 <p class="text-[#101820] text-xl md:text-2xl uppercase font-bold ">{{ $item->name }}</p>
                                 <span class="text-[#101820] text-base md:text-lg font-bold mt-3">@money($item->original_price)</span>
                             </div>
+                
+                @endforeach
                             <div class="mt-5 text-base md:text-lg font-semibold md:block flex items-center space-x-4 md:space-x-0">
                                 <p class="font-semibold">Drinks? </p>
                                 <select name="drinks" id="drinks" class="bg-[#101820] outline-none text-[#FEE715] border-none mt-3 rounded-md focus:outline-none focus:ring-0 w-3/5 font-semibold">
@@ -28,17 +30,10 @@
                                 </select>
                                 <span class="text-[#101920] inline-block ml-3">&#8358;1,000.00</span>
                             </div>
-                            <div class="mt-6 flex space-x-5 ">
-                                <button class="bg-[#101820] px-3 py-1 text-[#FEE715] font-bold text-4xl rounded-xl">-</button>
-                                <input type="text" name="number" value="1" class="rounded-md w-20 shadow-md text-center focus:ring-0 text-lg">
-                                <button class="bg-[#101820] px-2 py-1 text-[#FEE715] font-bold text-3xl rounded-xl">+</button>
-                            </div>
-                            <div class="py-5 text-xl font-semibold">
-                                <p>Total - &#8358;11,000.00</p>
-                            </div>
+                            {{ $cart->rowId }}
+                            <livewire:website.cart.price-quantity :row_id="$cart->rowId" />
                         </div>
                     </div>
-                @endforeach
             @empty
             <p class="text-lg font-semibold">No Item in your cart</p>
             @endforelse
