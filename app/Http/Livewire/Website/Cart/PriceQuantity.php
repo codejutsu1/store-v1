@@ -9,6 +9,7 @@ class PriceQuantity extends Component
 {
     public $row_id;
     public $quantity;
+    public $price;
 
     protected $rules = [
         'quantity' => 'required|numeric|min:1'
@@ -20,7 +21,12 @@ class PriceQuantity extends Component
 
         $this->quantity = $cart->qty;
 
-        $this->total_price = $cart->option->original_price;
+        $this->total_price = $cart->price;
+
+        foreach($cart->options as $product)
+        {
+            $this->price = $product->original_price;
+        }
     }
 
     public function updated($propertyName)
@@ -32,7 +38,7 @@ class PriceQuantity extends Component
     {   
         $cart = Cart::get($this->row_id);
 
-        $this->total_price = $cart->price * $this->quantity;
+        $this->total_price = $this->price * $this->quantity;
 
         Cart::update($this->row_id, [
             'qty' => $this->quantity,
