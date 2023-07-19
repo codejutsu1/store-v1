@@ -30,7 +30,6 @@
                                 </select>
                                 <span class="text-[#101920] inline-block ml-3">&#8358;1,000.00</span>
                             </div>
-                            {{ $cart->rowId }}
                             <livewire:website.cart.price-quantity :row_id="$cart->rowId" />
                         </div>
                     </div>

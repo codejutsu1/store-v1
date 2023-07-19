@@ -170,3 +170,7 @@
     left: calc(60% + 20%);
     background: #FEE715;
 }
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
