@@ -5,7 +5,7 @@
             <span class="underline"><a href="{{ route('home') }}">Home</a></span> / Cart / <span class="inline-block text-lg md:text-xl text-[#FEE715]"><i>Checkout</i></span> 
             </p><br>
         </div>
-        <a href="{{ route('shop') }}" class="text-[#FEE715] underline block text-center pb-5">Continue shopping?</a>
+        <a href="#" class="text-[#FEE715] underline block text-center pb-5">Continue shopping?</a>
     </section>
 
     <section>

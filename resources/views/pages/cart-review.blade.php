@@ -5,7 +5,7 @@
                 <span class="underline"><a href="{{ route('home') }}">Home</a></span> / <span class="inline-block text-lg md:text-xl text-[#FEE715]"><i>Review Cart</i></span> 
             </p><br>
         </div>
-        <a href="{{ route('shop') }}" class="text-[#FEE715] underline block text-center pb-5">Continue shopping?</a>
+        <a href="#" class="text-[#FEE715] underline block text-center pb-5">Continue shopping?</a>
     </section>
 
     <section>
@@ -36,7 +36,7 @@
                             <span class="text-[#101820] font-bold mt-3">&#8358;14,999.00 <br> <span class="text-xs md:text-sm">+ &#8358;1,000.00</span></span>
                         </td>
                         <td>
-                            <input type="number" min="0" max="10" class="w-1/2 rounded-2xl text-center bg-[#101820] text-[#FEE715] focus:ring-0 focus:outline-4 focus:border-[#FEE715]" value="1">
+                            <input type="number" min="0" class="w-1/2 rounded-2xl text-center bg-[#101820] text-[#FEE715] focus:ring-0 focus:outline-4 focus:border-[#FEE715]" value="1">
                         </td>
                         <td>
                         <span class="text-[#101820] font-bold mt-3">&#8358;15,999.00</span>

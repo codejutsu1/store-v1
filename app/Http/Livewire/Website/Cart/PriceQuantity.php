@@ -36,8 +36,6 @@ class PriceQuantity extends Component
 
     public function render()
     {   
-        $cart = Cart::get($this->row_id);
-
         $this->total_price = $this->price * $this->quantity;
 
         Cart::update($this->row_id, [
