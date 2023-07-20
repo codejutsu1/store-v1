@@ -21,8 +21,6 @@ class PriceQuantity extends Component
 
         $this->quantity = $cart->qty;
 
-        $this->total_price = $cart->price;
-
         foreach($cart->options as $product)
         {
             $this->price = $product->original_price;
@@ -36,11 +34,10 @@ class PriceQuantity extends Component
 
     public function render()
     {   
-        $this->total_price = $this->price * $this->quantity;
+        $this->total_price = totalPrice($this->quantity, $this->price);
 
         Cart::update($this->row_id, [
-            'qty' => $this->quantity,
-            'price' => $this->total_price
+            'qty' => $this->quantity
         ]);
 
         return view('livewire.website.cart.price-quantity');

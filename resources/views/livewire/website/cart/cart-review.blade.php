@@ -33,7 +33,7 @@
                                 <input type="number" disabled value="{{ $cart->qty }}" min="0" class="w-1/2 rounded-2xl text-center bg-[#101820] text-[#FEE715] focus:ring-0 focus:outline-4 focus:border-[#FEE715]" value="1">
                             </td>
                             <td>
-                                <span class="text-[#101820] font-bold mt-3">@money($cart->price)</span>
+                                <span class="text-[#101820] font-bold mt-3">@money(totalPrice($cart->qty,$cart->price))</span>
                             </td>
                         </tr>
                     @empty
@@ -49,7 +49,7 @@
             <div class="w-full md:w-2/5 uppercase px-4 rounded-md bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-20 shadow-lg border-t">
                 <div class="flex justify-between py-4 text-lg md:text-xl font-semibold border-b">
                     <span>Subtotal</span>
-                    <span>@money($cart_subtotal)</span>
+                    <span>&#8358;{{ $cart_subtotal }}</span>
                 </div>
                 <div class="flex justify-between py-4 text-lg md:text-xl font-semibold border-b">
                     <span>Shipping Fee</span>
