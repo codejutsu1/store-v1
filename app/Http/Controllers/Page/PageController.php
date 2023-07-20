@@ -34,9 +34,7 @@ class PageController extends Controller
 
     public function cart()
     {
-        $cart_contents = Cart::content();
-
-        return view('pages/cart', compact('cart_contents'));
+        return view('pages/cart');
     }
 
     public function cartReview()

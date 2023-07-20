@@ -7,7 +7,7 @@ use Gloudemans\Shoppingcart\Facades\Cart;
 
 class CartCounter extends Component
 {
-    protected $listeners = ['cart_updated'=> 'render'];
+    protected $listeners = ['cart_updated'=> 'render', 'remove_cart' => 'render'];
 
     public $cart_counter;
 
