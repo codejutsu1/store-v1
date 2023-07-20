@@ -8,6 +8,7 @@ use Gloudemans\Shoppingcart\Facades\Cart;
 class ShowCart extends Component
 {
     protected $listeners = ['remove_cart' => 'render'];
+    
     public function render()
     {
         $cart_contents = Cart::content();
