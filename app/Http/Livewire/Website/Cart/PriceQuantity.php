@@ -10,7 +10,7 @@ class PriceQuantity extends Component
     public $row_id;
     public $quantity;
     public $price;
-
+    
     protected $rules = [
         'quantity' => 'required|numeric|min:1'
     ];

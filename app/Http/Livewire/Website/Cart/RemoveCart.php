@@ -15,8 +15,7 @@ class RemoveCart extends Component
     }
 
     public function removeCart()
-    {
-        // dd($this->rowId);
+    {   
         Cart::remove($this->rowId);
 
         $this->emit('remove_cart');
