@@ -13,6 +13,6 @@ class ShowCart extends Component
     {
         $cart_contents = Cart::content();
 
-        return view('livewire.website.cart.show-cart', compact('carts_contents'));
+        return view('livewire.website.cart.show-cart', compact('cart_contents'));
     }
 }
