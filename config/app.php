@@ -156,6 +156,8 @@ return [
 
     'providers' => [
 
+        Unicodeveloper\Paystack\PaystackServiceProvider::class,
+
         /*
          * Laravel Framework Service Providers...
          */
