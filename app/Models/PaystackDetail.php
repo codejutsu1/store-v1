@@ -9,6 +9,8 @@ class PaystackDetail extends Model
 {
     use HasFactory;
 
+    use BelongsToOrder;
+
     protected $fillable = [
         'order_id',
         'id',
