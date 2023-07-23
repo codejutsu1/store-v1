@@ -13,20 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('order_details', function (Blueprint $table) {
+        Schema::create('shipping_addresses', function (Blueprint $table) {
             $table->id();
             $table->foreignId('order_id')
                     ->constrained()
                     ->onUpdate('cascade')
                     ->onDelete('cascade');
-            $table->string('product_name');
-            $table->string('category');
-            $table->bigInteger('selling_price');
-            $table->bigInteger('original_price');
-            $table->integer('quantity');
-            $table->bigInteger('delivery_fee')->nullable();
-            $table->bigInteger('total_price');
-            $table->string('additional_information');
+            $table->string('lodge');
+            $table->string('area');
+            $table->bigInteger('phone');
+            $table->string('state');
             $table->timestamps();
         });
     }
@@ -38,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('order_details');
+        Schema::dropIfExists('shipping_addresses');
     }
 };

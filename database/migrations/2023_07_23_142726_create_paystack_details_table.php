@@ -13,20 +13,24 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('order_details', function (Blueprint $table) {
+        Schema::create('paystack_details', function (Blueprint $table) {
             $table->id();
             $table->foreignId('order_id')
                     ->constrained()
                     ->onUpdate('cascade')
                     ->onDelete('cascade');
-            $table->string('product_name');
-            $table->string('category');
-            $table->bigInteger('selling_price');
-            $table->bigInteger('original_price');
-            $table->integer('quantity');
-            $table->bigInteger('delivery_fee')->nullable();
-            $table->bigInteger('total_price');
-            $table->string('additional_information');
+            $table->bigInteger('id');
+            $table->string('domain');
+            $table->string('status');
+            $table->string('reference');
+            $table->string('amount');
+            $table->string('gateway_response');
+            $table->string('ip_address');
+            $table->bigInteger('fees');
+            $table->string('authorization_code');
+            $table->string('brand');
+            $table->string('card_type');
+            $table->string('bank');
             $table->timestamps();
         });
     }
@@ -38,6 +42,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('order_details');
+        Schema::dropIfExists('paystack_details');
     }
 };
