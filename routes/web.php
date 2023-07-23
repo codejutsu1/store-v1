@@ -5,6 +5,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Page\PageController;
 use App\Http\Controllers\User\ShopController;
 use App\Http\Controllers\User\UploadController;
+use App\Http\Controllers\User\PaymentController;
 use App\Http\Controllers\User\PageController as UserPage;
 
 /*
@@ -28,6 +29,8 @@ Route::controller(PageController::class)->group(function() {
     Route::get('/cart-review', 'cartReview')->name('cart.review');
     Route::get('/checkout', 'checkout')->name('checkout');
 });
+
+Route::get('/payment/callback', [PaymentController::class, 'handleGatewayCallback'])->name('callback');
 
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/dashboard', [UserPage::class, 'dashboard'])->name('dashboard');

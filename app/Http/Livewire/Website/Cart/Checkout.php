@@ -36,6 +36,7 @@ class Checkout extends Component
             "reference" => paystack()->genTranxRef(),
             "email" => $validated_data['email'],
             "currency" => "NGN",
+            "callback_url" => route('callback'),
             "metadata" => [
                 "cart_content" => Cart::content(),
                 "billing_address" => $validated_data,
