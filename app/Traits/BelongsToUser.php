@@ -4,7 +4,7 @@ namespace App\Traits;
 
 use App\Models\User;
 
-trait belongsToUser {
+trait BelongsToUser {
     
     public function user()
     {

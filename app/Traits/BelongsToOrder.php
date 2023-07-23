@@ -4,7 +4,7 @@ namespace App\Traits;
 
 use App\Models\Order;
 
-trait belongsToOrder {
+trait BelongsToOrder {
     
     public function order()
     {
