@@ -12,8 +12,9 @@ class Order extends Model
 
     use BelongsToUser;
 
-    protected $filable = [
+    protected $fillable = [
         'user_id',
+        'status',
         'total_price',
     ];
 

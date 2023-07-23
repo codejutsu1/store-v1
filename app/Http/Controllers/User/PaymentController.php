@@ -2,16 +2,24 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use Paystack;
+use Illuminate\Http\Request;
+use App\Services\UploadOrder;
+use App\Http\Controllers\Controller;
+use Gloudemans\Shoppingcart\Facades\Cart;
 
 class PaymentController extends Controller
 {
-    public function handleGatewayCallback()
+    public function handleGatewayCallback(UploadOrder $uploadOrder)
     {
         $paymentDetails = Paystack::getPaymentData();
 
-        dd($paymentDetails);
+        $orders = $uploadOrder->store($paymentDetails);
+
+        if($orders) {
+            Cart::destroy();
+
+            return redirect()->route('home');
+        }
     }
 }

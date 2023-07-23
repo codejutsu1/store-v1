@@ -14,7 +14,7 @@ class PaystackDetail extends Model
 
     protected $fillable = [
         'order_id',
-        'id',
+        'paystack_id',
         'domain',
         'status',
         'reference',

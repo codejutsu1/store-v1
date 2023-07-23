@@ -20,6 +20,7 @@ return new class extends Migration
                     ->onUpdate('cascade')
                     ->onDelete('cascade');
             $table->bigInteger('total_price');
+            $table->string('status');
             $table->timestamps();
         });
     }

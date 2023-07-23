@@ -19,7 +19,7 @@ return new class extends Migration
                     ->constrained()
                     ->onUpdate('cascade')
                     ->onDelete('cascade');
-            $table->bigInteger('id');
+            $table->bigInteger('paystack_id');
             $table->string('domain');
             $table->string('status');
             $table->string('reference');
