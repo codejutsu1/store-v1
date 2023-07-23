@@ -20,7 +20,7 @@ return new class extends Migration
                     ->onUpdate('cascade')
                     ->onDelete('cascade');
             $table->boolean('status')->nullable();
-            $table->foreignId('order_id')
+            $table->foreignId('user_id')
                     ->nullable()
                     ->constrained()
                     ->onUpdate('cascade')
