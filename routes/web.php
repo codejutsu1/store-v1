@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Page\PageController;
 use App\Http\Controllers\User\ShopController;
+use App\Http\Controllers\User\OrderController;
 use App\Http\Controllers\User\UploadController;
 use App\Http\Controllers\User\PaymentController;
 use App\Http\Controllers\User\PageController as UserPage;
@@ -46,6 +47,10 @@ Route::group(['middleware' => 'auth'], function() {
         Route::controller(ShopController::class)->group(function() {
             Route::get('category', 'category')->name('category');
             Route::get('product', 'product')->name('product');
+        });
+
+        Route::controller(OrderController::class)->group(function() {
+            Route::get('orders', 'index')->name('orders');
         });
     });
 });
