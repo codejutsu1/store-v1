@@ -10,16 +10,13 @@ class Order extends Model
 {
     use HasFactory;
 
+    use BelongsToUser;
+
     protected $fillable = [
         'user_id',
         'status',
         'total_price',
     ];
-
-    public function user()
-    {
-        return $this->hasOne(User::class);
-    }
 
     public function order_details()
     {

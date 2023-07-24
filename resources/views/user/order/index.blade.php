@@ -9,9 +9,17 @@
                         <th class="p-4">S/N</th>
                         <th class="p-4">Order Id</th>
                         <th class="p-4">Customer Name</th>
-                        <th class="p-4">Number of Orders</th>
+                        <th class="p-4">Status</th>
                         <th class="p-4">Date</th>
                     </tr>
+                    @foreach($orders as $order)
+                        <tr class="border-b">
+                            <td class="p-4 text-center">{{ $loop->iteration }}</td>
+                            <td class="p-4 text-center w-2/5">#0000{{ $order->order->id ?? 00 }}</td>
+                            <td class="p-4 text-center">{{ $order->name }}</td>
+                            <td class="p-4 text-center">{{ $order->order_status->status ?? 'NULL' }}</td>
+                        </tr>
+                    @endforeach
                 </table>
             </div>
         </div>
