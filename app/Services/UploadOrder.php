@@ -52,14 +52,13 @@ class UploadOrder
 
         OrderStatus::create([
             'order_id' => $order->id,
-            'user_id' => $user->id
         ]);
 
         ShippingAddress::create([
             'order_id' => $order->id,
             'lodge' => $orders['data']['metadata']['billing_address']['lodge'],
             'area' => $orders['data']['metadata']['billing_address']['area'],
-            'tel' => $orders['data']['metadata']['billing_address']['phone'],
+            'phone' => $orders['data']['metadata']['billing_address']['tel'],
             'state' => 'Imo'
         ]);
 

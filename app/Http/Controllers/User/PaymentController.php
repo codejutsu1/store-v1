@@ -19,6 +19,8 @@ class PaymentController extends Controller
         if($orders) {
             Cart::destroy();
 
+            toast('Your Order was successful, check email for further confirmation.', 'success');
+
             return redirect()->route('home');
         }
     }
