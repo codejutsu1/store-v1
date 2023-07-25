@@ -47,17 +47,7 @@ class User extends Authenticatable
         return $this->hasOne(Order::class);
     }
 
-    public function order_details()
-    {
-        return $this->hasManyThrough(OrderDetail::class, Order::class);
-    }
-
     public function order_status()
-    {
-        return $this->hasOneThrough(OrderStatus::class, Order::class);
-    }
-
-    public function order_status_user()
     {
         return $this->hasMany(OrderStatus::class);
     }

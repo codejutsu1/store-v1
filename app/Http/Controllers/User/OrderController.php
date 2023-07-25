@@ -11,13 +11,7 @@ class OrderController extends Controller
 {
     public function index()
     {
-        $orders = User::select(['id', 'name'])
-                        ->with([
-                            'order' => function($query) {$query->select(['id', 'user_id']);},
-                            'order_details' => function($query) {$query->select(['order_id']);},
-                            'order_status'
-                            ])
-                            ->get(); 
+        $orders = Order::with('order_details', 'order_status')->select('id')->get();
 
         return view('user.order.index', compact('orders'));
     }
