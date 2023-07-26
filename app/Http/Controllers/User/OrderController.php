@@ -15,4 +15,9 @@ class OrderController extends Controller
 
         return view('user.order.index', compact('orders'));
     }
+
+    public function show(Order $id)
+    {
+        return view('user.order.show');
+    }
 }

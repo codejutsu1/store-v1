@@ -15,7 +15,9 @@
                     @foreach($orders as $order)
                         <tr class="border-b">
                             <td class="p-4 text-center">{{ $loop->iteration }}</td>
-                            <td class="p-4 text-center w-2/5">#0000{{ $order->id }}</td>
+                            <td class="p-4 text-center w-2/5">
+                                <a href="{{ route('orders.show', $order->idn_to_utf8) }}">#0000{{ $order->id }}</a>
+                            </td>
                             <td class="p-4 text-center">{{ count($order->order_details) }}</td>
                             <td class="p-4 text-center">{{ $order->order_status->status }}</td>
                             <td class="p-4 text-center">{{ dateConvert($order->created_at) }}</td>
