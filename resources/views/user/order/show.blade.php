@@ -1,9 +1,17 @@
 <x-user-dashboard>
     <div class="bg-gray-900 h-full p-8 pt-32">
-        <div class="bg-gray-800 w-3/5 mx-auto p-8 rounded-md text-gray-200 space-y-3">
+        <div class="bg-gray-800 w-3/5 mx-auto p-8 rounded-md text-gray-200 space-y-3 font-semibold">
             <div class="flex justify-between border-b py-5 font-semibold">
                 <span>Name</span>
-                <span>{{ $name }}</span>
+                <span>{{ $user->name }}</span>
+            </div>
+            <div class="flex justify-between border-b py-5 font-semibold">
+                <span>Email</span>
+                <span class="underline">
+                    <a href="mailto:{{ $user->email }}">
+                        {{ $user->email }}
+                    </a>
+                </span>
             </div>
             <div class="flex justify-between border-b py-5">
                 <span>OrderId</span>
@@ -23,6 +31,18 @@
                         <span>@money($order->total_price)</span>
                     </div>
                 </div>
+            </div>
+            <div class="flex justify-between border-b py-5 font-semibold">
+                <span>Phone</span>
+                <span class="underline">
+                    <a href="tel:{{ $order->shipping_address->phone }}">
+                        {{ $order->shipping_address->phone }}
+                    </a>
+                </span>
+            </div>
+            <div class="flex justify-between border-b py-5 font-semibold">
+                <span>Shipping Address</span>
+                <span>{{ $order->shipping_address->lodge }} Lodge, {{ $order->shipping_address->area }}</span>
             </div>
         </div>
     </div>
