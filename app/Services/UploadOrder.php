@@ -15,7 +15,7 @@ class UploadOrder
 {
     public function store($orders)
     {
-        $user_name = $orders['data']['metadata']['billing_address']['first_name'] . '' . $orders['data']['metadata']['billing_address']['last_name'];
+        $user_name = $orders['data']['metadata']['billing_address']['first_name'] . ' ' . $orders['data']['metadata']['billing_address']['last_name'];
         $user_email = $orders['data']['metadata']['billing_address']['email'];
         $cart_contents = Cart::content();
 

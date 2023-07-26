@@ -16,8 +16,12 @@ class OrderController extends Controller
         return view('user.order.index', compact('orders'));
     }
 
-    public function show(Order $id)
+    public function show(Order $order)
     {
-        return view('user.order.show');
+        $name = User::where('id', $order->user_id)->value('name');
+
+        $order = Order::with(['order_details', 'order_status'])->where('id', $order->id)->first();
+
+        return view('user.order.show', compact('name', 'order'));
     }
 }

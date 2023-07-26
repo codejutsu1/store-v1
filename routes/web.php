@@ -51,7 +51,7 @@ Route::group(['middleware' => 'auth'], function() {
 
         Route::controller(OrderController::class)->group(function() {
             Route::get('orders', 'index')->name('orders');
-            Route::get('order/{id}', 'show')->name('orders.show');
+            Route::get('order/{order}', 'show')->name('orders.show');
         });
     });
 });
