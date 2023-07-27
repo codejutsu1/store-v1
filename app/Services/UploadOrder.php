@@ -27,8 +27,16 @@ class UploadOrder
 
         $order = Order::create([
             'user_id' => $user->id,
+            'order_id' => '',
             'status' => $orders['data']['status'],
-            'total_price' => floatval(Cart::subtotal()) * 1000
+            'total_price' => floatval(Cart::subtotal()) * 1000,
+            'additional_information' => $orders['data']['metadata']['billing_address']['additional_information'],
+        ]);
+
+        $orderId = createOrderId($orders['data']['metadata']['billing_address']['area'], $order->id);
+
+        Order::findOrFail($order->id)->update([
+            'order_id' => $orderId,
         ]);
 
         foreach($cart_contents as $cart)
@@ -45,7 +53,6 @@ class UploadOrder
                     'original_price' => $item->original_price,
                     'quantity' => $cart->qty,
                     'total_price' => totalPrice($cart->qty, $cart->price),
-                    'additional_information' => $orders['data']['metadata']['billing_address']['additional_information'],
                 ]);
             }
         }

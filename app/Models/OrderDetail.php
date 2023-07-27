@@ -20,6 +20,5 @@ class OrderDetail extends Model
         'quantity',
         'delivery_fee',
         'total_price',
-        'additional_information'
     ];
 }

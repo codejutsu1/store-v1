@@ -26,7 +26,6 @@ return new class extends Migration
             $table->integer('quantity');
             $table->bigInteger('delivery_fee')->nullable();
             $table->bigInteger('total_price');
-            $table->string('additional_information');
             $table->timestamps();
         });
     }

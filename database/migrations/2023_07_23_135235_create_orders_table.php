@@ -19,8 +19,10 @@ return new class extends Migration
                     ->constrained()
                     ->onUpdate('cascade')
                     ->onDelete('cascade');
+            $table->string('order_id')->nullable();
             $table->bigInteger('total_price');
             $table->string('status');
+            $table->string('addtional_information');
             $table->timestamps();
         });
     }
