@@ -21,8 +21,8 @@ return new class extends Migration
                     ->onDelete('cascade');
             $table->string('order_id')->nullable();
             $table->bigInteger('total_price');
-            $table->string('status');
-            $table->string('addtional_information');
+            $table->string('status')->nullable();
+            $table->string('additional_information');
             $table->timestamps();
         });
     }
