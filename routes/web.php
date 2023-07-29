@@ -37,14 +37,15 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/dashboard', [UserPage::class, 'dashboard'])->name('dashboard');
     
     Route::group(['prefix' => 'dashboard'], function() {
-        Route::controller(UserPage::class)->group(function() {
+        Route::controller(UserPage::class)->middleware('can:view website')->group(function() {
             Route::get('faq', 'faq')->name('faq');
             Route::get('feed', 'feed')->name('feed');
             Route::get('review', 'review')->name('review');
-            Route::get('settings', 'settings')->name('settings');
         });
 
-        Route::controller(ShopController::class)->group(function() {
+        Route::get('settings', [UserPage::class, 'settings'])->name('settings');
+
+        Route::controller(ShopController::class)->middleware('can:view shop')->group(function() {
             Route::get('category', 'category')->name('category');
             Route::get('product', 'product')->name('product');
         });

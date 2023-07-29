@@ -64,7 +64,6 @@
                     </a>
                     <!-- end::Menu link -->
 
-
                     <!-- start::Menu link -->
 
                     <a 
@@ -87,6 +86,7 @@
                     
                     <!-- end::Menu link -->
 
+                    @can('view shop')
                     <!-- start::Menu link -->
                     <div
                         x-data="{ linkHover: false, linkActive: false }"
@@ -140,7 +140,9 @@
                         <!-- end::Submenu -->
                     </div>
                     <!-- end::Menu link -->
-
+                    @endcan
+                    
+                    @can('view website')
                      <!-- start::Menu link -->
                      <div
                         x-data="{ linkHover: false, linkActive: false }"
@@ -206,6 +208,7 @@
                         <!-- end::Submenu -->
                     </div>
                     <!-- end::Menu link -->
+                    @endcan
 
                     <a 
                         x-data="{ linkHover: false }"
@@ -317,14 +320,15 @@
                                         <hr>
 
                                         <!-- start::Submenu link -->
-                                        <form
-                                            method=""
-                                            action=""
+                                        <!-- Authentication -->
+                                        <form method="POST" action="{{ route('logout') }}"
                                             x-data="{ linkHover: false }"
                                             class="flex items-center justify-between py-2 px-3 hover:bg-gray-100 bg-opacity-20"
                                             @mouseover="linkHover = true"
                                             @mouseleave="linkHover = false"
                                         >
+                                            @csrf
+
                                             <div class="flex items-center">
                                                 <svg class="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
                                                 <button 
@@ -335,7 +339,7 @@
                                                 </button>
                                             </div>
                                         </form>
-                                        <!-- end::Submenu link -->
+                                       
                                     </div>
                                     <!-- end::Submenu content -->
                                 </div>
