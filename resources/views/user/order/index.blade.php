@@ -16,7 +16,7 @@
                         <tr class="border-b">
                             <td class="p-4 text-center">{{ $loop->iteration }}</td>
                             <td class="p-4 text-center w-2/5">
-                                <a href="{{ route('orders.show', $order->idn_to_utf8) }}">#0000{{ $order->id }}</a>
+                                <a href="{{ route('orders.show', $order->id) }}" class="underline">#0000{{ $order->id }}</a>
                             </td>
                             <td class="p-4 text-center">{{ count($order->order_details) }}</td>
                             <td class="p-4 text-center">{{ $order->order_status->status }}</td>
