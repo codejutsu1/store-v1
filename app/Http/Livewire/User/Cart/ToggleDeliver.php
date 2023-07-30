@@ -10,6 +10,7 @@ class ToggleDeliver extends Component
     public Model $model;
     public bool $isActive;
     public string $field;
+    public string $id_name;
 
     public function mount()
     {

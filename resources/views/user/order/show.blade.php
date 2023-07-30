@@ -47,7 +47,7 @@
             <div class="flex justify-between border-b py-5 font-semibold">
                 <span>Ready</span>
                 <span>
-                    <livewire:user.cart.toggle-ready :model="$order" field="status" />
+                    <livewire:user.cart.toggle-ready id_name="ready" :model="$order" field="status" />
                 </span>
             </div>
 
@@ -56,7 +56,7 @@
                     Delivered
                 </span>
                 <span>
-                    <livewire:user.cart.toggle-deliver :model="$order" field="status" />
+                    <livewire:user.cart.toggle-deliver id_name="deliver" :model="$order" field="status" />
                 </span>
             </div>
 
@@ -65,7 +65,7 @@
                     Delivered By
                 </span>
                 <span>
-                    {{ $delivery_name }}
+                    {{ $delivery_name ?? 'NULL' }}
                 </span>
             </div>
         </div>

@@ -8,11 +8,13 @@ use Carbon\Carbon;
 
 class ShowCart extends Component
 {
-    public $period;
+    public $period = 'today';
     public $time;
 
     public function mount()
     {
+        $this->reset();
+        
         $this->period = 'today';
     }
 
