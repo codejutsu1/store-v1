@@ -173,4 +173,16 @@
 
 input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
-  }
+}
+
+/* CHECKBOX TOGGLE SWITCH */
+    /* @apply rules for documentation, these do not work as inline style */
+    .toggle-checkbox:checked {
+        @apply: right-0 border-green-400;
+        right: 0;
+        border-color: #68D391;
+    }
+    .toggle-checkbox:checked + .toggle-label {
+        @apply: bg-green-500;
+        background-color: #68D391;
+    }

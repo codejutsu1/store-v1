@@ -44,6 +44,12 @@
                 <span>Shipping Address</span>
                 <span>{{ $order->shipping_address->lodge }} Lodge, {{ $order->shipping_address->area }}</span>
             </div>
+            <div class="flex justify-between border-b py-5 font-semibold">
+                <span>Ready</span>
+                <span>
+                    <livewire:user.cart.toggle-ready :model="$order" field="status" />
+                </span>
+            </div>
         </div>
     </div>
 </x-user-dashboard>
