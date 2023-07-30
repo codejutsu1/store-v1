@@ -50,6 +50,15 @@
                     <livewire:user.cart.toggle-ready :model="$order" field="status" />
                 </span>
             </div>
+
+            <div class="flex justify-between border-b py-5 font-semibold">
+                <span>
+                    Delivered
+                </span>
+                <span>
+                    <livewire:user.cart.toggle-deliver :model="$order" field="status" />
+                </span>
+            </div>
         </div>
     </div>
 </x-user-dashboard>
