@@ -39,5 +39,4 @@ class Order extends Model
     {
         return $this->hasOne(ShippingAddress::class);
     }
-    
 }

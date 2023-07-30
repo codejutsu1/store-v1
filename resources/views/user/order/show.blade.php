@@ -59,6 +59,15 @@
                     <livewire:user.cart.toggle-deliver :model="$order" field="status" />
                 </span>
             </div>
+
+            <div class="flex justify-between border-b py-5 font-semibold">
+                <span>
+                    Delivered By
+                </span>
+                <span>
+                    {{ $delivery_name }}
+                </span>
+            </div>
         </div>
     </div>
 </x-user-dashboard>

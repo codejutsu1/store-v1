@@ -18,9 +18,10 @@ class OrderController extends Controller
     {
         $user = User::where('id', $order->user_id)->select(['name', 'email'])->first();
 
-        $order = Order::with(['order_details', 'order_status', 'shipping_address'])->where('id', $order->id)->first();
-        // dd($order);
+        $order = Order::with(['order_details', 'order_status', 'shipping_address',])->where('id', $order->id)->first();
 
-        return view('user.order.show', compact('user', 'order'));
+        $delivery_name = User::where('id', $order->order_status->user_id)->value('name');
+
+        return view('user.order.show', compact('user', 'order', 'delivery_name'));
     }
 }
