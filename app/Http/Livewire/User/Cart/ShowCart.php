@@ -20,7 +20,14 @@ class ShowCart extends Component
     {
         $this->time = dateToString($this->period);
 
-        $orders = Order::with('order_details', 'order_status')->select(['id', 'order_id', 'created_at'])->paginate(10);
+        if($this->period == 'all') {
+            $orders = Order::with('order_details', 'order_status')->select(['id', 'order_id', 'created_at'])->paginate(10);
+        }else {
+            $orders = Order::with('order_details', 'order_status')
+                            ->whereDate('created_at', '=', $this->time)
+                            ->select(['id', 'order_id', 'created_at'])
+                            ->paginate(10); 
+        }
 
         return view('livewire.user.cart.show-cart', compact('orders'));
     }
