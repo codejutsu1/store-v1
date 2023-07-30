@@ -11,9 +11,7 @@ class OrderController extends Controller
 {
     public function index()
     {
-        $orders = Order::with('order_details', 'order_status')->select(['id', 'created_at'])->paginate(10);
-
-        return view('user.order.index', compact('orders'));
+        return view('user.order.index');
     }
 
     public function show(Order $order)
