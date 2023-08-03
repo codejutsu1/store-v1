@@ -2,12 +2,15 @@
 
 namespace App\Http\Livewire\User\Cart;
 
+use Carbon\Carbon;
 use App\Models\Order;
 use Livewire\Component;
-use Carbon\Carbon;
+use Livewire\WithPagination;
 
 class ShowCart extends Component
 {
+    use WithPagination;
+    
     public $period = 'today';
     public $time;
 

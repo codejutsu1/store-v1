@@ -24,7 +24,7 @@
             </tr>
             @foreach($orders as $order)
                 <tr class="border-b text-center">
-                    <td class="py-4 px-6">{{ $loop->iteration }}</td>
+                    <td class="py-4 px-6">{{ $order->id }}</td>
                     <td class="py-4 px-6">
                         <a href="{{ route('orders.show', $order->id) }}" class="underline block">{{ $order->order_id }}</a>
                     </td>
@@ -34,5 +34,8 @@
                 </tr>
             @endforeach
         </table>
+        <div class="mt-10">
+            {{ $orders->links() }}
+        </div>
     </div>
 </div>
