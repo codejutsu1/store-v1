@@ -29,7 +29,15 @@
                         <a href="{{ route('orders.show', $order->id) }}" class="underline block">{{ $order->order_id }}</a>
                     </td>
                     <td class="py-4 px-6">{{ count($order->order_details) }}</td>
-                    <td class="py-4 px-6">{{ $order->order_status->status ?? 'NULL' }}</td>
+                    <td class="py-4 px-6">
+                        @if($order->order_status->status && $order->status)
+                            <span class="bg-green-500 px-1.5 py-0.5 rounded-lg text-gray-100">Delivered</span>
+                        @elseif($order->status &&  !$order->order_status->status)
+                            <span class="bg-indigo-500 px-1.5 py-0.5 rounded-lg text-gray-100">Ready</span>
+                        @else
+                            <span class="bg-yellow-500 px-1.5 py-0.5 rounded-lg text-gray-100">Pending</span>
+                        @endif
+                    </td>
                     <td class="py-4 px-6">{{ dateConvert($order->created_at) }}</td>
                 </tr>
             @endforeach

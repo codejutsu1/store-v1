@@ -11,7 +11,7 @@ class ShowCart extends Component
 {
     use WithPagination;
     
-    public $period = 'today';
+    public $period = '';
     public $time;
 
     public function mount()
@@ -26,11 +26,11 @@ class ShowCart extends Component
         $this->time = dateToString($this->period);
 
         if($this->period == 'all') {
-            $orders = Order::with('order_details', 'order_status')->select(['id', 'order_id', 'created_at'])->paginate(10);
+            $orders = Order::with('order_details', 'order_status')->select(['id', 'order_id', 'status', 'created_at'])->paginate(10);
         }else {
             $orders = Order::with('order_details', 'order_status')
                             ->whereDate('created_at', '=', $this->time)
-                            ->select(['id', 'order_id', 'created_at'])
+                            ->select(['id', 'order_id', 'status', 'created_at'])
                             ->paginate(10); 
         }
 
