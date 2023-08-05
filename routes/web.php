@@ -41,6 +41,7 @@ Route::group(['middleware' => 'auth'], function() {
             Route::get('faq', 'faq')->name('faq');
             Route::get('feed', 'feed')->name('feed');
             Route::get('review', 'review')->name('review');
+            Route::get('staff', 'staff')->name('staff');
         });
 
         Route::get('settings', [UserPage::class, 'settings'])->name('settings');

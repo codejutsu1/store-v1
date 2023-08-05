@@ -30,6 +30,11 @@ class PageController extends Controller
         return view('user.website.review', ['reviews' => Review::getAllReview()]);
     }
 
+    public function staff()
+    {
+        return view('user.staff');
+    }
+
     public function settings()
     {
         return view('user.settings');
