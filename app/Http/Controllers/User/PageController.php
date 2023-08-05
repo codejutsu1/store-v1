@@ -4,6 +4,7 @@ namespace App\Http\Controllers\User;
 
 use App\Models\Faq;
 use App\Models\Feed;
+use App\Models\User;
 use App\Models\Review;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -32,7 +33,10 @@ class PageController extends Controller
 
     public function staff()
     {
-        return view('user.staff');
+        $staff = User::with('roles')->role(['secretary', 'admin', 'rider'])->get();  
+        // dd($staff);
+
+        return view('user.staff', compact('staff'));
     }
 
     public function settings()
