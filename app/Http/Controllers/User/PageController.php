@@ -31,14 +31,6 @@ class PageController extends Controller
         return view('user.website.review', ['reviews' => Review::getAllReview()]);
     }
 
-    public function staff()
-    {
-        $staff = User::with('roles')->role(['secretary', 'admin', 'rider'])->get();  
-        // dd($staff);
-
-        return view('user.staff', compact('staff'));
-    }
-
     public function settings()
     {
         return view('user.settings');

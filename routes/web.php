@@ -5,6 +5,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Page\PageController;
 use App\Http\Controllers\User\ShopController;
 use App\Http\Controllers\User\OrderController;
+use App\Http\Controllers\User\StaffController;
 use App\Http\Controllers\User\UploadController;
 use App\Http\Controllers\User\PaymentController;
 use App\Http\Controllers\User\PageController as UserPage;
@@ -41,7 +42,11 @@ Route::group(['middleware' => 'auth'], function() {
             Route::get('faq', 'faq')->name('faq');
             Route::get('feed', 'feed')->name('feed');
             Route::get('review', 'review')->name('review');
-            Route::get('staff', 'staff')->name('staff');
+        });
+
+        Route::controller(StaffController::class)->group(function() {
+            Route::get('staff', 'index')->name('staff');
+            Route::get('staff/{staff}', 'show')->name('staff.show');
         });
 
         Route::get('settings', [UserPage::class, 'settings'])->name('settings');
@@ -53,7 +58,7 @@ Route::group(['middleware' => 'auth'], function() {
 
         Route::controller(OrderController::class)->group(function() {
             Route::get('orders', 'index')->name('orders');
-            Route::get('order/{order}', 'show')->name('orders.show');
+            Route::get('orders/{order}', 'show')->name('orders.show');
         });
     });
 });

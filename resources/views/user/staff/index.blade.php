@@ -15,14 +15,16 @@
                     @foreach($staff as $member)
                         <tr class="border-b text-center ">
                             <td class="py-4 px-6">{{ $loop->iteration }}</td>
-                            <td class="py-4 px-6">
-                                <a href="{{ route('orders.show', $member->id) }}" class="underline block">{{ $member->name }}</a>
+                            <td class="py-4 px-6 w-1/5">
+                                <a href="{{ route('staff.show', $member->id) }}" class="underline block">{{ $member->name }}</a>
                             </td>
                             <td class="py-4 px-6">{{ $member->email }}</td>
-                            @foreach($member->roles as $role)
-                                <td class="py-4 px-6">{{ ucfirst($role->name) }}</td>
-                            @endforeach
-                            <td class="py-4 px-6 text-sm">{{ dateConvert($member->created_at) }}</td>
+                            <td class="py-4 px-6">
+                                @foreach($member->roles as $role)
+                                    {{ ucfirst($role->name) }}
+                                @endforeach
+                            </td>
+                            <td class="py-4 px-10 text-sm">{{ dateConvert($member->created_at) }}</td>
                             <td class="py-4 px-6">
                                 <div class="flex space-x-4">
                                     <button onclick="Livewire.emit('openModal', 'user.staff.edit-staff', {{ json_encode(['staff' => $member->id]) }})">

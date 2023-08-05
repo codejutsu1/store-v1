@@ -9,22 +9,18 @@ use LivewireUI\Modal\ModalComponent;
 
 class EditStaff extends ModalComponent
 {
-    public $user;
-
     protected function rules()
     {
         return  [
             'fullname' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users,email,' . $this->user->id],
-            'role' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users,email,' . $this->user_id],
         ];
     
     }
 
     public function mount(User $staff)
     {
-
-        $this->user = $staff;
+        $this->user_id = $staff->id;
 
         $this->fullname = $staff->name;
 
@@ -41,7 +37,7 @@ class EditStaff extends ModalComponent
     {
         $this->validate();
 
-        User::findOrFail($this->user->id)->update([
+        User::findOrFail($this->user_id)->update([
             'name' => $this->fullname,
             'email' => $this->email,
         ]);
