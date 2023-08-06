@@ -68,6 +68,38 @@
                     {{ $delivery_name ?? 'NULL' }}
                 </span>
             </div>
+            <div class="flex justify-between border-b py-5 font-semibold">
+                <span>
+                    Payment Status
+                </span>
+                <span>
+                    {{ $order->paystack_detail->status ?? 'NULL' }}
+                </span>
+            </div>
+            <div class="flex justify-between border-b py-5 font-semibold">
+                <span>
+                    Payment Reference
+                </span>
+                <span>
+                    {{ $order->paystack_detail->reference ?? 'NULL' }}
+                </span>
+            </div>
+            <div class="flex justify-between border-b py-5 font-semibold">
+                <span>
+                    Payment Card Type
+                </span>
+                <span>
+                    {{ $order->paystack_detail->card_type ?? 'NULL' }}
+                </span>
+            </div>
+            <div class="flex justify-between border-b py-5 font-semibold">
+                <span>
+                    Payment Bank
+                </span>
+                <span>
+                    {{ $order->paystack_detail->bank ?? 'NULL' }}
+                </span>
+            </div>
         </div>
     </div>
 </x-user-dashboard>
