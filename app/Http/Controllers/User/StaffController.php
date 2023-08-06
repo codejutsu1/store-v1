@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\User;
 
 use App\Models\User;
+use App\Models\Order;
+use App\Models\OrderStatus;
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Role;
 use App\Http\Controllers\Controller;
@@ -20,6 +22,10 @@ class StaffController extends Controller
     {
         $roles =  Role::pluck('name');
 
-        return view('user.staff.show', compact('staff', 'roles'));
+        $order_id = OrderStatus::where('user_id', $staff->id)->pluck('id');
+
+        $orders = Order::whereIn('id', $order_id)->select(['id', 'order_id', 'created_at'])->paginate(10);
+
+        return view('user.staff.show', compact('staff', 'roles', 'orders'));
     }
 }
