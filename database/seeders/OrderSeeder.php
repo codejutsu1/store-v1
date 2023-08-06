@@ -25,10 +25,11 @@ class OrderSeeder extends Seeder
                 shuffle($address);
 
                 DB::table('orders')->insert([
-                    'user_id' => $i,
+                    'order_user_id' => $i,
                     'order_id' => createOrderId($address[0], $i),
                     'total_price' => rand(5000, 15000),
-                    'additional_information' => fake()->text()
+                    'additional_information' => fake()->text(),
+                    'created_at' => now(),
                 ]);
             }
         }

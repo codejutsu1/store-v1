@@ -19,14 +19,13 @@ class UploadOrder
         $user_email = $orders['data']['metadata']['billing_address']['email'];
         $cart_contents = Cart::content();
 
-        $user = User::create([
+        $user = OrderUser::create([
             'name' => $user_name,
             'email' => $user_email,
-            'password' => '123456',
         ]);
 
         $order = Order::create([
-            'user_id' => $user->id,
+            'order_user_id' => $user->id,
             'order_id' => '',
             'status' => $orders['data']['status'],
             'total_price' => floatval(Cart::subtotal()) * 1000,

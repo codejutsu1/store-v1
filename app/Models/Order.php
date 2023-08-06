@@ -10,10 +10,10 @@ class Order extends Model
 {
     use HasFactory;
 
-    use BelongsToUser;
+    // use BelongsToUser;
 
     protected $fillable = [
-        'user_id',
+        'order_user_id',
         'order_id',
         'status',
         'total_price',
@@ -38,5 +38,10 @@ class Order extends Model
     public function shipping_address()
     {
         return $this->hasOne(ShippingAddress::class);
+    }
+
+    public function order_user()
+    {
+        return $this->belongsTo(OrderUser::class);
     }
 }

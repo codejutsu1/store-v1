@@ -4,6 +4,7 @@ namespace App\Http\Controllers\User;
 
 use App\Models\User;
 use App\Models\Order;
+use App\Models\OrderUser;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -16,7 +17,7 @@ class OrderController extends Controller
 
     public function show(Order $order)
     {
-        $user = User::where('id', $order->user_id)->select(['name', 'email'])->first();
+        $user = OrderUser::where('id', $order->order_user_id)->select(['name', 'email'])->first();
 
         $order = Order::with(['order_details', 'order_status', 'shipping_address',])
                         ->with('paystack_detail', function($query) {
