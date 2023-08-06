@@ -4,6 +4,7 @@ namespace App\Http\Controllers\User;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Spatie\Permission\Models\Role;
 use App\Http\Controllers\Controller;
 
 class StaffController extends Controller
@@ -15,8 +16,10 @@ class StaffController extends Controller
         return view('user.staff.index', compact('staff'));
     }
 
-    public function show()
+    public function show(User $staff)
     {
-        return view('user.staff.show');
+        $roles =  Role::pluck('name');
+
+        return view('user.staff.show', compact('staff', 'roles'));
     }
 }
