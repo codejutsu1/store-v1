@@ -21,7 +21,7 @@ class ShowCart extends Component
     public function render()
     {
         $this->time = dateToString($this->period);
-        
+
         $search = "%$this->search%" ?? '';
 
         if($this->period == 'all') {
@@ -29,10 +29,16 @@ class ShowCart extends Component
                             ->with('order_details', 'order_status')
                             ->select(['id', 'order_id', 'status', 'created_at'])
                             ->paginate(10);
-        }else {
+        }elseif($this->period == 'today' || $this->period == 'yesterday') {
             $orders = Order::where('order_id', 'LIKE', $search)
                             ->with('order_details', 'order_status')
                             ->whereDate('created_at', '=', $this->time)
+                            ->select(['id', 'order_id', 'status', 'created_at'])
+                            ->paginate(10); 
+        }else {
+            $orders = Order::where('order_id', 'LIKE', $search)
+                            ->with('order_details', 'order_status')
+                            ->whereDate('created_at', '>=', $this->time)
                             ->select(['id', 'order_id', 'status', 'created_at'])
                             ->paginate(10); 
         }
