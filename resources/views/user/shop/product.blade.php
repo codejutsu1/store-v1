@@ -3,17 +3,16 @@
     <div class="bg-gray-800 w-full mx-auto p-8 rounded-md text-gray-200">
         <h1 class="font-semibold text-2xl border-b pb-4">Products - Create foodies you want to sell.</h1>
         <div class="py-10 overflow-x-auto">
-                @if($products)
                 <table class="w-full bg-gray-900 rounded-md overflow-hidden">
-                    <tr class="font-semibold border-b">
-                        <th class="p-4">S/N</th>
-                        <th class="p-4">Image</th>
-                        <th class="p-4">Name</th>
-                        <th class="p-4">Description</th>
-                        <th class="p-4">Price</th>
-                        <th class="p-4">Actions</th>
+                    <tr class="font-semibold text-center border-b">
+                        <th class="py-3 px-4">S/N</th>
+                        <th class="py-3 px-4">Image</th>
+                        <th class="py-3 px-4">Name</th>
+                        <th class="py-3 px-4">Description</th>
+                        <th class="py-3 px-4">Price</th>
+                        <th class="py-3 px-4">Actions</th>
                     </tr>
-                    @foreach($products as $product)
+                    @forelse($products as $product)
                         <tr class="border-b">
                             <td class="p-4 text-center">{{ $loop->iteration }}</td>
                             <td class="p-4 flex justify-center items-center w-full">
@@ -37,11 +36,10 @@
                                 </div>
                             </td>
                         </tr>
-                    @endforeach
+                        @empty   
+                          <p class="text-xl font-semibold text-center mt-2">No Categories yet...</p>
+                    @endforelse
                 </table>
-                @else   
-                    <p class="text-xl font-semibold text-center mt-2">No Categories yet...</p>
-                @endif
             </div>
         <div class="flex justify-end">
             <button type="button" onclick="Livewire.emit('openModal', 'user.product.create-product')" class="bg-purple-800 text-white px-4 py-2 rounded-md font-semibold">

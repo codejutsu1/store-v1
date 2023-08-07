@@ -4,21 +4,20 @@
         <h1 class="font-semibold text-2xl border-b pb-4">Categories - Create new categories for your store.</h1>
 
         <div class="py-10 overflow-x-auto">
-            @if($categories)
                 <table class="w-full bg-gray-900 rounded-md overflow-hidden">
-                    <tr class="font-semibold border-b">
-                        <th class="p-4">S/N</th>
-                        <th class="p-4">Name</th>
-                        <th class="p-4">Description</th>
-                        <th class="p-4">Actions</th>
+                    <tr class="font-semibold text-center border-b">
+                        <th class="py-3 px-6">S/N</th>
+                        <th class="py-3 px-6">Name</th>
+                        <th class="py-3 px-6">Description</th>
+                        <th class="py-3 px-6">Actions</th>
                     </tr>
-                    @foreach($categories as $category)
-                        <tr class="border-b">
-                            <td class="p-4 text-center">{{ $loop->iteration }}</td>
-                            <td class="p-4 text-center w-2/5">{{ $category->name }}</td>
-                            <td class="p-4 text-center">{{ $category->description }}</td>
-                            <td class="p-4 text-center">
-                                <div class="flex space-x-4">
+                    @forelse($categories as $category)
+                        <tr class="border-b text-center">
+                            <td class="py-4 px-6">{{ $loop->iteration }}</td>
+                            <td class="py-4 px-6">{{ $category->name }}</td>
+                            <td class="py-4 px-6">{{ $category->description }}</td>
+                            <td class="py-4 px-6">
+                                <div class="flex space-x-4 justify-center">
                                     <button onclick="Livewire.emit('openModal', 'user.category.edit-category', {{ json_encode(['category' => $category->id]) }})">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500 hover:text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
@@ -32,11 +31,10 @@
                                 </div>
                             </td>
                         </tr>
-                    @endforeach
-                </table>
-                @else   
+                        @empty   
                     <p class="text-xl font-semibold text-center mt-2">No Categories yet...</p>
-                @endif
+                    @endforelse
+                </table>
             </div>
         <div class="flex justify-end mt-5">
             <button type="button" onclick="Livewire.emit('openModal', 'user.category.create-category')" class="bg-purple-800 text-white px-4 py-2 rounded-md font-semibold">

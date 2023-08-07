@@ -4,17 +4,16 @@
             <h1 class="font-semibold text-2xl border-b pb-4">Review - Upload what people say about you.</h1>
 
             <div class="py-10 overflow-auto">
-                @if($reviews)
                     <table class="w-full bg-gray-900 rounded-md overflow-hidden">
                         <tr class="font-semibold border-b">
-                            <th class="p-4">S/N</th>
-                            <th class="p-4">Image</th>
-                            <th class="p-4">Name</th>
-                            <th class="p-4">Comments</th>
-                            <th class="p-4">Links</th>
-                            <th class="p-4">Actions</th>
+                            <th class="py-3 px-6">S/N</th>
+                            <th class="py-3 px-6">Image</th>
+                            <th class="py-3 px-6">Name</th>
+                            <th class="py-3 px-6">Comments</th>
+                            <th class="py-3 px-6">Links</th>
+                            <th class="py-3 px-6">Actions</th>
                         </tr>
-                        @foreach($reviews as $review)
+                        @forelse($reviews as $review)
                             <tr class="border-b">
                                 <td class="px-4 py-2 text-center">{{ $loop->iteration }}</td>
                                 <td class="p-4 flex justify-center items-center">
@@ -51,11 +50,10 @@
                                     </div>
                                 </td>
                             </tr>
-                        @endforeach
+                        @empty
+                                <p class="text-xl font-semibold text-center mt-2">No Review yet...</p>
+                        @endforelse
                     </table>
-                @else   
-                    <p class="text-xl font-semibold text-center mt-2">No Review yet...</p>
-                @endif
             </div>
             <div class="flex justify-end">
                 <button type="button" onclick="Livewire.emit('openModal', 'user.review.create-review')" class="bg-purple-800 text-white px-4 py-2 rounded-md font-semibold">
