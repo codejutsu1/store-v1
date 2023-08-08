@@ -257,7 +257,7 @@
 
             <div class="lg:pl-64 w-full flex flex-col">
                 <!-- start::Topbar -->
-                <div class="flex flex-col relative">
+                <div class="flex flex-col relative z-50">
                     <header class="flex justify-between items-center h-16 py-4 px-6 bg-gray-800 fixed inset-0 border-b w-full">
                         <!-- start::Mobile menu button -->
                         <div class="flex items-center ">
