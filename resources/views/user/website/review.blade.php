@@ -14,18 +14,18 @@
                             <th class="py-3 px-6">Actions</th>
                         </tr>
                         @forelse($reviews as $review)
-                            <tr class="border-b">
-                                <td class="px-4 py-2 text-center">{{ $loop->iteration }}</td>
-                                <td class="p-4 flex justify-center items-center">
+                            <tr class="border-b text-center">
+                                <td class="py-4 px-6">{{ $loop->iteration }}</td>
+                                <td class="py-4 px-6 flex justify-center items-center">
                                     @if($review->image)
                                         <img class="w-20 h-20 object-fit" src="../../storage/review/{{ $review->image }}" alt="{{ $review->name }}" />
                                     @else
                                         <img class="w-20 h-20 object-fit" src="{{ Vite::asset('resources/images/review/human-2.png') }}" alt="{{ $review->name }}">
                                     @endif
                                 </td>
-                                <td class="px-4 py-2 text-center">{{ $review->name }}</td>
-                                <td class="w-1/3 p-4 text-center">{{ $review->comment }}</td>
-                                <td class="px-4 py-2 text-sm text-purple-600 text-center font-semibold">
+                                <td class="py-4 px-6">{{ $review->name }}</td>
+                                <td class="py-4 px-6">{{ $review->comment }}</td>
+                                <td class="py-4 px-6 text-sm text-purple-600 text-center font-semibold">
                                     @if($review->twiiter || $review->facebook || $review->instagram || $review->tiktok)
                                         <a class="underline" href="{{ $review->twitter ?? '#' }}">Twitter</a>
                                         <a class="underline" href="{{ $review->facebook ?? '#' }}">Facebook</a>
@@ -35,8 +35,8 @@
                                         <p class="text-center text-gray-200">No socials yet ...</p>
                                     @endif
                                 </td>
-                                <td class="px-4 py-2 text-center">
-                                    <div class="flex space-x-4">
+                                <td class="py-4 px-6">
+                                    <div class="flex space-x-4 justify-center">
                                         <button onclick="Livewire.emit('openModal', 'user.review.edit-review', {{ json_encode(['review' => $review->id]) }})" >
                                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500 hover:text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
