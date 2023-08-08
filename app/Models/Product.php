@@ -26,9 +26,4 @@ class Product extends Model
     {
         return $this->hasOne(ProductImage::class);
     }
-
-    public static function getAllProducts()
-    {
-        return (new static)::with(['productImage'])->get();  
-    }
 }

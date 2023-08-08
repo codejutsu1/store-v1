@@ -16,6 +16,6 @@ class ShopController extends Controller
 
     public function product()
     {   
-        return view('user.shop.product', ['products' => Product::getAllProducts()]);
+        return view('user.shop.product');
     }
 }
