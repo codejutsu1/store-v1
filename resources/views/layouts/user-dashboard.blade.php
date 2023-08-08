@@ -2,6 +2,8 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
         <title>Your Dashboard</title>
         <link href="https://unpkg.com/filepond@^4/dist/filepond.css" rel="stylesheet" />
         <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet">
@@ -256,9 +258,9 @@
             <div class="lg:pl-64 w-full flex flex-col">
                 <!-- start::Topbar -->
                 <div class="flex flex-col relative">
-                    <header class="flex justify-between items-center h-16 py-4 px-6 bg-gray-800 fixed inset-0 border-b">
+                    <header class="flex justify-between items-center h-16 py-4 px-6 bg-gray-800 fixed inset-0 border-b w-full">
                         <!-- start::Mobile menu button -->
-                        <div class="flex items-center">
+                        <div class="flex items-center ">
                             <button 
                                 @click="menuOpen = true" 
                                 class="text-gray-500 hover:text-primary focus:outline-none lg:hidden transition duration-200"
