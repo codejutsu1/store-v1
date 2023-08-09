@@ -1,5 +1,5 @@
 <x-user-dashboard>
-    <div class="bg-gray-900 h-full p-4 md:p-8 pt-32">
+    <div class="bg-gray-900 h-full px-4 md:px-8 pt-32">
         <div class="bg-gray-800 w-full md:w-3/5 mx-auto p-8 rounded-md text-gray-200 space-y-3 font-semibold">
             <h1 class="text-xl text-center">{{ ucwords($staff->name) }}'s Dashboard</h1>
             <h2 class="text-lg text-center">Roles:</h2>

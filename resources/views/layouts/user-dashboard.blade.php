@@ -34,7 +34,7 @@
 
             <aside 
                 :class="menuOpen ? 'translate-x-0 ease-out' : '-translate-x-full ease-in'" 
-                class="fixed z-30 inset-y-0 left-0 w-64 transition duration-300 bg-gray-800 overflow-y-auto lg:translate-x-0 lg:inset-0 custom-scrollbar"
+                class="fixed z-50 inset-y-0 left-0 w-64 transition duration-300 bg-gray-800 overflow-y-auto lg:translate-x-0 lg:inset-0 custom-scrollbar"
             >
                 <!-- start::Logo -->
                 <div class="flex items-center justify-center bg-black bg-opacity-30 h-16">
@@ -255,12 +255,12 @@
                 <!-- end::Navigation -->
             </aside>
 
-            <div class="lg:pl-64 w-full flex flex-col">
+            <div class="lg:pl-64 w-full flex flex-col relative">
                 <!-- start::Topbar -->
-                <div class="flex flex-col relative z-50">
-                    <header class="flex justify-between items-center h-16 py-4 px-6 bg-gray-800 fixed inset-0 border-b w-full">
+                <div class="flex flex-col z-40 relative">
+                    <header class="flex justify-between items-center h-16 py-4 px-6 bg-gray-800 fixed inset-x-0">
                         <!-- start::Mobile menu button -->
-                        <div class="flex items-center ">
+                        <div class="flex items-center">
                             <button 
                                 @click="menuOpen = true" 
                                 class="text-gray-500 hover:text-primary focus:outline-none lg:hidden transition duration-200"
