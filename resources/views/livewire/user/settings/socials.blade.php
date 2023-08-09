@@ -1,5 +1,5 @@
 <div class="bg-gray-800 w-full mx-auto p-4 md:p-8 rounded-md text-gray-200 mt-20">
-    <h1 class="font-semibold text-xl md:text-2xl border-b pb-4">Socials - Ways to get you.</h1>
+    <h1 class="font-semibold text-lg md:text-2xl border-b pb-4">Socials - Ways to get you.</h1>
 
     <div>
         <form wire:submit.prevent="submit" class="py-10 space-y-10">

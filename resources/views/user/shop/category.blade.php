@@ -1,10 +1,10 @@
 <x-user-dashboard>
-<div class="bg-gray-900 h-full p-8 pt-32">
+<div class="bg-gray-900 h-full px-4 md:px-8 pt-32">
     <div class="bg-gray-800 w-full mx-auto p-8 rounded-md text-gray-200">
-        <h1 class="font-semibold text-2xl border-b pb-4">Categories - Create new categories for your store.</h1>
+        <h1 class="font-semibold text-lg md:text-2xl border-b pb-4">Categories - Create new categories for your store.</h1>
 
         <div class="py-10 overflow-x-auto">
-                <table class="w-full bg-gray-900 rounded-md overflow-hidden">
+                <table class="w-full text-sm md:text-base bg-gray-900 rounded-md overflow-x-auto">
                     <tr class="font-semibold text-center border-b">
                         <th class="py-3 px-6">S/N</th>
                         <th class="py-3 px-6">Name</th>

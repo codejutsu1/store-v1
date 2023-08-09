@@ -1,5 +1,5 @@
 <div class="bg-gray-800 w-full mx-auto p-4 md:p-8 rounded-md text-gray-200">
-    <h1 class="font-semibold text-xl nd:text-2xl border-b pb-4">Site - Make changes as you deem fit.</h1>
+    <h1 class="font-semibold text-lg nd:text-2xl border-b pb-4">Site - Make changes as you deem fit.</h1>
     <div>
         <form wire:submit.prevent="submit" class="py-10 space-y-10">
             <div class="md:grid grid-cols-2 md:gap-10 space-y-10 md:space-y-0">
