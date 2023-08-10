@@ -22,7 +22,7 @@
         
         @vite(['resources/css/app.css']) 
     </head>
-    <body >
+    <body>
         @include('sweetalert::alert')
         <div 
             x-data="{ menuOpen: false }" 
@@ -33,6 +33,7 @@
             <!-- end::Black overlay -->
 
             <aside 
+                x-cloak
                 :class="menuOpen ? 'translate-x-0 ease-out' : '-translate-x-full ease-in'" 
                 class="fixed z-50 inset-y-0 left-0 w-64 transition duration-300 bg-gray-800 overflow-y-auto lg:translate-x-0 lg:inset-0 custom-scrollbar"
             >
