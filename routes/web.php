@@ -44,7 +44,7 @@ Route::group(['middleware' => 'auth'], function() {
             Route::get('review', 'review')->name('review');
         });
 
-        Route::controller(StaffController::class)->group(function() {
+        Route::controller(StaffController::class)->middleware('can:view staff')->group(function() {
             Route::get('staff', 'index')->name('staff');
             Route::get('staff/{staff}', 'show')->name('staff.show');
         });

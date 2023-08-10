@@ -212,6 +212,8 @@
                     <!-- end::Menu link -->
                     @endcan
 
+                    @can('view staff')
+
                      <!-- start::Menu link -->
                      <a 
                         x-data="{ linkHover: false }"
@@ -231,6 +233,7 @@
                         </span>
                     </a>
                     <!-- end::Menu link -->
+                    @endcan
 
                     <a 
                         x-data="{ linkHover: false }"
@@ -250,7 +253,25 @@
                             Setting
                         </span>
                     </a>
-                   
+
+                    <div >
+                        <a href="javascript:void(0)" onclick="document.getElementById('logout-form').submit();"
+                        class="flex items-center text-gray-400 px-6 py-3 cursor-pointer hover:bg-black hover:bg-opacity-30 transition duration-200">
+                            <svg class="w-5 h-5 transition duration-200" :class=" linkHover ? 'text-gray-100' : ''"fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" class="text-darkOrange" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1">
+                                </path>
+                            </svg>
+
+                            <span class="ml-3 transition duration-200" 
+                            :class="linkHover ? 'text-gray-100' : ''">Logout</span>
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </div>
                 </nav>
                 <!-- end::Navigation -->
             </aside>
@@ -299,10 +320,11 @@
                                 >
                                     <!-- start::Submenu content -->
                                     <div class="bg-white rounded">
+                                        @can('view staff')
                                         <!-- start::Submenu link -->
                                         <a 
                                             x-data="{ linkHover: false }"
-                                            href="./pages/profile.html"
+                                            href="{{ route('staff') }}"
                                             class="flex items-center justify-between py-2 px-3 hover:bg-gray-100 bg-opacity-20"
                                             @mouseover="linkHover = true"
                                             @mouseleave="linkHover = false"
@@ -318,11 +340,12 @@
                                             </div>
                                         </a>
                                         <!-- end::Submenu link -->
-                                        
+                                        @endcan
+                                    
                                         <!-- start::Submenu link -->
                                         <a 
                                             x-data="{ linkHover: false }"
-                                            href="./pages/settings.html"
+                                            href="{{ route('settings') }}"
                                             class="flex items-center justify-between py-2 px-3 hover:bg-gray-100 bg-opacity-20"
                                             @mouseover="linkHover = true"
                                             @mouseleave="linkHover = false"
