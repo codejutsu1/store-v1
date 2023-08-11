@@ -1,6 +1,5 @@
 <x-page-layout>
     <x-category />
-
     <section class="relative overflow-hidden">
         <div class="pt-5 pb-28 w-11/12 md:w-5/6 mx-auto circles">
             <h1 class="relative z-30 text-center text-[#101820] text-2xl md:text-4xl uppercase font-semibold">

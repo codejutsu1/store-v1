@@ -8,7 +8,11 @@
         <link href="https://unpkg.com/filepond@^4/dist/filepond.css" rel="stylesheet" />
         <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet">
 
-        <style>[x-cloak] { display: none !important; }</style>
+        <style>
+            [x-cloak] { 
+                display: none !important; 
+            }
+        </style>
 
         <!-- Styles -->
         @livewireStyles
@@ -37,7 +41,7 @@
                 :class="menuOpen ? 'translate-x-0 ease-out' : '-translate-x-full ease-in'" 
                 class="fixed z-50 inset-y-0 left-0 w-64 transition duration-300 bg-gray-800 overflow-y-auto lg:translate-x-0 lg:inset-0 custom-scrollbar"
             >
-            <div @click="menuOpen = false" class="fixed bottom-10 right-1/2 rounded-full border w-14 h-14 flex items-center justify-center">
+            <div @click="menuOpen = false" class="fixed md:hidden bottom-10 right-1/2 rounded-full border w-14 h-14 flex items-center justify-center">
                 <span class="font-6xl text-gray-200 font-bold">X</span>
             </div>
                 <!-- start::Logo -->
