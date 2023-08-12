@@ -13,7 +13,7 @@
                 <div class="md:w-2/5 flex justify-center">
                     <img class="object-cover shadow-lg w-72 h-72 rounded-md" src="../../storage/product/{{ $product->productImage->image }}" alt="{{ $product->name }}">
                 </div>
-                <div class="md:w-2/5 w-11/12 mx-auto md:mx-0 space-y-8">
+                <div class="md:w-2/5 w-11/12 mx-auto md:mx-0 space-y-8 px-2">
                     <div>
                         <span class="text-2xl font-bold block">Product Name</span>
                         <span class="text-lg font-semibold">{{ $product->name }}</span>
