@@ -17,29 +17,31 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="antialiased">
-        <nav class="bg-[#101820] flex justify-around items-center text-gray-200 py-3">
-            <div>
-                <h1 class="text-[#FEE715]">{{ $setting->site_name }} Here...</h1>
-            </div>
-            <ul class="md:flex items-center space-x-20 hidden">
-                @forelse($categories as $category)
-                    <li>
-                        <a href="{{ route('shop', $category->slug) }}" class="duration-300 hover:text-[#FEE715]">
-                            {{ $category->name }}
-                        </a>
-                    </li>
-                @empty
-                    <p>No Categories yet</p>
-                @endforelse
-            </ul>
-            <div class="flex items-center space-x-5">
-                <img class="w-5 h-5 cursor-pointer" src="{{ Vite::asset('resources/images/nav/search.svg') }}" alt="Search Icon">
+        <nav class="bg-[#101820] text-gray-200 py-3">
+            <div class="w-11/12 md:w-5/6 flex justify-between items-center mx-auto">
+                <div>
+                    <h1 class="text-[#FEE715]">{{ $setting->site_name }} Here...</h1>
+                </div>
+                <ul class="md:flex items-center space-x-20 hidden">
+                    @forelse($categories as $category)
+                        <li>
+                            <a href="{{ route('shop', $category->slug) }}" class="duration-300 hover:text-[#FEE715]">
+                                {{ $category->name }}
+                            </a>
+                        </li>
+                    @empty
+                        <p>No Categories yet</p>
+                    @endforelse
+                </ul>
+                <div class="flex items-center space-x-5">
+                    <img class="w-5 h-5 cursor-pointer" src="{{ Vite::asset('resources/images/nav/search.svg') }}" alt="Search Icon">
 
-                <a href="{{ route('cart') }}" class="bg-[#FEE715] w-10 h-10 flex justify-center items-center images relative">
-                    <img class="w-5 h-5" src="{{ Vite::asset('resources/images/nav/shopping-cart.svg') }}" alt="Shopping Cart">
+                    <a href="{{ route('cart') }}" class="bg-[#FEE715] w-10 h-10 flex justify-center items-center images relative">
+                        <img class="w-5 h-5" src="{{ Vite::asset('resources/images/nav/shopping-cart.svg') }}" alt="Shopping Cart">
 
-                    <livewire:website.cart.cart-counter />
-                </a>
+                        <livewire:website.cart.cart-counter />
+                    </a>
+                </div>
             </div>
         </nav>
         <div class="py-2 w-5/6 mx-auto">
