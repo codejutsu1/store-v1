@@ -27,4 +27,9 @@ class Product extends Model
     {
         return $this->hasOne(ProductImage::class);
     }
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }

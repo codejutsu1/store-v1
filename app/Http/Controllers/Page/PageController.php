@@ -32,6 +32,17 @@ class PageController extends Controller
         return view('pages/shop', compact('products'));
     }
 
+    public function productShow(Product $product)
+    {
+        $product = $product->with('productImage')->first();
+
+        $category = Category::where('id', $product->category_id)
+                            ->select(['id', 'name', 'description'])
+                            ->first();
+
+        return view('pages/product-show', compact('product','category'));
+    }
+
     public function cart()
     {
         return view('pages/cart');

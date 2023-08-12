@@ -18,7 +18,7 @@
                                     <span class="text-[#101920] text-xl md:text-2xl font-bold"><sup>&#8358;</sup><span class="text-2xl md:text-4xl">@product_price($product->original_price)</span>.00</span>
                                 </div>
                                 <div class="py-8 flex justify-between">
-                                    <a href="{{ route('cart') }}" class="block px-5 py-2 uppercase font-bold bg-[#FEE715] text-[#101820] rounded-tr-md rounded-bl-md">View</a>
+                                    <a href="{{ route('product.show', $product->slug) }}" class="block px-5 py-2 uppercase font-bold bg-[#FEE715] text-[#101820] rounded-tr-md rounded-bl-md">View</a>
                                     <livewire:website.cart.add-to-cart :product="$product" />
                                 </div>
                             </div>

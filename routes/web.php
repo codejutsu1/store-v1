@@ -24,18 +24,19 @@ use App\Http\Controllers\User\PageController as UserPage;
 
 Route::controller(PageController::class)->group(function() {
     Route::get('/', 'home')->name('home');
-    Route::get('/about-us', 'aboutUs')->name('about.us');
-    Route::get('/privacy-policy', 'privacyPolicy')->name('privacy.policy');
-    Route::get('/shop/{category}', 'shop')->name('shop');
-    Route::get('/cart', 'cart')->name('cart');
-    Route::get('/cart-review', 'cartReview')->name('cart.review');
-    Route::get('/checkout', 'checkout')->name('checkout');
+    Route::get('about-us', 'aboutUs')->name('about.us');
+    Route::get('privacy-policy', 'privacyPolicy')->name('privacy.policy');
+    Route::get('shop/{category}', 'shop')->name('shop');
+    Route::get('product/{product}', 'productShow')->name('product.show');
+    Route::get('cart', 'cart')->name('cart');
+    Route::get('cart-review', 'cartReview')->name('cart.review');
+    Route::get('checkout', 'checkout')->name('checkout');
 });
 
 Route::get('/payment/callback', [PaymentController::class, 'handleGatewayCallback'])->name('callback');
 
 Route::group(['middleware' => 'auth'], function() {
-    Route::get('/dashboard', [UserPage::class, 'dashboard'])->name('dashboard');
+    Route::get('dashboard', [UserPage::class, 'dashboard'])->name('dashboard');
     
     Route::group(['prefix' => 'dashboard'], function() {
         Route::controller(UserPage::class)->middleware('can:view website')->group(function() {
