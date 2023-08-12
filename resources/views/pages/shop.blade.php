@@ -10,7 +10,7 @@
                     @forelse($products as $product)
                         <div class="bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-20 border-t shadow-xl flex flex-col items-center justify-center rounded-r-2xl">
                             <div class="md:-mt-28 -mt-32">
-                                <img class="object-cover w-[200px] h-[200px] images border shadow-lg" src="../../storage/product/{{ $product->productImage->image }}" alt="{{ $product->productImage->description }}" loading="lazy">
+                                <img class="object-cover w-[200px] h-[200px] images border shadow-lg" src="../../storage/product/{{ $product->productImage->image }}" alt="{{ $product->name }}" loading="lazy">
                             </div>
                             <div class="w-11/12 md:w-5/6 mx-auto">
                                 <div class="border-b text-center py-10">
@@ -18,7 +18,7 @@
                                     <span class="text-[#101920] text-xl md:text-2xl font-bold"><sup>&#8358;</sup><span class="text-2xl md:text-4xl">@product_price($product->original_price)</span>.00</span>
                                 </div>
                                 <div class="py-8 flex justify-between">
-                                    <a href="{{ route('cart') }}" class="block px-5 py-2 uppercase font-bold bg-[#FEE715] text-[#101820] rounded-tr-md rounded-bl-md">Buy Now</a>
+                                    <a href="{{ route('cart') }}" class="block px-5 py-2 uppercase font-bold bg-[#FEE715] text-[#101820] rounded-tr-md rounded-bl-md">View</a>
                                     <livewire:website.cart.add-to-cart :product="$product" />
                                 </div>
                             </div>

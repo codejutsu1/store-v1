@@ -20,6 +20,7 @@ return new class extends Migration
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
             $table->string('name');
+            $table->string('slug')->unique();
             $table->bigInteger('original_price');
             $table->bigInteger('discount_price')->nullable();
             $table->boolean('status')->default(0);

@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\User\Product;
 
 use App\Models\Category;
+use Illuminate\Support\Str;
 use App\Services\UploadFile;
 use Livewire\WithFileUploads;
 use LivewireUI\Modal\ModalComponent;
@@ -37,9 +38,12 @@ class CreateProduct extends ModalComponent
     {
         $this->validate();
 
+        $slug = Str::slug($this->name);
+
         $product = Category::findOrFail($this->category_id)->products()->create([
             'category_id' => $this->category_id,
             'name' => $this->name,
+            'slug' => $slug,
             'original_price' => $this->original_price,
         ]);
 

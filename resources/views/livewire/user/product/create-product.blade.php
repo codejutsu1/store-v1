@@ -28,7 +28,7 @@
                     @error('image')<span class="text-red-600 font-bold">{{ $message }}</span> @enderror
                 </div>
                 <div>
-                    <textarea wire:model.debounce.500ms="description" class="block w-full bg-gray-800 focus:ring-0 focus:border-gray-200 rounded-md mt-10" rows="5" placeholder="Image Description...."></textarea>
+                    <textarea wire:model.debounce.500ms="description" class="block w-full bg-gray-800 focus:ring-0 focus:border-gray-200 rounded-md mt-10" rows="5" placeholder="Product Description...."></textarea>
                     @error('description') <span class="text-red-600 font-bold">{{ $message }}</span> @enderror
                 </div>
                 <div class="flex justify-end pt-10">
