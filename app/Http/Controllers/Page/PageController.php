@@ -34,7 +34,7 @@ class PageController extends Controller
 
     public function productShow(Product $product)
     {
-        $product = $product->with('productImage')->first();
+        $product = $product->where('id', $product->id)->with('productImage')->first();
 
         $category = Category::where('id', $product->category_id)
                             ->select(['id', 'name', 'description'])
