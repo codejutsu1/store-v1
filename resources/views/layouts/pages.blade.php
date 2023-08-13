@@ -10,17 +10,47 @@
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 
+        <style>
+            [x-cloak] { 
+                display: none !important; 
+            }
+        </style>
+
         <!-- Styles -->
         @livewireStyles
         
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="antialiased">
+    <body class="antialiased"
+    x-data="{navbarOpen: false, }"
+    >
         <nav class="bg-[#101820] text-gray-200 py-3">
             <div class="w-11/12 md:w-5/6 flex justify-between items-center mx-auto">
                 <div>
-                    <h1 class="text-[#FEE715]">{{ $setting->site_name }} Here...</h1>
+                    <h1 class="hidden md:block text-[#FEE715]">{{ $setting->site_name }} Here...</h1>
+                    <div class="flex items-center">
+                            <button 
+                                @click="navbarOpen = true" 
+                                x-show="!navbarOpen"
+                                x-transition
+                                x-cloak
+                                class="text-[#FEE715] hover:text-primary focus:outline-none md:hidden transition duration-200"
+                            >
+                            <svg class="w-6 h-6" fill="#FEE715" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path></svg>
+                            </button>
+                            <button 
+                                @click="navbarOpen = false" 
+                                x-show="navbarOpen"
+                                x-transition
+                                x-cloak
+                                class="text-[#FEE715] hover:text-primary focus:outline-none md:hidden transition duration-200"
+                            > 
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="#FEE715" stroke="currentColor"  viewBox="0 0 50 50">
+                                    <path d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"></path>
+                                </svg>
+                            </button>
+                        </div>
                 </div>
                 <ul class="md:flex items-center space-x-20 hidden">
                     @forelse($categories as $category)
@@ -44,9 +74,25 @@
                 </div>
             </div>
         </nav>
+
+        <!-- Mobile -->
+        <ul class="fixed inset-x-0 min-h-screen bg-black opacity-80 z-50 text-xl font-semibold text-gray-200 transform translate-x-full transition duration-300"
+            :class="{'translate-x-full' : !navbarOpen, 'translate-x-0': navbarOpen}"
+        >
+            <li>
+                <a href="{{ route('home') }}" class="block active:text-[#FEE715] py-5 text-center">Home</a>
+            </li>
+            <li>
+                <a href="{{ route('about.us') }}" class="block active:text-[#FEE715] py-5 text-center">About Us</a>
+            </li>
+            <li>
+                <a href="#" class="block active:text-[#FEE715] py-5 text-center">Shop</a>
+            </li>
+        </ul>
         <div class="py-2 w-5/6 mx-auto">
             <marquee class="text-center font-semibold">Important Announcement, all products will have a discount of <span class="font-bold">30%</span>, valid till 30th August.</marquee>
         </div>
+        <!-- End Mobile -->
 
         <main>
             {{ $slot }}
