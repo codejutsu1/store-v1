@@ -12,7 +12,7 @@
                 <img class="object-contain w-96 h-96" src="{{ Vite::asset('resources/images/normal/young_model.png') }}" alt="A young black model">
             </div>
 
-            <div class="flex items-end">
+            <div class="flex items-end" data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="1500">
                 <div>
                     <p class="text-2xl md:text-4xl font-bold text-gray-100 uppercase">
                         <span class="text-[#FEE715]">Quick </span>order <br/> Fast <span class="text-[#FEE715]">Delivery</span>
@@ -33,7 +33,7 @@
             </h1>
             <div class="pt-44 relative z-30">
                 <div class="md:grid grid-cols-2 justify-center md:gap-y-44 md:gap-10 space-y-36 md:space-y-0">
-                    <div class="bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-20 border-t shadow-xl flex flex-col items-center justify-center rounded-r-2xl">
+                    <div class="bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-20 border-t shadow-xl flex flex-col items-center justify-center rounded-r-2xl" data-aos="fade-up"  data-aos-duration="1500">
                         <div class="-mt-28">
                             <img class="object-cover w-[200px] h-[200px] images border shadow-lg" src="{{ Vite::asset('resources/images/normal/pizza.jpg') }}" alt="Pizza" loading="lazy">
                         </div>
@@ -49,7 +49,7 @@
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-20 border-t shadow-xl flex flex-col items-center justify-center rounded-r-2xl">
+                    <div data-aos="fade-up"  data-aos-duration="1500" class="bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-20 border-t shadow-xl flex flex-col items-center justify-center rounded-r-2xl">
                         <div class="-mt-28">
                             <img class="object-cover w-[200px] h-[200px] images border shadow-lg" src="{{ Vite::asset('resources/images/normal/fruit-salad.jpg') }}" alt="Fruit Salad" loading="lazy">
                         </div>
@@ -65,7 +65,7 @@
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-20 border-t shadow-xl flex flex-col items-center justify-center rounded-r-2xl">
+                    <div data-aos="fade-up"  data-aos-duration="1500" class="bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-20 border-t shadow-xl flex flex-col items-center justify-center rounded-r-2xl">
                         <div class="-mt-28">
                             <img class="object-cover w-[200px] h-[200px] images border shadow-lg" src="{{ Vite::asset('resources/images/normal/cake.jpg') }}" alt="Cake" loading="lazy">
                         </div>
@@ -81,7 +81,7 @@
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-20 border-t shadow-xl flex flex-col items-center justify-center rounded-r-2xl">
+                    <div data-aos="fade-up"  data-aos-duration="1500" class="bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-20 border-t shadow-xl flex flex-col items-center justify-center rounded-r-2xl">
                         <div class="-mt-28">
                             <img class="object-cover w-[200px] h-[200px] images border shadow-lg" src="{{ Vite::asset('resources/images/normal/ice-cream.jpg') }}" alt="Ice cream" loading="lazy">
                         </div>
@@ -112,7 +112,7 @@
             </h1>
             <div class="pt-10">
                 <div class="md:flex justify-between md:gap-x-20 gap-x-0 space-y-24 md:space-y-0">
-                    <div class="shadow-custom md:w-1/3 w-full h-[400px] relative rounded-md">
+                    <div class="shadow-custom md:w-1/3 w-full h-[400px] relative rounded-md ">
                         <div class="bg-gray-800 opacity-90 hover:opacity-100 absolute top-5 left-5 right-5 bottom-5 p-4 overflow-hidden rounded-md shadow-custom-2 duration-500 hover:translate-y-[-50px] group">
                             <div class="relative pt-16 text-center">
                                 <h1 class="text-2xl md:text-4xl font-bold text-gray-200 group-hover:text-[#FEE715] duration-1000">Armateur</h1>

@@ -21,7 +21,7 @@
                 <a href="/">
                     <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
                 </a>
-            </div> -->
+        </div> -->
 
             <div class="w-11/12 md:w-full mt-40 sm:max-w-md md:mt-6 px-6 py-4 login-div shadow-md overflow-hidden sm:rounded-lg relative z-40">
                 {{ $slot }}
