@@ -23,9 +23,12 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="antialiased"
-    x-data="{navbarOpen: false, }"
+        x-data="{navbarOpen: false, scrollFromTop : false}"
+        x-init="window.pageYOffset > 112 ? scrollFromTop = true : scrollFromTop = false"
+        @scroll.window="window.pageYOffset > 112 ? scrollFromTop = true : scrollFromTop = false"
+        :class="{'overflow-hidden':navbarOpen, 'overflow-auto': !navbarOpen}"
     >
-        <nav class="bg-[#101820] text-gray-200 py-3">
+        <nav class="bg-[#101820] text-gray-200 py-3 w-full transtion duration-200" :class="{'fixed z-50 shadow-xl': scrollFromTop,}">
             <div class="w-11/12 md:w-5/6 flex justify-between items-center mx-auto">
                 <div>
                     <h1 class="hidden md:block text-[#FEE715]">{{ $setting->site_name }} Here...</h1>
@@ -55,7 +58,7 @@
                 <ul class="md:flex items-center space-x-20 hidden">
                     @forelse($categories as $category)
                         <li>
-                            <a href="{{ route('shop', $category->slug) }}" class="duration-300 hover:text-[#FEE715]">
+                            <a href="{{ route('shop', $category->slug) }}" class="duration-300 hover:text-[#FEE715] active:text-[#FEE715]">
                                 {{ $category->name }}
                             </a>
                         </li>
