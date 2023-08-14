@@ -45,7 +45,7 @@
                     <div class="p-4 shadow-lg rounded-md tab-acc relative" data-aos="fade-left" data-aos-duration="1500">
                         <input type="radio" id="acc1" name="acc" class="hidden">
                         <label for="acc1" class="label-acc">
-                            <h1 class="text-xl md:text-2xl font-bold text-[#101820]">Who are we?</h1>
+                            <h1 class="text-xl md:text-2xl font-semibold text-[#101820]">Who are we?</h1>
                         </label>
                         <div class="text-gray-500 text-base md:text-lg content-acc max-h-0 overflow-hidden">
                             <p class="py-10">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed ex quisquam, modi amet reiciendis ut molestias! Ipsam, fuga illo. Error quam saepe consectetur facere qui sapiente veritatis assumenda dolorem earum.</p>
@@ -55,7 +55,7 @@
                     <div class="p-4 shadow-lg rounded-md tab-acc relative" data-aos="fade-left" data-aos-duration="1500">
                         <input type="radio" id="acc2" name="acc" class="hidden">
                         <label for="acc2" class="label-acc">
-                            <h1 class="text-xl md:text-2xl font-bold text-[#101820]">How do we deliver?</h1>
+                            <h1 class="text-xl md:text-2xl font-semibold text-[#101820]">How do we deliver?</h1>
                         </label>
                         <div class="text-gray-500 text-base md:text-lg content-acc max-h-0 overflow-hidden">
                             <p class="py-10">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed ex quisquam, modi amet reiciendis ut molestias! Ipsam, fuga illo. Error quam saepe consectetur facere qui sapiente veritatis assumenda dolorem earum.</p>
@@ -65,7 +65,7 @@
                     <div class="p-4 shadow-lg rounded-md tab-acc relative" data-aos="fade-left" data-aos-duration="1500">
                         <input type="radio" id="acc3" name="acc" class="hidden">
                         <label for="acc3" class="label-acc">
-                            <h1 class="text-xl md:text-2xl font-bold text-[#101820]">When is the cookathon coming to pass?</h1>
+                            <h1 class="text-xl md:text-2xl font-semibold text-[#101820]">When is the cookathon coming to pass?</h1>
                         </label>
                         <div class="text-gray-500 text-base md:text-lg content-acc max-h-0 overflow-hidden">
                             <p class="py-10">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed ex quisquam, modi amet reiciendis ut molestias! Ipsam, fuga illo. Error quam saepe consectetur facere qui sapiente veritatis assumenda dolorem earum.</p>

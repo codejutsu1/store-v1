@@ -108,22 +108,34 @@
                     <h1 class="text-4xl md:text-6xl text-[#FEE715] text-center md:text-left">
                         Logo Here
                     </h1>
-                    <div class="w-3/5 mx-auto md:mx-0 flex justify-between pt-2">
-                        <a href="#" class="grayscale duration-300 hover:grayscale-0">
-                            <img class="w-6 h-6 object-cover" src="{{ Vite::asset('resources/images/review/tiktok.svg') }}" alt="reviewer tiktok">
-                        </a>
-                        <a href="#" class="grayscale duration-300 hover:grayscale-0">
-                            <img class="w-6 h-6 object-cover" src="{{ Vite::asset('resources/images/review/twitter.svg') }}" alt="reviewer tiktok">
-                        </a>
-                        <a href="#" class="grayscale duration-300 hover:grayscale-0">
-                            <img class="w-6 h-6 object-cover" src="{{ Vite::asset('resources/images/review/instagram.svg') }}" alt="reviewer tiktok">
-                        </a>
-                        <a href="#" class="grayscale duration-300 hover:grayscale-0">
-                            <img class="w-6 h-6 object-cover" src="{{ Vite::asset('resources/images/review/facebook.svg') }}" alt="reviewer tiktok">
-                        </a>
-                        <a href="#" class="grayscale duration-300 hover:grayscale-0">
-                            <img class="w-6 h-6 object-cover" src="{{ Vite::asset('resources/images/review/whatsapp.svg') }}" alt="reviewer whatsapp">
-                        </a>
+                    <div class="w-3/5 mx-auto md:mx-0 pt-10 h-full">
+                        <ul class="flex justify-between pt-2 w-full">
+                            <li>
+                                <a href="#" class="grayscale duration-300 hover:grayscale-0 inline-block">
+                                    <img class="w-6 h-6 object-cover" src="{{ Vite::asset('resources/images/review/tiktok.svg') }}" alt="reviewer tiktok">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="grayscale duration-300 hover:grayscale-0 inline-block">
+                                    <img class="w-6 h-6 object-cover" src="{{ Vite::asset('resources/images/review/twitter.svg') }}" alt="reviewer tiktok">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="grayscale duration-300 hover:grayscale-0 inline-block">
+                                    <img class="w-6 h-6 object-cover" src="{{ Vite::asset('resources/images/review/instagram.svg') }}" alt="reviewer tiktok">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="grayscale duration-300 hover:grayscale-0 inline-block">
+                                    <img class="w-6 h-6 object-cover" src="{{ Vite::asset('resources/images/review/facebook.svg') }}" alt="reviewer tiktok">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="grayscale duration-300 hover:grayscale-0 inline-block">
+                                    <img class="w-6 h-6 object-cover" src="{{ Vite::asset('resources/images/review/whatsapp.svg') }}" alt="reviewer tiktok">
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 
@@ -144,9 +156,35 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="block duration-100 hover:text-[#FEE715] hover:font-semibold">
-                                    Shop
-                                </a>
+                                <div x-data="{ linkHover: false, linkActive: false }">
+                                    <div 
+                                        @mouseover = "linkHover = true"
+                                        @mouseleave = "linkHover = false"
+                                        @click = "linkActive = !linkActive"                         
+                                        class="block duration-100 hover:text-[#FEE715] hover:font-semibold"
+                                    >
+                                        <div class="flex justify-center items-center">
+                                            <span>shop</span> 
+                                            <svg class="svg-icon" style="width: 2em; height: 2em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M680.1408 414.976c9.9328-8.704 24.2176-6.656 31.8976 4.608a27.8016 27.8016 0 0 1-4.096 35.84l-172.032 149.76a35.6352 35.6352 0 0 1-47.8208 0l-172.032-149.7088a27.8016 27.8016 0 0 1-4.096-35.9424c7.68-11.1616 22.016-13.2096 31.8976-4.608L512 561.3056l168.1408-146.2784z"  /></svg>                      
+                                        </div>
+                                    </div>
+                                    <ul
+                                        x-show="linkActive"
+                                        x-cloak
+                                        x-collapse.duration.300ms
+                                        class="space-y-5"
+                                    >
+                                    @forelse($categories as $category)
+                                        <li>
+                                            <a href="{{ route('shop', $category->slug) }}" class="block duration-100 hover:text-[#FEE715] hover:font-semibold text-sm tracking-wide mt-5">
+                                                <span class="text-[#FEE715] font-bold">-</span> {{ $category->name }}
+                                            </a>
+                                        </li>
+                                    @empty
+                                        <p>No Categories yet</p>
+                                    @endforelse
+                                    </ul>
+                                </div>
                             </li>
                             <li>
                                 <a href="{{ route('about.us') . '#faq' }}" class="block duration-100 hover:text-[#FEE715] hover:font-semibold">
@@ -168,7 +206,7 @@
                         <ul class="space-y-6 pt-5 text-sm md:text-base">
                             <li class="flex justify-between gap-2 md:gap-5">
                                 <div class="md:w-1/5 flex justify-center">
-                                    <img class="w-8 h-8 md:w-20 object-cover" src="{{ Vite::asset('resources/images/contact-us/address.svg') }}" alt="Logo location">
+                                    <img class="w-8 h-8 md:w-10 object-cover" src="{{ Vite::asset('resources/images/contact-us/address.svg') }}" alt="Logo location">
                                 </div>
                                 <div class="w-full md:w-4/5">
                                     No. 9 UpperNorth Street, <br> Off Breakfast Road, <br> Tokyo.
