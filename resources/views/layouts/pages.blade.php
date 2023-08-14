@@ -102,9 +102,9 @@
             {{ $slot }}
         </main>
 
-        <footer class="bg-black">
+        <footer class="bg-black h-full overflow-hidden">
             <div class="w-11/12 md:w-5/6 mx-auto py-10 text-gray-100 md:grid grid-cols-2 md:gap-5 space-y-16 md:space-y-0">
-                <div class="flex flex-col justify-between pb-5 space-y-5 md:space-y-0">
+                <div class="flex flex-col justify-between pb-5 space-y-5 md:space-y-0" data-aos="fade-up" data-aos-duration="1500">
                     <h1 class="text-4xl md:text-6xl text-[#FEE715] text-center md:text-left">
                         Logo Here
                     </h1>
@@ -128,7 +128,7 @@
                 </div>
                 
                 <div class="flex justify-between">
-                    <div class="uppercase">
+                    <div class="uppercase" data-aos="fade-up" data-aos-duration="1500">
                         <h1 class="text-lg md:text-2xl font-semibold text-center text-[#FEE715]">
                             Quick Links
                         </h1>
@@ -161,14 +161,14 @@
                         </ul>
                     </div>
 
-                    <div>
+                    <div data-aos="fade-up" data-aos-duration="1500">
                         <h1 class="text-lg md:text-2xl font-semibold uppercase text-[#FEE715] text-center md:text-left">
                             Contact Info
                         </h1>
                         <ul class="space-y-6 pt-5 text-sm md:text-base">
                             <li class="flex justify-between gap-2 md:gap-5">
                                 <div class="md:w-1/5 flex justify-center">
-                                    <img class="w-10 h-10 md:w-20 object-cover" src="{{ Vite::asset('resources/images/contact-us/address.svg') }}" alt="Logo location">
+                                    <img class="w-8 h-8 md:w-20 object-cover" src="{{ Vite::asset('resources/images/contact-us/address.svg') }}" alt="Logo location">
                                 </div>
                                 <div class="w-full md:w-4/5">
                                     No. 9 UpperNorth Street, <br> Off Breakfast Road, <br> Tokyo.
@@ -176,7 +176,7 @@
                             </li>
                             <li class="flex gap-5">
                                 <div class="md:w-1/5 flex justify-center">
-                                    <img class="w-10 h-10 md:w-20 object-cover" src="{{ Vite::asset('resources/images/contact-us/email.svg') }}" alt="Logo location">
+                                    <img class="w-8 h-8 md:w-20 object-cover" src="{{ Vite::asset('resources/images/contact-us/email.svg') }}" alt="Logo location">
                                 </div>
                                 <div class="w-4/5 flex items-center">
                                     <a href="#" class="underline">hello@logo.com</a>
@@ -184,7 +184,7 @@
                             </li>
                             <li class="flex gap-5">
                                 <div class="md:w-1/5 flex justify-center">
-                                    <img class="w-10 h-10 md:w-20 object-cover" src="{{ Vite::asset('resources/images/contact-us/phone.svg') }}" alt="Logo location">
+                                    <img class="w-8 h-8 md:w-20 object-cover" src="{{ Vite::asset('resources/images/contact-us/phone.svg') }}" alt="Logo location">
                                 </div>
                                 <div class="w-4/5 flex items-center">
                                     <a href="#" class="underline">{{ $setting->site_phone }}</a>
