@@ -29,7 +29,7 @@
         @scroll.window="window.pageYOffset > 112 ? scrollFromTop = true : scrollFromTop = false"
         :class="{'overflow-hidden':navbarOpen, 'overflow-auto': !navbarOpen}"
     >
-        <nav class="bg-[#101820] text-gray-200 py-3 w-full transtion duration-200" :class="{'fixed z-50 shadow-xl': scrollFromTop,}">
+        <nav class="bg-[#101820] text-gray-200 py-3 w-full transtion duration-200 z-50" :class="{'fixed shadow-xl': scrollFromTop,}">
             <div class="w-11/12 md:w-5/6 flex justify-between items-center mx-auto">
                 <div>
                     <h1 class="hidden md:block text-[#FEE715]">{{ $setting->site_name }} Here...</h1>
@@ -90,7 +90,36 @@
                 <a href="{{ route('about.us') }}" class="block active:text-[#FEE715] py-5 text-center">About Us</a>
             </li>
             <li>
-                <a href="#" class="block active:text-[#FEE715] py-5 text-center">Shop</a>
+                <div x-data="{ linkHover: false, linkActive: false }">
+                    <div 
+                        @mouseover = "linkHover = true"
+                        @mouseleave = "linkHover = false"
+                        @click = "linkActive = !linkActive"                         
+                        class="block duration-100 hover:text-[#FEE715] hover:font-semibold"
+                    >
+                        <div class="flex justify-center items-center py-5">
+                            <span>Shop</span> 
+                            <svg class="svg-icon" style="width: 2em; height: 2em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M680.1408 414.976c9.9328-8.704 24.2176-6.656 31.8976 4.608a27.8016 27.8016 0 0 1-4.096 35.84l-172.032 149.76a35.6352 35.6352 0 0 1-47.8208 0l-172.032-149.7088a27.8016 27.8016 0 0 1-4.096-35.9424c7.68-11.1616 22.016-13.2096 31.8976-4.608L512 561.3056l168.1408-146.2784z"  /></svg>                      
+                        </div>
+                    </div>
+                    <ul
+                        x-show="linkActive"
+                        x-cloak
+                        x-transition
+                        x-collapse.duration.300ms
+                        class="space-y-5 transition duration-300 text-center"
+                    >
+                        @forelse($categories as $category)
+                            <li>
+                                <a href="{{ route('shop', $category->slug) }}" class="block duration-100 hover:text-[#FEE715] hover:font-semibold text-lg tracking-wide py-4 mt-5">
+                                    <span class="text-[#FEE715] font-bold">-</span> {{ $category->name }}
+                                </a>
+                            </li>
+                        @empty
+                            <p>No Categories yet</p>
+                        @endforelse
+                    </ul>
+                </div>
             </li>
         </ul>
         <div class="py-2 w-5/6 mx-auto">
@@ -174,15 +203,15 @@
                                         x-collapse.duration.300ms
                                         class="space-y-5"
                                     >
-                                    @forelse($categories as $category)
-                                        <li>
-                                            <a href="{{ route('shop', $category->slug) }}" class="block duration-100 hover:text-[#FEE715] hover:font-semibold text-sm tracking-wide mt-5">
-                                                <span class="text-[#FEE715] font-bold">-</span> {{ $category->name }}
-                                            </a>
-                                        </li>
-                                    @empty
-                                        <p>No Categories yet</p>
-                                    @endforelse
+                                        @forelse($categories as $category)
+                                            <li>
+                                                <a href="{{ route('shop', $category->slug) }}" class="block duration-100 hover:text-[#FEE715] hover:font-semibold text-sm tracking-wide mt-5">
+                                                    <span class="text-[#FEE715] font-bold">-</span> {{ $category->name }}
+                                                </a>
+                                            </li>
+                                        @empty
+                                            <p>No Categories yet</p>
+                                        @endforelse
                                     </ul>
                                 </div>
                             </li>
