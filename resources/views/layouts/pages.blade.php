@@ -19,6 +19,7 @@
 
         <!-- Styles -->
         @livewireStyles
+        <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
         
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -126,6 +127,8 @@
             <marquee class="text-center font-semibold">Important Announcement, all products will have a discount of <span class="font-bold">30%</span>, valid till 30th August.</marquee>
         </div>
         <!-- End Mobile -->
+        
+        <x-preloader />
 
         <main>
             {{ $slot }}
@@ -134,7 +137,7 @@
         <footer class="bg-black h-full overflow-hidden">
             <div class="w-11/12 md:w-5/6 mx-auto py-10 text-gray-100 md:grid grid-cols-2 md:gap-5 space-y-16 md:space-y-0">
                 <div class="flex flex-col justify-between pb-5 space-y-5 md:space-y-0" data-aos="fade-up" data-aos-duration="1500">
-                    <h1 class="text-4xl md:text-6xl text-[#FEE715] text-center md:text-left">
+                    <h1 class="footer_header relative text-2xl md:text-4xl text-gray-200text-center md:text-left">
                         Logo Here
                     </h1>
                     <div class="w-3/5 mx-auto md:mx-0 pt-10 h-full">
@@ -170,10 +173,10 @@
                 
                 <div class="flex justify-between">
                     <div class="uppercase" data-aos="fade-up" data-aos-duration="1500">
-                        <h1 class="text-lg md:text-2xl font-semibold text-center text-[#FEE715]">
+                        <h1 class="text-lg md:text-xl font-semibold text-center text-[#FEE715]">
                             Quick Links
                         </h1>
-                        <ul class="text-center space-y-4 py-4 text-sm md:text-base">
+                        <ul class="text-center space-y-4 py-4 text-xs md:text-sm">
                             <li>
                                 <a href="{{ route('home') }}" class="block duration-100 hover:text-[#FEE715] hover:font-semibold">
                                     Home
@@ -229,31 +232,31 @@
                     </div>
 
                     <div data-aos="fade-up" data-aos-duration="1500">
-                        <h1 class="text-lg md:text-2xl font-semibold uppercase text-[#FEE715] text-center md:text-left">
+                        <h1 class="text-lg md:text-xl font-semibold uppercase text-[#FEE715] text-center md:text-left">
                             Contact Info
                         </h1>
-                        <ul class="space-y-6 pt-5 text-sm md:text-base">
+                        <ul class="space-y-6 pt-5 text-xs md:text-sm">
                             <li class="flex justify-between gap-2 md:gap-5">
-                                <div class="md:w-1/5 flex justify-center">
-                                    <img class="w-8 h-8 md:w-10 object-cover" src="{{ Vite::asset('resources/images/contact-us/address.svg') }}" alt="Logo location">
+                                <div class="flex justify-center">
+                                    <img class="w-5 h-5 object-cover" src="{{ Vite::asset('resources/images/contact-us/address.svg') }}" alt="Logo location">
                                 </div>
-                                <div class="w-full md:w-4/5">
+                                <div class="w-full ">
                                     No. 9 UpperNorth Street, <br> Off Breakfast Road, <br> Tokyo.
                                 </div>
                             </li>
                             <li class="flex gap-5">
-                                <div class="md:w-1/5 flex justify-center">
-                                    <img class="w-8 h-8 md:w-20 object-cover" src="{{ Vite::asset('resources/images/contact-us/email.svg') }}" alt="Logo location">
+                                <div class="flex justify-center">
+                                    <img class="w-5 h-5 object-cover" src="{{ Vite::asset('resources/images/contact-us/email.svg') }}" alt="Logo location">
                                 </div>
-                                <div class="w-4/5 flex items-center">
+                                <div class="flex items-center">
                                     <a href="#" class="underline">hello@logo.com</a>
                                 </div>
                             </li>
                             <li class="flex gap-5">
-                                <div class="md:w-1/5 flex justify-center">
-                                    <img class="w-8 h-8 md:w-20 object-cover" src="{{ Vite::asset('resources/images/contact-us/phone.svg') }}" alt="Logo location">
+                                <div class="flex justify-center">
+                                    <img class="w-5 h-5 object-cover" src="{{ Vite::asset('resources/images/contact-us/phone.svg') }}" alt="Logo location">
                                 </div>
-                                <div class="w-4/5 flex items-center">
+                                <div class="flex items-center">
                                     <a href="#" class="underline">{{ $setting->site_phone }}</a>
                                 </div>
                             </li>
@@ -268,6 +271,15 @@
             AOS.init({
                 once: true,
             });
+
+            var loader = document.getElementById("preloader");
+
+            window.addEventListener("load", function(){
+                loader.style.display = "none";
+                // setTimeout(() => {
+                //     loader.style.display = "none";
+                // }, 1000);
+            })
         </script>
         <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
