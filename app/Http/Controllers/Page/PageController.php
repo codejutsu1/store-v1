@@ -25,6 +25,11 @@ class PageController extends Controller
         return view('pages/privacy-policy');
     }
 
+    public function terms()
+    {
+        return view('pages/terms');
+    }
+
     public function shop(Category $category)
     {
         $products = Product::with('productImage')->where('category_id', $category->id)->get();

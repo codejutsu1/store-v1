@@ -70,12 +70,12 @@
 
                 <div class="pt-10 text-sm space-y-5">
                     <p>
-                        Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.
+                        Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our <a class="underline italic" href="{{ route('privacy.policy') }}" target="_blank">privacy policy</a>.
                     </p>
                     <div>
                         <label for="terms" class="cursor-pointer">    
                             <input type="checkbox" id="terms" class="focus:outline-none focus:ring-0 rounded-md" required>
-                            <span class="uppercase font-bold text-xs">I have read and agreed to this website terms and condition</span>
+                            <span class="uppercase font-bold text-xs">I have read and agreed to this website <a href="{{ route('terms') }}" target="_blank" class="underline italic">terms and condition</a></span>
                         </label>
                     </div>
                 </div>
