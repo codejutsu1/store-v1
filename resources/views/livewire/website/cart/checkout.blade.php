@@ -68,7 +68,23 @@
                     </div>
                 </div>
 
-                <div class="py-10 ">
+                <div class="pt-10 text-sm space-y-5">
+                    <p>
+                        Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.
+                    </p>
+                    <div>
+                        <label for="terms" class="cursor-pointer">    
+                            <input type="checkbox" id="terms" class="focus:outline-none focus:ring-0 rounded-md" required>
+                            <span class="uppercase font-bold text-xs">I have read and agreed to this website terms and condition</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="pt-10">
+                    <img src="{{ Vite::asset('resources/images/cards/paystack.png') }}" alt="Paystack Image">
+                </div>
+
+                <div class="py-10">
                     <button class="bg-[#FEE715] w-full py-3 rounded-md font-semibold text-[#101820]">
                         Pay with Paystack
                     </button>

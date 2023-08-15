@@ -283,7 +283,7 @@
                     </div>
                 </div>
             </div>
-            <div class="mx-auto flex justify-end py-3 text-gray-400 bg-zinc-800 px-3">
+            <div class="mx-auto flex justify-end py-3 text-gray-400 bg-zinc-800 px-3 overflow-hidden">
                 <div class="w-full md:w-1/2 flex justify-between text-xs">
                     <div>
                         <p>{{ $setting->site_name }} &#169; {{ date('Y') }} All Rights Reserved</p>
