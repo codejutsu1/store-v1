@@ -135,13 +135,13 @@
         </main>
 
         <footer class="bg-black h-full overflow-hidden">
-            <div class="w-11/12 md:w-5/6 mx-auto py-10 text-gray-100 md:grid grid-cols-2 md:gap-5 space-y-16 md:space-y-0">
-                <div class="flex flex-col justify-between pb-5 space-y-5 md:space-y-0" data-aos="fade-up" data-aos-duration="1500">
-                    <h1 class="footer_header relative text-2xl md:text-4xl text-gray-200text-center md:text-left">
+            <div class="w-11/12 mx-auto py-16 text-gray-100 md:grid grid-cols-3 md:gap-5 space-y-16 md:space-y-0">
+                <div class="flex flex-col justify-between space-y-5 md:space-y-0" data-aos="fade-up" data-aos-duration="1500">
+                    <h1 class="footer_header relative text-2xl md:text-4xl text-gray-200 text-left">
                         Logo Here
                     </h1>
-                    <div class="w-3/5 mx-auto md:mx-0 pt-10 h-full">
-                        <ul class="flex justify-between pt-2 w-full">
+                    <div class="w-3/5 pt-14 h-full">
+                        <ul class="flex justify-between w-full">
                             <li>
                                 <a href="#" class="grayscale duration-300 hover:grayscale-0 inline-block">
                                     <img class="w-6 h-6 object-cover" src="{{ Vite::asset('resources/images/review/tiktok.svg') }}" alt="reviewer tiktok">
@@ -172,11 +172,11 @@
                 </div>
                 
                 <div class="flex justify-between">
-                    <div class="uppercase" data-aos="fade-up" data-aos-duration="1500">
-                        <h1 class="text-lg md:text-xl font-semibold text-center text-[#FEE715]">
+                    <div class="capitalize" data-aos="fade-up" data-aos-duration="1500">
+                        <h1 class="relative footer_header text-lg md:text-xl font-bold text-gray-300">
                             Quick Links
                         </h1>
-                        <ul class="text-center space-y-4 py-4 text-xs md:text-sm">
+                        <ul class="space-y-4 pt-14 pb-5 text-xs md:text-sm text-gray-400 font-semibold">
                             <li>
                                 <a href="{{ route('home') }}" class="block duration-100 hover:text-[#FEE715] hover:font-semibold">
                                     Home
@@ -195,7 +195,7 @@
                                         @click = "linkActive = !linkActive"                         
                                         class="block duration-100 hover:text-[#FEE715] hover:font-semibold"
                                     >
-                                        <div class="flex justify-center items-center">
+                                        <div class="flex items-center">
                                             <span>shop</span> 
                                             <svg class="svg-icon" style="width: 2em; height: 2em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M680.1408 414.976c9.9328-8.704 24.2176-6.656 31.8976 4.608a27.8016 27.8016 0 0 1-4.096 35.84l-172.032 149.76a35.6352 35.6352 0 0 1-47.8208 0l-172.032-149.7088a27.8016 27.8016 0 0 1-4.096-35.9424c7.68-11.1616 22.016-13.2096 31.8976-4.608L512 561.3056l168.1408-146.2784z"  /></svg>                      
                                         </div>
@@ -232,19 +232,19 @@
                     </div>
 
                     <div data-aos="fade-up" data-aos-duration="1500">
-                        <h1 class="text-lg md:text-xl font-semibold uppercase text-[#FEE715] text-center md:text-left">
+                        <h1 class="relative footer_header text-lg md:text-xl font-bold text-gray-300">
                             Contact Info
                         </h1>
-                        <ul class="space-y-6 pt-5 text-xs md:text-sm">
-                            <li class="flex justify-between gap-2 md:gap-5">
+                        <ul class="space-y-6 pt-14 pb-5 text-xs md:text-sm text-gray-400 font-semibold">
+                            <li class="flex gap-2">
                                 <div class="flex justify-center">
                                     <img class="w-5 h-5 object-cover" src="{{ Vite::asset('resources/images/contact-us/address.svg') }}" alt="Logo location">
                                 </div>
-                                <div class="w-full ">
+                                <div>
                                     No. 9 UpperNorth Street, <br> Off Breakfast Road, <br> Tokyo.
                                 </div>
                             </li>
-                            <li class="flex gap-5">
+                            <li class="flex gap-2">
                                 <div class="flex justify-center">
                                     <img class="w-5 h-5 object-cover" src="{{ Vite::asset('resources/images/contact-us/email.svg') }}" alt="Logo location">
                                 </div>
@@ -252,7 +252,7 @@
                                     <a href="#" class="underline">hello@logo.com</a>
                                 </div>
                             </li>
-                            <li class="flex gap-5">
+                            <li class="flex gap-2">
                                 <div class="flex justify-center">
                                     <img class="w-5 h-5 object-cover" src="{{ Vite::asset('resources/images/contact-us/phone.svg') }}" alt="Logo location">
                                 </div>
@@ -261,6 +261,35 @@
                                 </div>
                             </li>
                         </ul>
+                    </div>
+                </div>
+
+                <div class="pl-0 md:pl-20" data-aos="fade-up" data-aos-duration="1500">
+                    <h1 class="relative footer_header text-lg md:text-xl font-bold text-gray-300 capitalize">
+                        We accept
+                    </h1>
+                    <div class="mx-auto md:mx-0 h-full pt-14">
+                        <ul class="flex space-x-5 w-full grayscale">
+                            <li>
+                                <img class="w-16 h-10 bject-cover" src="{{ Vite::asset('resources/images/cards/mastercard.png') }}" alt="Mastercard">
+                            </li>
+                            <li>
+                                <img class="w-16 h-10 object-cover" src="{{ Vite::asset('resources/images/cards/visa.png') }}" alt="Visa">
+                            </li>
+                            <li>
+                                <img class="w-16 h-10 object-cover" src="{{ Vite::asset('resources/images/cards/direct_debit.png') }}" alt="Direct Debit">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mx-auto flex justify-end py-3 text-gray-400 bg-zinc-800 px-3">
+                <div class="w-full md:w-1/2 flex justify-between text-xs">
+                    <div>
+                        <p>{{ $setting->site_name }} &#169; {{ date('Y') }} All Rights Reserved</p>
+                    </div>
+                    <div>
+                        <p>Powered By: <a class="underline" href="mailto:codejutus@protonmail.com">codejutsu@protonmail.com</a></p>
                     </div>
                 </div>
             </div>

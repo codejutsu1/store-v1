@@ -259,7 +259,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 
-/* .footer_header:before 
+.footer_header:before 
 {
     content: '';
     height: 2px;
@@ -267,6 +267,6 @@ input[type=number]::-webkit-inner-spin-button {
     display: block;
     background: #FEE715;
     position: absolute;
-    bottom: -15px;
+    bottom: -12px;
     left: 0px;
-} */
+}
