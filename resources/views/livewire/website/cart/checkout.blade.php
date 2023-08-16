@@ -1,4 +1,5 @@
 <div>
+    @if(count($carts))
     <form wire:submit.prevent="submit">
         <div class="w-11/12 md:w-5/6 mx-auto md:flex justify-between gap-10">
             <div class="py-5 md:w-3/5 w-full"> 
@@ -92,4 +93,7 @@
             </div>
         </div>
     </form>
+    @else
+    <p class="font-semibold text-center py-20">No Item in your cart yet...</p>
+    @endif
 </div>

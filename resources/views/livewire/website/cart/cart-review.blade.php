@@ -61,7 +61,7 @@
                 </div>
                 <div class="flex justify-between py-4 text-lg md:text-xl font-bold border-b">
                     <span>Total</span>
-                    <span>&#8358;27,400.00</span>
+                    <span>&#8358;{{ $cart_subtotal }}</span>
                 </div>
             </div>                    
         </div>

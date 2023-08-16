@@ -1,4 +1,4 @@
-<div class="bg-black inset-y-0 inset-x-0 fixed z-[100] transition duration-500" id="preloader">
+<div class="bg-[#101820] inset-y-0 inset-x-0 fixed z-[100] transition duration-500" id="preloader">
     <section class="preloader_section min-h-screen flex items-center justify-center">
         <div class="flex justify-center w-1/3">
             <div class="circle relative w-40 h-40">
