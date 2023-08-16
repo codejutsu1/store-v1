@@ -5,6 +5,7 @@ namespace App\Http\Controllers\User;
 use App\Models\Faq;
 use App\Models\Feed;
 use App\Models\User;
+use App\Models\Order;
 use App\Models\Review;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -13,7 +14,11 @@ class PageController extends Controller
 {
     public function dashboard()
     {
-        return view('user.dashboard');
+        $total_revenue = Order::sum('total_price');
+
+        $new_orders = Order::where('status', Null)->count();
+
+        return view('user.dashboard', compact('total_revenue', 'new_orders'));
     }
 
     public function faq()
