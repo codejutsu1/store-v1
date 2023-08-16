@@ -1,5 +1,7 @@
 <?php
 
+use App\Mail\OrderReceived;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Page\PageController;
@@ -21,6 +23,9 @@ use App\Http\Controllers\User\PageController as UserPage;
 |
 */
 
+Route::get('/main', function () {
+    Mail::to('codejutsu@protonmail.com')->send(new OrderReceived());
+});
 
 Route::controller(PageController::class)->group(function() {
     Route::get('/', 'home')->name('home');
