@@ -4,7 +4,7 @@
         <h1 class="font-semibold text-lg md:text-2xl border-b pb-4">Categories - Create new categories for your store.</h1>
 
         <div class="py-10 overflow-x-auto">
-            <table class="w-[600px] text-sm md:text-base bg-gray-900 rounded-md overflow-x-auto">
+            <table class="w-[600px] md:w-full text-sm md:text-base bg-gray-900 rounded-md overflow-x-auto">
                 <tr class="font-semibold text-center border-b">
                     <th class="py-3 px-6">S/N</th>
                     <th class="py-3 px-6">Name</th>

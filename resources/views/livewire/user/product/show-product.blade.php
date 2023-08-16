@@ -7,7 +7,7 @@
     </select>
 
     <div class="py-10 overflow-x-auto">
-        <table class="w-[800px] text-sm md:text-base bg-gray-900 rounded-md overflow-hidden">
+        <table class="w-[800px] md:w-full text-sm md:text-base bg-gray-900 rounded-md overflow-hidden">
             <tr class="font-semibold text-center border-b">
                 <th class="py-3 px-4">S/N</th>
                 <th class="py-3 px-4">Image</th>
