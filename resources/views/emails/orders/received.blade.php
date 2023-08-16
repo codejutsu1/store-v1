@@ -1,6 +1,8 @@
 <x-mail::message>
 # Thank you for your order
 
+Hello Iheanacho Chukwuemeka, 
+
 Your order has been received and is now being processed. Your order details are shown below for your reference:
 
 ## Order <b>#KSI-2334-4545</b> (August 10th, 2023) Summary
@@ -30,7 +32,7 @@ Your order has been received and is now being processed. Your order details are 
 </x-mail::table>
 
 <x-mail::panel>
-If you didn't perform any action or you encountered some problems, kindly send us an email on <a href="mailto:codejutsu@protonmail.com">codejutsu@protonmail.com</a> or chat us up on <a href="https://wa.me/+2348083369493">Whatsapp at +234 8083 369 493.</a>
+If you didn't perform this action or you need assistances, kindly send us an email on <a href="mailto:codejutsu@protonmail.com">codejutsu@protonmail.com</a> or chat us up on <a href="https://wa.me/+2348083369493">Whatsapp at +234 8083 369 493.</a>
 </x-mail::panel>
 
 Thanks,<br>

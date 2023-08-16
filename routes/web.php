@@ -1,6 +1,7 @@
 <?php
 
 use App\Mail\OrderReceived;
+use App\Mail\OrderDelivered;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
@@ -25,6 +26,7 @@ use App\Http\Controllers\User\PageController as UserPage;
 
 Route::get('/main', function () {
     Mail::to('codejutsu@protonmail.com')->send(new OrderReceived());
+    Mail::to('codejutsu@protonmail.com')->send(new OrderDelivered());
 });
 
 Route::controller(PageController::class)->group(function() {
