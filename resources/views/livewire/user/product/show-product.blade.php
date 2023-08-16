@@ -7,7 +7,7 @@
     </select>
 
     <div class="py-10 overflow-x-auto">
-        <table class="w-full text-sm md:text-base bg-gray-900 rounded-md overflow-hidden">
+        <table class="w-[800px] text-sm md:text-base bg-gray-900 rounded-md overflow-hidden">
             <tr class="font-semibold text-center border-b">
                 <th class="py-3 px-4">S/N</th>
                 <th class="py-3 px-4">Image</th>
@@ -18,14 +18,14 @@
             </tr>
             @forelse($products as $product)
                 <tr class="text-center border-b">
-                    <td class="py-4 px-6">{{ $loop->iteration }}</td>
-                    <td class="py-4 px-6 flex justify-center items-center">
+                    <td class="py-4 md:px-6 px-2">{{ $loop->iteration }}</td>
+                    <td class="py-4 md:px-6 px-2 flex justify-center items-center">
                         <img class="w-20 h-20 object-fit" src="../../storage/product/{{ $product->productImage->image }}" alt="{{ $product->productImage->description }}" />
                     </td>
-                    <td class="py-4 px-6">{{ $product->name }}</td>
-                    <td class="py-4 px-6">{{ $product->productImage->description }}</td>
-                    <td class="py-4 px-6">@money($product->original_price)</td>
-                    <td class="py-4 px-6">
+                    <td class="py-4 md:px-6 px-2">{{ $product->name }}</td>
+                    <td class="py-4 md:px-6 px-2">{{ $product->productImage->description }}</td>
+                    <td class="py-4 md:px-6 px-2">@money($product->original_price)</td>
+                    <td class="py-4 md:px-6 px-2">
                         <div class="flex space-x-4 justify-center">
                             <button onclick="Livewire.emit('openModal', 'user.product.edit-product', {{ json_encode(['product' => $product->id]) }})">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500 hover:text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">

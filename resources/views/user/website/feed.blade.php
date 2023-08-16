@@ -4,13 +4,13 @@
             <h1 class="font-semibold text-xl md:text-2xl border-b pb-4">Feed - What's popping?</h1>
 
             <div class="py-10 overflow-auto">
-                <table class="w-full text-sm md:text-base bg-gray-900 rounded-md overflow-hidden">
+                <table class="w-[800px] md:w-full text-sm md:text-base bg-gray-900 rounded-md overflow-hidden">
                     <tr class="font-semibold border-b">
-                        <th class="py-3 px-6">S/N</th>
-                        <th class="py-3 px-6">Image</th>
-                        <th class="py-3 px-6">Description</th>
-                        <th class="py-3 px-6">Created At</th>
-                        <th class="py-3 px-6">Actions</th>
+                        <th class="py-4 px-6">S/N</th>
+                        <th class="py-4 px-6">Image</th>
+                        <th class="py-4 px-6">Description</th>
+                        <th class="py-4 px-6">Created At</th>
+                        <th class="py-4 px-6">Actions</th>
                     </tr>
                     @forelse($feeds as $feed)
                         <tr class="border-b font-semibold text-center">

@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('slug')->unique();
             $table->bigInteger('original_price');
+            $table->boolean('top_product')->nullable();
             $table->bigInteger('discount_price')->nullable();
             $table->boolean('status')->default(0);
             $table->timestamps();

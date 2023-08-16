@@ -3,18 +3,18 @@
         <div class="bg-gray-800 w-full mx-auto p-8 rounded-md text-gray-200">
             <h1 class="font-semibold text-xl md:text-2xl border-b pb-4">FAQ - Customize your questions and answers</h1>
             <div class="py-10 overflow-x-auto">
-                <table class="w-full text-sm md:text-base bg-gray-900 rounded-md overflow-x-auto">
+                <table class="w-[800px] md:w-full text-sm md:text-base bg-gray-900 rounded-md overflow-x-auto">
                     <tr class="font-semibold text-center border-b">
-                        <th class="py-3 px-4">S/N</th>
-                        <th class="py-3 px-4">Question</th>
-                        <th class="py-3 px-4">Answer</th>
-                        <th class="py-3 px-4">Actions</th>
+                        <th class="py-4 px-6">S/N</th>
+                        <th class="py-4 px-6">Question</th>
+                        <th class="py-4 px-6">Answer</th>
+                        <th class="py-4 px-6">Actions</th>
                     </tr>
                     @forelse($faqs as $faq)
                         <tr class="border-b text-center">
-                            <td class="py-4 px-6">{{ $loop->iteration }}</td>
-                            <td class="py-4 px-6">{{ $faq->question }}</td>
-                            <td class="py-4 px-6">{{ $faq->answer }}</td>
+                            <td class="py-4 md:px-4 px-2">{{ $loop->iteration }}</td>
+                            <td class="py-4 md:px-4 px-2">{{ $faq->question }}</td>
+                            <td class="py-4 md:px-4 px-2">{{ $faq->answer }}</td>
                             <td class="py-4 px-6">
                                 <div class="flex space-x-4 justify-center">
                                     <button onclick="Livewire.emit('openModal', 'user.faq.faq-edit', {{ json_encode(['faq' => $faq->id]) }})">

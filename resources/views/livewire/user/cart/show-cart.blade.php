@@ -14,11 +14,11 @@
         </div>
     </div>
     <div class="py-10 overflow-x-auto">
-        <table class="w-full text-sm md:text-base bg-gray-900 rounded-md overflow-hidden">
+        <table class="w-[800px] text-sm md:text-base bg-gray-900 rounded-md overflow-x-auto">
             <tr class="font-semibold border-b">
                 <th class="py-3 px-6">S/N</th>
                 <th class="py-3 px-6">Order Id</th>
-                <th class="py-3 px-6">Number of Orders</th>
+                <th class="py-3 md:px-6 px-2">Number of Orders</th>
                 <th class="py-3 px-6">Status</th>
                 <th class="py-3 px-6">Date</th>
             </tr>

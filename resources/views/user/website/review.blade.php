@@ -4,7 +4,7 @@
             <h1 class="font-semibold text-xl md:text-2xl border-b pb-4">Review - Upload what people say about you.</h1>
 
             <div class="py-10 overflow-auto">
-                    <table class="w-full text-sm md:text-base bg-gray-900 rounded-md overflow-hidden">
+                    <table class="w-[800px] md:w-full text-sm md:text-base bg-gray-900 rounded-md overflow-hidden">
                         <tr class="font-semibold border-b">
                             <th class="py-3 px-6">S/N</th>
                             <th class="py-3 px-6">Image</th>
@@ -15,17 +15,17 @@
                         </tr>
                         @forelse($reviews as $review)
                             <tr class="border-b text-center">
-                                <td class="py-4 px-6">{{ $loop->iteration }}</td>
-                                <td class="py-4 px-6 flex justify-center items-center">
+                                <td class="py-4 md:px-6 px-2">{{ $loop->iteration }}</td>
+                                <td class="py-4 md:px-6 px-2 flex justify-center items-center">
                                     @if($review->image)
                                         <img class="w-20 h-20 object-fit" src="../../storage/review/{{ $review->image }}" alt="{{ $review->name }}" />
                                     @else
                                         <img class="w-20 h-20 object-fit" src="{{ Vite::asset('resources/images/review/human-2.png') }}" alt="{{ $review->name }}">
                                     @endif
                                 </td>
-                                <td class="py-4 px-6">{{ $review->name }}</td>
-                                <td class="py-4 px-6">{{ $review->comment }}</td>
-                                <td class="py-4 px-6 text-sm text-purple-600 text-center font-semibold">
+                                <td class="py-4 md:px-6 px-2">{{ $review->name }}</td>
+                                <td class="py-4 md:px-6 px-2">{{ $review->comment }}</td>
+                                <td class="py-4 md:px-6 px-2 text-sm text-purple-600 text-center font-semibold">
                                     @if($review->twiiter || $review->facebook || $review->instagram || $review->tiktok)
                                         <a class="underline" href="{{ $review->twitter ?? '#' }}">Twitter</a>
                                         <a class="underline" href="{{ $review->facebook ?? '#' }}">Facebook</a>
