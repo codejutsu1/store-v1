@@ -3,7 +3,7 @@
         <div class="bg-gray-800 w-full mx-auto p-8 rounded-md text-gray-200">
             <h1 class="font-semibold text-xl md:text-2xl border-b pb-4">Staff - Build your team.</h1>
             <div class="py-10 overflow-x-auto">
-                <table class="w-full text-sm md:text-base bg-gray-900 rounded-md overflow-hidden">
+                <table class="w-[800px] md:w-full text-sm md:text-base bg-gray-900 rounded-md overflow-hidden">
                     <tr class="uppercase text-center border-b">
                         <th class="py-3 px-6">S/N</th>
                         <th class="py-3 px-6">Name</th>

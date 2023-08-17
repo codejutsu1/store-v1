@@ -28,7 +28,8 @@ class RoleSeeder extends Seeder
             'view website',
             'view settings',
             'view orders',
-            'confirm order'
+            'confirm order',
+            'view staff'
         ];
 
         foreach($roles as $role) 
