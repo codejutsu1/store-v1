@@ -17,7 +17,8 @@ class PageLayout extends Component
      */
     public function __construct()
     {
-        $this->categories = Category::select(['id', 'name', 'slug'])->get() ?? '';
+        $this->categories = Category::select(['id', 'name', 'slug'])->get();
+        
         $this->setting = Setting::first();
     }
 
