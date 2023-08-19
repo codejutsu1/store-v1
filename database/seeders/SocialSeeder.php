@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class SocialSeeder extends Seeder
 {
@@ -16,11 +17,11 @@ class SocialSeeder extends Seeder
     {
         DB::table('socials')->insert([
             'facebook' => 'https://facebook.com',
-            'twitter' => 'https://facebook.com',
-            'tiktok' => 'https://facebook.com',
-            'instagram' => 'https://facebook.com',
-            'whatsapp' => 'https://facebook.com',
-            'telegram' => 'https://facebook.com',
+            'twitter' => 'https://twitter.com',
+            'tiktok' => 'https://tiktok.com',
+            'instagram' => 'https://instagram.com',
+            'whatsapp' => 'https://whatsapp.com',
+            'telegram' => 'https://telegram.com',
         ]);
     }
 }
