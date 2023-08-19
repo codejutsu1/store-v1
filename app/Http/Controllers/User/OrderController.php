@@ -24,7 +24,7 @@ class OrderController extends Controller
                             $query->select(['id','status', 'reference', 'card_type', 'bank']);
                         })
                         ->where('id', $order->id)
-                        ->first();
+                        ->first(); 
 
         $delivery_name = User::where('id', $order->order_status->user_id)->value('name');
 

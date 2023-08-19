@@ -1,5 +1,6 @@
 <div>
     <div class="md:flex justify-between py-5 px-1 space-y-5 md:space-y-0">
+        @can('view orders')
         <select wire:model.lazy="period" class="bg-gray-50 border border-gray-300 text-gray-200 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full md:w-1/3 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
             <option value="">~ Period ~</option>
             <option value="today" selected>Today</option>
@@ -8,6 +9,7 @@
             <option value="month">This Month</option>
             <option value="all">All Orders</option>
         </select>
+        @endcan
 
         <div>
             <input type="search" placeholder="Search by Order Id..." wire:model.debounce.500ms="search" class="bg-gray-50 border border-gray-300 text-gray-200 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />

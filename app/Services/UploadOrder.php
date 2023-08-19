@@ -28,7 +28,6 @@ class UploadOrder
         $order = Order::create([
             'order_user_id' => $user->id,
             'order_id' => '',
-            'status' => $orders['data']['status'],
             'total_price' => floatval(Cart::subtotal()) * 1000,
             'additional_information' => $orders['data']['metadata']['billing_address']['additional_information'],
         ]);

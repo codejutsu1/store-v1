@@ -15,7 +15,7 @@
             </div>
             <div class="flex justify-between border-b py-5">
                 <span>OrderId</span>
-                <span>#0000{{ $order->id }}</span>
+                <span>{{ $order->order_id }}</span>
             </div>
             <div class="flex justify-between border-b py-5">
                 <span>Products</span>
@@ -46,6 +46,7 @@
             </div>
             <div class="flex justify-between border-b py-5 font-semibold">
                 <span>Ready</span>
+                {{ $order->status }}
                 <span>
                     <livewire:user.cart.toggle-ready id_name="ready" :model="$order" field="status" />
                 </span>
@@ -55,11 +56,15 @@
                 <span>
                     Delivered
                 </span>
+                @if($order->status == 1)
                 <span>
                     <livewire:user.cart.toggle-deliver id_name="deliver" :model="$order" field="status" />
                 </span>
+                @else
+                    <span class="bg-yellow-500 px-1.5 py-0.5 rounded-lg text-gray-100">Not Ready</span>
+                @endif
             </div>
-
+            @can('view orders')
             <div class="flex justify-between border-b py-5 font-semibold">
                 <span>
                     Delivered By
@@ -100,6 +105,7 @@
                     {{ $order->paystack_detail->bank ?? 'NULL' }}
                 </span>
             </div>
+            @endcan
         </div>
     </div>
 </x-user-dashboard>

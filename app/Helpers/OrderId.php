@@ -9,7 +9,7 @@ if(!function_exists('createOrderId')){
 
         $new_alpha = substr(str_shuffle($alpha), 0, 4);
 
-        $location = substr($order_address, 0, 1);
+        $location = strtoupper(substr($order_address, 0, 1));
 
         $orderId = 'KS'.$location.'-' . $new_alpha . '-' . $order_id . $number;
 
