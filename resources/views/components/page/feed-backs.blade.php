@@ -1,4 +1,4 @@
-<section class="bg-[#101820] container">
+<section class="bg-[#101820] w-full">
         <div>
             <div class="py-10 pb-32 w-full md:w-5/6 mx-auto ">
                 <h1 class="text-center text-2xl md:text-4xl uppercase font-semibold text-[#FEE715]">

@@ -53,8 +53,8 @@
                     <h1 class="text-2xl font-semibold text-center border-b border-[#FEE715] py-3">Order Summary</h1>
                     @forelse($carts as $cart)
                     <div class="flex justify-between items-center border-b border-[#FEE715] pb-3">
-                        <p class="text-[#101820] text-sm uppercase font-semibold ">{{ $cart->name }} <span class="lowercase ml-5">x{{ $cart->qty }}</span> <br> <span class="text-xs">+ 30cl Pepsi</span></p>
-                        <span class="text-[#101820] font-semibold">@money(totalPrice($cart->qty, $cart->price)) <br> <span class="text-sm">+ &#8358;400.00</span></span>
+                        <p class="text-[#101820] text-sm uppercase font-semibold ">{{ $cart->name }} <span class="lowercase ml-5">x{{ $cart->qty }}</span> </p>
+                        <span class="text-[#101820] font-semibold">@money(totalPrice($cart->qty, $cart->price)) </span>
                     </div>
                     @empty
                         <p class="text-lg font-semibold">No items yet</p>

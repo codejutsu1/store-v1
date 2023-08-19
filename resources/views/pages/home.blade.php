@@ -1,6 +1,6 @@
 <x-page-layout>
 
-    <div class="bg-hero bg-cover relative container md:h-[600px] overflow-hidden">
+    <div class="bg-hero bg-cover relative w-full md:h-[600px] overflow-hidden">
         <div class="absolute bg-[#101820] opacity-80 inset-0 h-full w-full"></div>
         <div class="relative z-40 w-11/12 md:w-5/6 mx-auto md:flex justify-between">
             <div class="pt-20 w-[400px] h-[150px]">
@@ -26,7 +26,7 @@
     </div>
 
 
-    <section class="relative container">
+    <section class="relative w-full">
         <div class="py-10 pb-28 w-5/6 mx-auto circles">
             <h1 class="relative z-30 text-center text-2xl md:text-4xl uppercase font-semibold">
                 Top Products
@@ -104,7 +104,7 @@
         </div>
     </section>
 
-    <section class="bg-[#101820] relative container">
+    <section class="bg-[#101820] relative w-full">
      
         <div class="py-10 w-5/6 mx-auto relative z-30">
             <h1 class="text-center text-2xl md:text-4xl uppercase font-semibold text-[#FEE721]">
@@ -158,6 +158,6 @@
 
     <x-feed-slider />
 
-    <x-feed-backs />
+    <!-- <x-feed-backs /> -->
 
 </x-page-layout>    

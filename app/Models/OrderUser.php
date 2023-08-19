@@ -9,6 +9,11 @@ class OrderUser extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name',
+        'email'
+    ];
+
     public function order()
     {
         return $this->hasOne(Order::class);

@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Models\User;
 use App\Models\Order;
 use App\Models\Category;
+use App\Models\OrderUser;
 use App\Models\OrderDetail;
 use App\Models\OrderStatus;
 use App\Models\PaystackDetail;
