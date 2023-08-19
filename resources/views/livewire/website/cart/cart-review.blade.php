@@ -27,10 +27,10 @@
                                 </div>
                             </td>
                             <td >
-                                <p class="text-[#101820] text-base md:text-lg uppercase font-bold ">{{ $item->name }} <br> <span class="text-xs md:text-sm">+ 1 ltr Hollandia</span></p>
+                                <p class="text-[#101820] text-base md:text-lg uppercase font-bold ">{{ $item->name }} </p>
                             </td>
                             <td>
-                                <span class="text-[#101820] font-bold mt-3">@money($item->original_price) <br> <span class="text-xs md:text-sm">+ &#8358;1,000.00</span></span>
+                                <span class="text-[#101820] font-bold mt-3">@money($item->original_price) </span>
                             </td>
                             @endforeach
                             <td>

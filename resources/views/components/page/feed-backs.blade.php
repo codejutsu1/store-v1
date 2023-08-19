@@ -1,14 +1,14 @@
-<section class="bg-[#101820]">
+<section class="bg-[#101820] container">
         <div>
             <div class="py-10 pb-32 w-full md:w-5/6 mx-auto ">
                 <h1 class="text-center text-2xl md:text-4xl uppercase font-semibold text-[#FEE715]">
                     Wetin dem dey yarn about us?
                 </h1>
 
-                <div class="pt-10 swiper-container overflow-hidden">
+                <div class="pt-10 swiper-container overflow-hidden w-full h-[800px]">
                     <div class="flex justify-between space-x-5 md:space-x-10 swiper-wrapper">
                         @foreach($reviews as $review)
-                        <div class="bg-gray-800 h-[500px] w-[300px] md:w-[300px] py-8 px-5 swiper-slide group">
+                        <div class="bg-[101820] h-[500px] w-full md:w-[300px] py-8 px-5 swiper-slide group">
                             <div class="layer"></div>
                             <div class="relative z-30">
                                 <p class="text-center text-gray-300 group-hover:text-gray-900 font-semibold duration-1000">{{ $review->comment }}</P>

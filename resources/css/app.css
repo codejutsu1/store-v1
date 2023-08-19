@@ -2,7 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-body {font-family: 'Ubuntu', sans-serif}
+body {
+    font-family: 'Ubuntu', sans-serif;
+    -webkit-overflow-scrolling: touch;
+}
 
 @layer base {
     html {

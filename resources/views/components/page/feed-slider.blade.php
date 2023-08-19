@@ -1,4 +1,4 @@
-<div class="py-10 mx-auto">
+<div class="py-10 mx-auto container">
         <h1 class="text-center text-2xl md:text-4xl uppercase font-semibold my-10">
             Feeds
         </h1>
