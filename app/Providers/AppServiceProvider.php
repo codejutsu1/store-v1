@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
@@ -35,5 +36,9 @@ class AppServiceProvider extends ServiceProvider
                 echo number_format($amount, 2) ;
             ?>";
         });
+
+        if($this->app->environment('production')) {
+            \URL::forceScheme('https');
+        }
     }
 }
