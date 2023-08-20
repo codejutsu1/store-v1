@@ -44,7 +44,7 @@
     "scripts": {
         "post-autoload-dump": [
             "mkdir -p /app/bootstrap/cache/",
-            "sudo chown -R 777 /app/bootstrap/cache/",
+            "sudo chown -R 775 /app/bootstrap/cache/",
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
         ],
