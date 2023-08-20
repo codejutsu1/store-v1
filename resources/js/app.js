@@ -1,16 +1,15 @@
 import './bootstrap';
 
+import.meta.glob([
+    '../images/**',
+    '../fonts/**',
+  ]);
+
 import Alpine from 'alpinejs';
 
 window.Alpine = Alpine;
 
 Alpine.start();
-
-
-import.meta.glob([
-    '../images/**',
-    '../fonts/**',
-  ]);
 
 var $typed_strings = document.getElementById('typed-strings');
 var $typed_strings2 = document.getElementById('typed-strings2');
