@@ -261,7 +261,7 @@
                                     <img class="w-5 h-5 object-cover" src="{{ Vite::asset('resources/images/contact-us/phone.svg') }}" alt="Logo location">
                                 </div>
                                 <div class="flex items-center">
-                                    <a href="#" class="underline">{{ $setting->site_phone }}</a>
+                                    <a href="tel:07080119082" class="underline">+234 708 011 9082</a>
                                 </div>
                             </li>
                         </ul>
@@ -293,7 +293,7 @@
                         <p>{{ $setting->site_name }} &#169; {{ date('Y') }} All Rights Reserved</p>
                     </div>
                     <div>
-                        <p>Powered By: <a class="underline" href="mailto:codejutus@protonmail.com">codejutsu@protonmail.com</a></p>
+                        <p>Powered By: <a class="underline" href="mailto:codejutsu@protonmail.com">codejutsu@protonmail.com</a></p>
                     </div>
                 </div>
             </div>
