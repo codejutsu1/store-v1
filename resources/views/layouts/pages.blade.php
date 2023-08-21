@@ -41,13 +41,13 @@
         File::makeDirectory($dirname, 0755, true); //creates directory
         chmod($dirname, 0755);
     }
-        if (! is_writable($dirname)) {
-            throw new Exception("The {$dirname} directory must be present and writable by daniel.");
-            if(!File::exists($dirname)) {
+    if(!File::exists($dirname)) {
                 throw new Exception("The {$dirname} doesnt exist by daniel.");
             }else {
                 throw new Exception("The {$dirname} directory exixt by daniel.");
             }
+        if (! is_writable($dirname)) {
+            throw new Exception("The {$dirname} directory must be present and writable by daniel.");
         }
     @endphp
         <nav class="bg-[#101820] text-gray-200 py-3 w-full transtion duration-200 z-50" :class="{'fixed shadow-xl': scrollFromTop,}">
