@@ -35,7 +35,7 @@
     >
     @php
     use Illuminate\Support\Facades\File;
-    use Exception;
+    
     $dirname = "/app/bootstrap/cache/";
     if(!File::exists($dirname)) {
         File::makeDirectory($dirname, 0755, true); //creates directory
