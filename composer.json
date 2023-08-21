@@ -49,7 +49,10 @@
             "mkdir -p /app/storage/framework/views",
             "mkdir -p /app/storage/framework/sessions",
             "php artisan config:cache",
-            "sudo chown -R 755 /app/bootstrap/cache/",
+            "sudo chmod -R 775 /app/storage",
+            "sudo chmod -R 755 /app/bootstrap/cache/",
+            "sudo chmod -R 755 /bootstrap/cache/",
+            "sudo chmod -R 755 /app/storage",
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
         ],
