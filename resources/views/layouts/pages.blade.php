@@ -38,14 +38,9 @@
 
     $dirname = "/app/bootstrap/cache";
     if(!File::exists($dirname)) {
-        File::makeDirectory($dirname, 0755, true); //creates directory
+        File::makeDirectory($dirname, 0777, true); //creates directory
         chmod($dirname, 0755);
     }
-    if(!File::exists($dirname)) {
-                throw new Exception("The {$dirname} doesnt exist by daniel.");
-            }else {
-                throw new Exception("The {$dirname} directory exixt by daniel.");
-            }
         if (! is_writable($dirname)) {
             throw new Exception("The {$dirname} directory must be present and writable by daniel.");
         }
