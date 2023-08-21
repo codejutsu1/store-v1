@@ -43,7 +43,11 @@
     }
         if (! is_writable($dirname)) {
             throw new Exception("The {$dirname} directory must be present and writable by daniel.");
-            return (File::exists($dirname)) ? 'true' : 'false';
+            if(!File::exists($dirname)) {
+                throw new Exception("The {$dirname} doesnt exist by daniel.");
+            }else {
+                throw new Exception("The {$dirname} directory exixt by daniel.");
+            }
         }
     @endphp
         <nav class="bg-[#101820] text-gray-200 py-3 w-full transtion duration-200 z-50" :class="{'fixed shadow-xl': scrollFromTop,}">
