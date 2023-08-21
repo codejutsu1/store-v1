@@ -33,18 +33,7 @@
         @scroll.window="window.pageYOffset > 112 ? scrollFromTop = true : scrollFromTop = false"
         :class="{'overflow-hidden':navbarOpen, 'overflow-auto': !navbarOpen}"
     >
-    @php
-    use Illuminate\Support\Facades\File;
 
-    $dirname = "/app/bootstrap/cache";
-    if(!File::exists($dirname)) {
-        File::makeDirectory($dirname, 0777, true); //creates directory
-        chmod($dirname, 0777);
-    }
-        if (! is_writable($dirname)) {
-            throw new Exception("The {$dirname} directory must be present and writable by daniel.");
-        }
-    @endphp
         <nav class="bg-[#101820] text-gray-200 py-3 w-full transtion duration-200 z-50" :class="{'fixed shadow-xl': scrollFromTop,}">
             <div class="w-11/12 md:w-5/6 flex justify-between items-center mx-auto">
                 <div>
