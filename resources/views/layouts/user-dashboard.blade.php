@@ -418,7 +418,6 @@
             document.addEventListener('DOMContentLoaded', function() {
                 FilePond.registerPlugin(FilePondPluginImagePreview);
             });
-            window.appUrlStorage = "{{ config('app.url').'/storage' }}";
         </script>
     </body>
 </html>
