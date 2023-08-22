@@ -24,8 +24,7 @@
                     @error('category_id') <span class="text-red-600 font-bold">{{ $message }}</span> @enderror
                 </div>
                 <div>
-                    <input type="file" wire:model="image">
-                    <!-- <x-file-pond wire:model="image" class="mt-10" /> -->
+                    <x-file-pond wire:model="image" class="mt-10" />
                     @error('image')<span class="text-red-600 font-bold">{{ $message }}</span> @enderror
                 </div>
                 <div>
