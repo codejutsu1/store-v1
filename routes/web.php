@@ -9,7 +9,6 @@ use App\Http\Controllers\Page\PageController;
 use App\Http\Controllers\User\ShopController;
 use App\Http\Controllers\User\OrderController;
 use App\Http\Controllers\User\StaffController;
-use App\Http\Controllers\User\UploadController;
 use App\Http\Controllers\User\PaymentController;
 use App\Http\Controllers\User\PageController as UserPage;
 
