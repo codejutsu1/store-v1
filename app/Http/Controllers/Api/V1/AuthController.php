@@ -17,7 +17,7 @@ class AuthController extends Controller
 
     public function register(StoreUserRequest $request)
     {
-        $request->validated($request->all());
+        $request->validated();
 
         $user = User::create([
             'name' => $request->name,
@@ -35,7 +35,7 @@ class AuthController extends Controller
 
     public function login(LoginUserRequest $request)
     {
-        $request->validated($request->all());
+        $request->validated();
 
         if(!Auth::attempt($request->only('email', 'password'))){
             return $this->error('', 'Credentials do not match', 401);

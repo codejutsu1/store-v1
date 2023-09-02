@@ -29,6 +29,12 @@ Route::prefix('v1')->group(function() {
 
     Route::group(['middleware' => 'auth:sanctum'], function(){
         Route::post('logout', [AuthController::class, 'logout']);
-        Route::apiResource('categories', CategoryController::class);
+
+        // Route::group(['middleware' => 'can:view shop'], function(){
+        //     Route::apiResource('categories', CategoryController::class);
+        // });
+
+        
+            Route::apiResource('categories', CategoryController::class);
     });
 });
