@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use App\Traits\HttpResponses;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Api\StoreProductRequest;
+use App\Http\Requests\Api\UpdateProductRequest;
 use App\Http\Resources\v1\Product\ProductResource;
 use App\Http\Resources\v1\Product\ProductCollection;
 
@@ -23,7 +24,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-    return new ProductCollection(Product::with('productImage')->get());
+    return new ProductCollection(Product::with('productImage')->paginate(10));
     }
 
     /**
@@ -53,7 +54,7 @@ class ProductController extends Controller
             'description' => $request->description,
         ]);
 
-        return $this->success(['products' => new ProductResource($product)]);
+        return $this->success(['products' => new ProductResource($product)], '', 201);
     }
 
     /**
@@ -62,9 +63,9 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Product $product)
     {
-        //
+        return new ProductResource($product);
     }
 
     /**
@@ -74,9 +75,31 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateProductRequest $request, Product $product, UploadFile $uploadFile)
     {
-        //
+        $image = $product->productImage->image;
+
+        $request->validated();
+
+        $product->update([
+            'category_id' => $request->category_id,
+            'name' => $request->name,
+            'original_price' => $request->original_price,
+        ]);
+
+        if($request->image)
+        {
+            $uploadFile->remove($image, 'product');
+
+            $image = $uploadFile->store($request->image, $request->description, 'product', False);
+        }
+
+        $product->productImage->update([
+            'image' => $image,
+            'description' => $request->description,
+        ]);
+
+        return $this->success(['product' => new ProductResource($product)], '', 201);
     }
 
     /**
@@ -85,8 +108,12 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Product $product, UploadFile $uploadFile)
     {
-        //
+        $uploadFile->remove($product->productImage->image, 'product');
+
+        $product->delete();
+
+        return response(null, 204);
     }
 }
