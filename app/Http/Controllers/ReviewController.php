@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Review;
+use App\Services\UploadFile;
 use Illuminate\Http\Request;
 use App\Traits\HttpResponses;
 use App\Http\Requests\Api\StoreReviewRequest;
@@ -45,9 +46,9 @@ class ReviewController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Review $review)
     {
-        //
+        return $this->success(['review' => new ReviewResource($review)]);
     }
 
     /**
@@ -57,9 +58,20 @@ class ReviewController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StoreReviewRequest $request, Review $review, UploadFile $uploadFile)
     {
-        //
+        $validated_data = $request->validated();
+
+        if($request->image) 
+        {
+            $uploadFile->remove($review->image, 'review');
+
+            $validated_data['image'] = $uploadFile->store($request->image, $request->name, 'review', False);
+        }
+
+        $review->update($validated_data);
+
+        return $this->success(['review' => new ReviewResource($review)], '', 201);
     }
 
     /**
@@ -68,8 +80,12 @@ class ReviewController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Review $review, UploadFile $uploadFile)
     {
-        //
+        $uploadFile->remove($review->image, 'review');
+
+        $review->delete();
+
+        return response(null, 204);
     }
 }
