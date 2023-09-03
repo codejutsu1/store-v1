@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\V1\FaqController;
 use App\Http\Controllers\Api\V1\AuthController;
 use App\Http\Controllers\Api\V1\ProductController;
 use App\Http\Controllers\Api\V1\CategoryController;
@@ -35,8 +36,11 @@ Route::prefix('v1')->group(function() {
         //     Route::apiResource('categories', CategoryController::class);
         // });
 
-        
+            //View shop middleware
             Route::apiResource('categories', CategoryController::class);
             Route::apiResource('products', ProductController::class);
+
+            //View website middleware
+            Route::apiResource('faqs', FaqController::class);
     });
 });
