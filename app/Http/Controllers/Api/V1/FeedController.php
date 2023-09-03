@@ -2,11 +2,17 @@
 
 namespace App\Http\Controllers\Api\V1;
 
-use App\Http\Controllers\Controller;
+use App\Models\Feed;
+use App\Services\UploadFile;
 use Illuminate\Http\Request;
+use App\Traits\HttpResponses;
+use App\Http\Controllers\Controller;
+use App\Http\Resources\V1\Feed\FeedResource;
+use App\Http\Resources\V1\Feed\FeedCollection;
 
 class FeedController extends Controller
 {
+    use HttpResponses;
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +20,7 @@ class FeedController extends Controller
      */
     public function index()
     {
-        //
+        return new FeedCollection(Feed::getAllFeed());
     }
 
     /**
@@ -23,9 +29,16 @@ class FeedController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, UploadFile $uploadFile)
     {
-        //
+        $request->validate([
+            'image' => 'required|mimes:jpeg,jpg,png|max:200',
+            'description' => 'required',
+        ]);
+
+        $feed = $uploadFile->store($request->image, $request->description, 'feed'); 
+
+        return $this->success(['feed' => new FeedResource($feed)], '', 201);
     }
 
     /**
@@ -34,9 +47,9 @@ class FeedController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Feed $feed)
     {
-        //
+        return $this->success(['feed' => new FeedResource($feed)]);
     }
 
     /**
@@ -48,7 +61,7 @@ class FeedController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return $this->error('', 'You cannot perform this action cause this page is not found.', 404);
     }
 
     /**
@@ -57,8 +70,12 @@ class FeedController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Feed $feed, UploadFile $uploadFile)
     {
-        //
+        $uploadFile->remove($feed->image, 'feed');
+
+        $feed->delete();
+
+        return response(null, 204);
     }
 }

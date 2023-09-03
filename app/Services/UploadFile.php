@@ -17,10 +17,11 @@ class UploadFile
 
         if($migrate)
         {
-            $model_class::create([
+            $model = $model_class::create([
                 'image' => $image_name,
                 'description' => $description
             ]);
+            return $model;
         }else {
             return $image_name;
         }

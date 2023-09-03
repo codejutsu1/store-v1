@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\V1\FaqController;
 use App\Http\Controllers\Api\V1\AuthController;
+use App\Http\Controllers\Api\V1\FeedController;
 use App\Http\Controllers\Api\V1\ProductController;
 use App\Http\Controllers\Api\V1\CategoryController;
 
@@ -42,5 +43,6 @@ Route::prefix('v1')->group(function() {
 
             //View website middleware
             Route::apiResource('faqs', FaqController::class);
+            Route::apiResource('feeds', FeedController::class);
     });
 });
