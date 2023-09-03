@@ -8,8 +8,8 @@ use Illuminate\Http\Request;
 use App\Traits\HttpResponses;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreCategoryRequest;
-use App\Http\Resources\V1\CategoryResource;
-use App\Http\Resources\V1\CategoryCollection;
+use App\Http\Resources\V1\Category\CategoryResource;
+use App\Http\Resources\V1\Category\CategoryCollection;
 
 class CategoryController extends Controller
 {
@@ -38,7 +38,7 @@ class CategoryController extends Controller
 
         $category = Category::create($validated);
 
-        return $this->success(['category' => $category]);
+        return $this->success(['category' => new CategoryResource($category)]);
     }
 
     /**
@@ -76,8 +76,10 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Category $category)
     {
-        //
+        $category->delete();
+
+        return response(null, 204);
     }
 }
