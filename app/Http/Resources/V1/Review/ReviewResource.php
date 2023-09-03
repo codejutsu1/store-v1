@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Resources\V1\Feed;
+namespace App\Http\Resources\V1\Review;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class FeedResource extends JsonResource
+class ReviewResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -16,9 +16,14 @@ class FeedResource extends JsonResource
     {
         return [
             'id' => $this->id,
+            'name' => $this->name,
+            'comment' => $this->comment,
             'image' => $this->image,
-            'description' => $this->description,
-            'createdAt' => $this->created_at
+            'facebook' => $this->facebook,
+            'tiktok' => $this->tiktok,
+            'instagram' => $this->instagram,
+            'twitter' => $this->twitter,
+            'createdAt' => $this->created_at,
         ];
     }
 }

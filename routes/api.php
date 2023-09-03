@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\Api\V1\FaqController;
 use App\Http\Controllers\Api\V1\AuthController;
 use App\Http\Controllers\Api\V1\FeedController;
@@ -44,5 +45,6 @@ Route::prefix('v1')->group(function() {
             //View website middleware
             Route::apiResource('faqs', FaqController::class);
             Route::apiResource('feeds', FeedController::class);
+            Route::apiResource('reviews', ReviewController::class);
     });
 });
