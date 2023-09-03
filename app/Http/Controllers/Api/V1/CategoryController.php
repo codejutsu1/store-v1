@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Traits\HttpResponses;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreCategoryRequest;
+use App\Http\Resources\V1\CategoryResource;
 use App\Http\Resources\V1\CategoryCollection;
 
 class CategoryController extends Controller
@@ -48,7 +49,7 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        return $this->success(['category' => $category]);
+        return $this->success(['category' => new CategoryResource($category)]);
     }
 
     /**
@@ -58,9 +59,15 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StoreCategoryRequest $request, Category $category)
     {
-        //
+        $validated = $request->validated();
+
+        $validated['slug'] = Str::slug($request->name);
+
+        $category->update($validated);
+
+        return $this->success(['category' => new CategoryResource($category)]);
     }
 
     /**
