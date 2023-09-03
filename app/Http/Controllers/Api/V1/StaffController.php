@@ -51,9 +51,9 @@ class StaffController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(User $staff)
     {
-        //
+        return $this->success(['staff' => new StaffResource($staff)], '', 201);
     }
 
     /**
@@ -63,9 +63,14 @@ class StaffController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, User $staff)
     {
-        //
+        $staff->update($request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users,email,' . $staff->id],
+        ]));
+
+        return $this->success(['staff' => new StaffResource($staff)], '', 201);
     }
 
     /**
@@ -74,8 +79,10 @@ class StaffController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $staff)
     {
-        //
+        $staff->delete();
+
+        return response(null, 204);
     }
 }
