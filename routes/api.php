@@ -6,6 +6,7 @@ use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\Api\V1\FaqController;
 use App\Http\Controllers\Api\V1\AuthController;
 use App\Http\Controllers\Api\V1\FeedController;
+use App\Http\Controllers\Api\V1\StaffController;
 use App\Http\Controllers\Api\V1\ProductController;
 use App\Http\Controllers\Api\V1\CategoryController;
 
@@ -46,5 +47,8 @@ Route::prefix('v1')->group(function() {
             Route::apiResource('faqs', FaqController::class);
             Route::apiResource('feeds', FeedController::class);
             Route::apiResource('reviews', ReviewController::class);
+
+            //view staff middleware
+            Route::apiResource('staffs', StaffController::class);
     });
 });
