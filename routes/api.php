@@ -8,6 +8,7 @@ use App\Http\Controllers\Api\V1\AuthController;
 use App\Http\Controllers\Api\V1\FeedController;
 use App\Http\Controllers\Api\V1\StaffController;
 use App\Http\Controllers\Api\V1\ProductController;
+use App\Http\Controllers\Api\V1\SettingController;
 use App\Http\Controllers\Api\V1\CategoryController;
 
 /*
@@ -50,5 +51,11 @@ Route::prefix('v1')->group(function() {
 
             //view staff middleware
             Route::apiResource('staffs', StaffController::class);
+
+            Route::controller(SettingController::class)->group(function() {
+                //view settings
+                Route::get('settings/site', 'site_index');
+                Route::put('settings/site-update', 'site_update');
+            });
     });
 });
