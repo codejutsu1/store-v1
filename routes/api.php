@@ -59,6 +59,8 @@ Route::prefix('v1')->group(function() {
 
                 Route::get('settings/socials', 'social_index');
                 Route::put('settings/socials-update', 'social_update');
+
+                Route::put('settings/change-password', 'change_password');
             });
     });
 });

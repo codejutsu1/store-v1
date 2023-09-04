@@ -8,8 +8,8 @@ use App\Traits\HttpResponses;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use App\Http\Requests\LoginUserRequest;
 use App\Http\Requests\StoreUserRequest;
+use App\Http\Requests\Api\Auth\LoginUserRequest;
 
 class AuthController extends Controller
 {
