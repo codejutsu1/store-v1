@@ -56,6 +56,9 @@ Route::prefix('v1')->group(function() {
                 //view settings
                 Route::get('settings/site', 'site_index');
                 Route::put('settings/site-update', 'site_update');
+
+                Route::get('settings/socials', 'social_index');
+                Route::put('settings/socials-update', 'social_update');
             });
     });
 });
