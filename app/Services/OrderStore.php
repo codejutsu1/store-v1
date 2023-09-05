@@ -3,9 +3,11 @@
 namespace App\Services;
 
 use App\Models\Order;
+use App\Interfaces\Storable;
+use App\Interfaces\Updatable;
 use Gloudemans\Shoppingcart\Facades\Cart;
 
-class OrderStore
+class OrderStore implements Storable, Updatable
 {
     public $area;
 
@@ -13,14 +15,15 @@ class OrderStore
     {
         $order = Order::create([
             'order_user_id' => $user->id,
-            'order_id' => '',
             'total_price' => floatval(Cart::subtotal()) * 1000,
             'additional_information' => $orders['data']['metadata']['billing_address']['additional_information'],
         ]); 
 
-        return $order;
-
         $this->area = $orders['data']['metadata']['billing_address']['area'];
+
+        $this->update($order->id);
+
+        return $order;
     }
 
     public function update($orderId)

@@ -2,7 +2,10 @@
 
 namespace App\Services;
 
+use App\Models\Category;
+use App\Models\OrderDetail;
 use App\Interfaces\Storable;
+use Gloudemans\Shoppingcart\Facades\Cart;
 
 class OrderDetailStore implements Storable
 {
@@ -10,23 +13,26 @@ class OrderDetailStore implements Storable
     {
         $cart_contents = Cart::content();
         
-        foreach($cart_contents as $cart)
-        {
-            foreach($cart->options as $item)
+       if($cart_contents)
+       {
+            foreach($cart_contents as $cart)
             {
-                $category = Category::where('id', $item->category_id)->value('name');
+                foreach($cart->options as $item)
+                {
+                    $category = Category::where('id', $item->category_id)->value('name');
 
-                OrderDetail::create([
-                    'order_id' => $orderId,
-                    'product_name' => $cart->name,
-                    'category' => $category,
-                    'selling_price' => $cart->price,
-                    'original_price' => $item->original_price,
-                    'quantity' => $cart->qty,
-                    'total_price' => totalPrice($cart->qty, $cart->price),
-                ]);
+                    OrderDetail::create([
+                        'order_id' => $orderId,
+                        'product_name' => $cart->name,
+                        'category' => $category,
+                        'selling_price' => $cart->price,
+                        'original_price' => $item->original_price,
+                        'quantity' => $cart->qty,
+                        'total_price' => totalPrice($cart->qty, $cart->price),
+                    ]);
+                }
             }
-        }
+       }
 
         return '';
 
