@@ -2,7 +2,10 @@
 
 namespace App\Services;
 
-class OrderUserStore
+use App\Models\OrderUser;
+use App\Interfaces\Storable;
+
+class OrderUserStore implements Storable
 {
     public function store($orders)
     {
