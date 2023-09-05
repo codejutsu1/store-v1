@@ -2,9 +2,10 @@
 
 namespace App\Services;
 
+use App\Interfaces\Storable;
 use App\Models\PaystackDetail;
 
-class PaystackDetailStore 
+class PaystackDetailStore implements Storable
 {
     public function store($orderId, $orders)
     {

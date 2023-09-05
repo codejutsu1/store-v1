@@ -2,7 +2,10 @@
 
 namespace App\Services;
 
-class ShippingAddressStore 
+use App\Interfaces\Storable;
+use App\Models\ShippingAddress;
+
+class ShippingAddressStore implements Storable
 {
     public function store($orderId, $orders)
     {
